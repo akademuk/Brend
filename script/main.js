@@ -115,36 +115,34 @@ function initLanguageSwitcher() {
 }
 
 function initCounterAnimation() {
-  if (window.location.pathname === '/' || window.location.pathname === '/home') {
-    const statsEl = document.querySelector('.hero__stats');
-    const values  = document.querySelectorAll('.hero__stats-value');
-    let started   = false;
+  const statsEl = document.querySelector('.hero__stats');
+  const values = document.querySelectorAll('.hero__stats-value');
+  let started = false;
 
-    const animateCount = el => {
-      const target = +el.dataset.target;
-      const step   = Math.ceil(target / 200);
-      let count     = 0;
+  const animateCount = (el) => {
+    const target = +el.dataset.target;
+    const step = Math.ceil(target / 200);
+    let count = 0;
 
-      const update = () => {
-        count += step;
-        el.textContent = count < target ? count : target;
-        if (count < target) {
-          requestAnimationFrame(update);
-        }
-      };
-      update();
+    const update = () => {
+      count += step;
+      el.textContent = count < target ? count : target;
+      if (count < target) {
+        requestAnimationFrame(update);
+      }
     };
+    update();
+  };
 
-    const obs = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting && !started) {
-          started = true;
-          values.forEach(animateCount);
-          obs.disconnect();
-        }
-      });
-    }, { threshold: 0.5 });
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !started) {
+        started = true;
+        values.forEach(animateCount);
+        obs.disconnect();
+      }
+    });
+  }, { threshold: 0.5 });
 
-    obs.observe(statsEl);
-  }
+  obs.observe(statsEl);
 }
