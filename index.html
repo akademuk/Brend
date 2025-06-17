@@ -4,48 +4,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NexGen provides cutting-edge digital solutions to help your business thrive in the digital landscape.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="NexGen">
     <title>Переключатель фона</title>
 
-
-    <link rel="stylesheet" href="style/aos.css">
-    <link rel="stylesheet" href="style/swiper-bundle.min.css">
+    <!-- Оптимизация шрифтов -->
+    <link rel="stylesheet" href="style/aos.css" integrity="sha384-..." crossorigin="anonymous">
+    <link rel="stylesheet" href="style/swiper-bundle.min.css" integrity="sha384-..." crossorigin="anonymous">
     <link rel="stylesheet" href="style/reset.css">
     <link rel="stylesheet" href="style/style.css">
+    <!-- Добавление favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- Уведомление для Google о доступности -->
+    <link rel="canonical" href="https://yourdomain.com">
 </head>
 
 <body class="dark-theme">
     <div class="language-switcher container">
-        <button id="languageToggle" class="language-toggle">
-            <span class="language-option" id="en">EN</span>
-            <span class="language-option" id="ua">UA</span>
-            <span class="language-option" id="ru">RU</span>
+        <button id="languageToggle" class="language-toggle" aria-label="Select Language">
+            <span class="language-option" id="en" aria-label="English">EN</span>
+            <span class="language-option" id="ua" aria-label="Ukrainian">UA</span>
+            <span class="language-option" id="ru" aria-label="Russian">RU</span>
         </button>
     </div>
 
-
-    <header class="container wrapper">
+    <header class="container wrapper" role="banner">
         <div class="logo">
-            <a href="#" aria-label="Перейти на главную страницу NexGen">
-                <img width="98" height="19" src="images/Logo.svg" alt="Логотип компании">
+            <a href="/" aria-label="Перейти на главную страницу NexGen">
+                <img width="98" height="19" src="images/Logo.svg" alt="Логотип компании NexGen" loading="lazy">
             </a>
         </div>
 
         <div class="theme-switcher">
-            <button id="switchTheme" class="theme-toggle">
+            <button id="switchTheme" class="theme-toggle" aria-pressed="false" aria-label="Switch theme">
                 <span class="switch-text"></span>
                 <div class="switch"></div>
             </button>
         </div>
 
-        <nav class="navbar">
-            <ul class="desktop-menu" role="navigation" aria-label="Главное меню">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Careers</a></li>
-                <li><a href="#">Blogs</a></li>
-                <li><a href="#" class="contact-btn">Contact Us</a></li>
+        <nav class="navbar" role="navigation">
+            <ul class="desktop-menu" aria-label="Главное меню">
+                <li><a href="#" aria-label="Главная">Home</a></li>
+                <li><a href="#" aria-label="Услуги">Services</a></li>
+                <li><a href="#" aria-label="Проекты">Projects</a></li>
+                <li><a href="#" aria-label="О компании">About</a></li>
+                <li><a href="#" aria-label="Карьера">Careers</a></li>
+                <li><a href="#" aria-label="Блог">Blogs</a></li>
+                <li><a href="#" class="contact-btn" aria-label="Связаться с нами">Contact Us</a></li>
             </ul>
         </nav>
 
@@ -59,20 +65,19 @@
 
         <nav class="mobile-links" aria-hidden="true" role="menu">
             <ul>
-                <li><a href="#" role="menuitem">Home</a></li>
-                <li><a href="#" role="menuitem">Services</a></li>
-                <li><a href="#" role="menuitem">Projects</a></li>
-                <li><a href="#" role="menuitem">About</a></li>
-                <li><a href="#" role="menuitem">Careers</a></li>
-                <li><a href="#" role="menuitem">Blogs</a></li>
-                <li><a href="#" role="menuitem">Contact Us</a></li>
+                <li><a href="#" role="menuitem" aria-label="Главная">Home</a></li>
+                <li><a href="#" role="menuitem" aria-label="Услуги">Services</a></li>
+                <li><a href="#" role="menuitem" aria-label="Проекты">Projects</a></li>
+                <li><a href="#" role="menuitem" aria-label="О компании">About</a></li>
+                <li><a href="#" role="menuitem" aria-label="Карьера">Careers</a></li>
+                <li><a href="#" role="menuitem" aria-label="Блог">Blogs</a></li>
+                <li><a href="#" role="menuitem" aria-label="Контакты">Contact Us</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="hero wrapper" role="region" aria-labelledby="hero-title" itemscope itemtype="https://schema.org/WebPage">
         <div class="hero__container">
-
             <div class="hero__content container">
                 <h1 id="hero-title" class="heading-primary">
                     Digital Solutions<br>
@@ -80,7 +85,7 @@
                 </h1>
 
                 <a href="/start-project" class="hero__button hero__button--primary" aria-label="Start a Project">
-                    <span><img src="images/link-arrow.svg" alt="" aria-hidden="true" width="24" height="25"></span>
+                    <span><img src="images/link-arrow.svg" alt="Arrow" aria-hidden="true" width="24" height="25" loading="lazy"></span>
                     Start a Project
                 </a>
 
@@ -97,20 +102,13 @@
                         <li class="hero__service">Web Development</li>
                         <li class="hero__service">Mobile Apps</li>
                         <li class="hero__service">Digital Strategy</li>
-                        <li class="hero__service">Digital Marketing</li>
-                        <li class="hero__service">Website Design</li>
-                        <li class="hero__service">Branding</li>
-                        <li class="hero__service">Web Development</li>
-                        <li class="hero__service">Mobile Apps</li>
-                        <li class="hero__service">Digital Strategy</li>
                     </ul>
                 </div>
             </div>
 
             <div class="hero__visual">
                 <figure class="hero__figure">
-                    <img src="images/hero__img.jpg" alt="EstateIn Real Estate – Web Development project preview"
-                        class="hero__image">
+                    <img src="images/hero__img.jpg" alt="EstateIn Real Estate – Web Development project preview" class="hero__image" loading="lazy">
                     <figcaption class="hero__figcaption">
                         EstateIn Real Estate<br>
                         <span>Web Development</span>
@@ -118,10 +116,9 @@
                 </figure>
 
                 <a href="#top" class="hero__visual-link" aria-label="Back to top">
-                    <span><img src="images/link-arrow-top.svg" alt="" aria-hidden="true" width="60" height="60"></span>
+                    <span><img src="images/link-arrow-top.svg" alt="Back to top" aria-hidden="true" width="60" height="60" loading="lazy"></span>
                 </a>
             </div>
-
         </div>
 
         <ul class="hero__stats" aria-label="Наши достижения">
@@ -138,7 +135,7 @@
                 <span class="hero__stats-value" data-target="100">0</span>
             </li>
             <li class="hero__stats-item">
-                <span class="hero__stats-label">Followers</span>    
+                <span class="hero__stats-label">Followers</span>
                 <span class="hero__stats-value" data-target="420">0</span>
             </li>
             <li class="hero__stats-item">
@@ -146,60 +143,15 @@
                 <span class="hero__stats-value" data-target="10">0</span>
             </li>
             <li class="hero__stats-item hero__stats-item--action">
-                <a href="/about" class="hero__stats-link">
-                    <span>
-                        <img width="29" height="28" src="images/hero__stats-item.svg" alt="Know More icon">
-                    </span>
-                    Know More</a>
+                <a href="/about" class="hero__stats-link" aria-label="Learn more about us">
+                    <span><img width="29" height="28" src="images/hero__stats-item.svg" alt="Know More icon" loading="lazy"></span>
+                    Know More
+                </a>
             </li>
         </ul>
     </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <div class="menu-overlay"></div>
-
-
-
-
 
     <script src="script/jquery-3.7.0.min.js"></script>
     <script src="script/aos.js"></script>
