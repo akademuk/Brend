@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initBurgerMenu();
   initLanguageSwitcher();
   initCounterAnimation();
+  initServicesSwiper();
 });
 
 function initThemeSwitcher() {
@@ -145,4 +146,26 @@ function initCounterAnimation() {
   }, { threshold: 0.5 });
 
   obs.observe(statsEl);
+}
+
+function initServicesSwiper() {
+  const wrapper = document.querySelector(".hero__services-wrapper");
+  if (!wrapper) return;
+
+  const originalSlides = Array.from(wrapper.children);
+  const neededClones = 10;
+  for (let i = 0; i < neededClones; i++) {
+    const slide = originalSlides[i % originalSlides.length].cloneNode(true);
+    wrapper.appendChild(slide);
+  }
+
+  /* global Swiper */
+  new Swiper(".hero__services-slider", {
+    loop: true,
+    speed: 5000,
+    slidesPerView: 'auto',
+    spaceBetween: 0,
+    autoplay: { delay: 0, disableOnInteraction: false },
+    allowTouchMove: false,
+  });
 }

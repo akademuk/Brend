@@ -1,57 +1,55 @@
+/* --------------------------------
+   Font Faces – Modern Formats Only
+-------------------------------- */
+
 @font-face {
-    font-family: "Inter";
-    src: url("../fonts/Inter-Medium.woff2") format("woff2"),
-        url("../fonts/Inter-Medium.woff") format("woff"),
-        url("../fonts/Inter-Medium.ttf") format("truetype"),
-        url("../fonts/Inter-Medium.eot");
+    font-family: 'Inter';
+    font-style: normal;
     font-weight: 500;
-    font-style: normal;
     font-display: swap;
+    src: url('../fonts/Inter-Medium.woff2') format('woff2'),
+        url('../fonts/Inter-Medium.woff') format('woff');
 }
 
 @font-face {
-    font-family: "RobotoFlex";
-    src: url("../fonts/RobotoFlex-Regular.woff2") format("woff2"),
-        url("../fonts/RobotoFlex-Regular.woff") format("woff"),
-        url("../fonts/RobotoFlex-Regular.ttf") format("truetype"),
-        url("../fonts/RobotoFlex-Regular.eot");
+    font-family: 'RobotoFlex';
+    font-style: normal;
     font-weight: 400;
-    font-style: normal;
     font-display: swap;
+    src: url('../fonts/RobotoFlex-Regular.woff2') format('woff2'),
+        url('../fonts/RobotoFlex-Regular.woff') format('woff');
 }
 
+/* Roboto Mono: Regular */
 @font-face {
-    font-family: "RobotoMono";
-    src: url("../fonts/RobotoMono-Bold.woff2") format("woff2"),
-        url("../fonts/RobotoMono-Bold.woff") format("woff"),
-        url("../fonts/RobotoMono-Bold.ttf") format("truetype"),
-        url("../fonts/RobotoMono-Bold.eot");
+    font-family: 'RobotoMono';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../fonts/RobotoMono-Regular.woff2') format('woff2'),
+        url('../fonts/RobotoMono-Regular.woff') format('woff');
+}
+
+/* Roboto Mono: Medium */
+@font-face {
+    font-family: 'RobotoMono';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('../fonts/RobotoMono-Medium.woff2') format('woff2'),
+        url('../fonts/RobotoMono-Medium.woff') format('woff');
+}
+
+/* Roboto Mono: Bold */
+@font-face {
+    font-family: 'RobotoMono';
+    font-style: normal;
     font-weight: 700;
-    font-style: normal;
     font-display: swap;
+    src: url('../fonts/RobotoMono-Bold.woff2') format('woff2'),
+        url('../fonts/RobotoMono-Bold.woff') format('woff');
 }
 
-@font-face {
-    font-family: "RobotoMono";
-    src: url("../fonts/RobotoMono-Medium.woff2") format("woff2"),
-        url("../fonts/RobotoMono-Medium.woff") format("woff"),
-        url("../fonts/RobotoMono-Medium.ttf") format("truetype"),
-        url("../fonts/RobotoMono-Medium.eot");
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "RobotoMono";
-    src: url("../fonts/RobotoMono-Regular.woff2") format("woff2"),
-        url("../fonts/RobotoMono-Regular.woff") format("woff"),
-        url("../fonts/RobotoMono-Regular.ttf") format("truetype"),
-        url("../fonts/RobotoMono-Regular.eot");
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
 
 :root {
     /* Цвета для светлой темы */
@@ -163,6 +161,18 @@ body.menu-open {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 header.container {
     display: flex;
     position: relative;
@@ -213,14 +223,6 @@ body.menu-open header {
     display: none;
 }
 
-.hero__services {
-    display: flex;
-    width: max-content;
-    animation: marquee 30s linear infinite;
-    pointer-events: none;
-    gap: 23px;
-}
-
 .hero__service {
     color: #676665;
     font-family: "RobotoMono", sans-serif;
@@ -229,6 +231,11 @@ body.menu-open header {
     line-height: 150%;
     text-transform: uppercase;
     position: relative;
+}
+
+.hero__slide {
+    max-width: max-content;
+    padding: 0 20px;
 }
 
 .hero__service::before {
@@ -297,7 +304,7 @@ body.menu-open header {
     margin-bottom: 11px;
 }
 
-.hero__services-wrapper {
+.hero__services-slider {
     border-radius: 8px;
     background: var(--background-dark);
     padding: 14px;
@@ -308,6 +315,7 @@ body.menu-open header {
 }
 
 
+
 @keyframes moveAround {
     0% {
         transform: translate(-50%, -50%) rotate(0deg);
@@ -315,16 +323,6 @@ body.menu-open header {
 
     100% {
         transform: translate(-50%, -50%) rotate(360deg);
-    }
-}
-
-@keyframes marquee {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(-50%);
     }
 }
 
@@ -792,6 +790,9 @@ body.menu-open header {
 
     .hero__service {
         font-size: 20px;
+        height: 100%;
+        display: flex;
+        align-items: center;
     }
 
     .hero__button {
@@ -808,13 +809,13 @@ body.menu-open header {
         gap: 16px;
     }
 
-    .hero__services {
+    .hero__services-wrapper {
         gap: 47px;
         height: 100%;
         align-items: center;
     }
 
-    .hero__services-wrapper {
+    .hero__services-slider {
         max-width: calc(100% + 88px);
         min-width: calc(100% + 88px);
         width: 100%;
