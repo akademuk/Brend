@@ -116,7 +116,7 @@ body {
 }
 
 body.light-theme {
-    background-color: var(--background-light);
+    background-color: #EEF4F8;
     color: var(--font-light);
 }
 
@@ -130,7 +130,12 @@ body.dark-theme .container {
 }
 
 body.light-theme .container {
-    background: grey;
+    background: #FFFFFF;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme .hero__services-slider {
+    background-color: #EEF4F8;
 }
 
 body.dark-theme .paragraph {
@@ -145,9 +150,91 @@ body.menu-open {
     overflow: hidden;
 }
 
+body.light-theme .border-light {
+    border: 2px solid #E0E0E0;
+}
+
 body.menu-open header {
     border-radius: 10px 10px 0 0;
 }
+
+body.light-theme .heading-primary,
+body.light-theme .heading-secondary {
+    color: #1A1A1A !important;
+}
+
+body.light-theme .hero__figure {
+    background: #FFFFFF;
+    border-radius: 12px;
+}
+
+body.light-theme .service__header--icon {
+        background: #EEF4F8;
+    border: 1px solid #fff;
+}
+
+body.light-theme .paragraph {
+    color: #333333;
+}
+
+body.light-theme .hero__stats-link span {
+    background: #EEF4F8;
+    border: 1px solid #fff;
+}
+
+body.light-theme .desktop-menu li {
+    background: #EEF4F8;
+}
+
+body.light-theme .hero__visual-link {
+     background: #EEF4F8;
+}
+
+body.light-theme .hero__visual-link span img {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(5%) saturate(0%) hue-rotate(335deg) brightness(106%) contrast(106%);
+}
+
+body.light-theme .hero__button span img {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(5%) saturate(0%) hue-rotate(335deg) brightness(106%) contrast(106%);
+}
+
+body.light-theme .work__order--icon {
+    background: #EEF4F8;
+    border: none;
+}
+
+body.light-theme .work__meta li {
+      background: #EEF4F8;
+}
+
+body.light-theme .work__order--link {
+    color: #fff;
+}
+
+body.light-theme .hero__stats-link span img {
+filter: brightness(0) saturate(100%) invert(64%) sepia(13%) saturate(1613%) hue-rotate(327deg) brightness(85%) contrast(87%);
+}
+
+body.light-theme .hero__stats-link {
+    color: var(--color-orange);
+}
+
+body.light-theme .hero__figcaption {
+  color: var(--color-orange);  
+}
+
+body.light-theme .theme-toggle {
+    background-color: #EEF4F8;
+}
+
+body.light-theme .theme-toggle .switch {
+    background: var(--color-orange);
+}
+
+body.light-theme .work__order-right--technologies ul li {
+  background-color: #EEF4F8;
+}
+
 
 .menu-overlay {
     position: fixed;
@@ -1435,7 +1522,7 @@ body.menu-open header {
     }
 
     .services__grid .service {
-        padding: 80px;
+        padding: 60px 40px;
         gap: 0;
         border-radius: 14px;
         width: calc(50% - 10px);
@@ -1730,3 +1817,4 @@ body.menu-open header {
         transform: translateX(-50%);
     }
 }
+
