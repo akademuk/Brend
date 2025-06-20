@@ -13,7 +13,7 @@
     <!-- <link rel="stylesheet" href="style/aos.css" integrity="sha384-..." crossorigin="anonymous"> -->
     <link rel="stylesheet" href="style/swiper-bundle.min.css" integrity="sha384-..." crossorigin="anonymous">
     <link rel="stylesheet" href="style/reset.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="style/style.css" >
+    <link rel="stylesheet" href="style/style.css">
 
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="canonical" href="https://yourdomain.com">
@@ -30,13 +30,13 @@
 
     <header class="container wrapper" role="banner">
         <div class="logo">
-            <a href="/" aria-label="Перейти на главную страницу NexGen">
-                <img width="98" height="19" src="images/Logo.svg" alt="Логотип компании NexGen" loading="lazy">
+            <a href="/" aria-label="Перейти на главную страницу">
+                <img width="98" height="19" src="images/Logo.svg" alt="Логотип вашего бренда" loading="lazy">
             </a>
         </div>
 
         <div class="theme-switcher">
-            <button id="switchTheme" class="theme-toggle" aria-pressed="false" aria-label="Switch theme">
+            <button id="switchTheme" class="theme-toggle" aria-pressed="false" aria-label="Переключить тему">
                 <span class="switch-text"></span>
                 <div class="switch"></div>
             </button>
@@ -44,13 +44,13 @@
 
         <nav class="navbar" role="navigation">
             <ul class="desktop-menu" aria-label="Главное меню">
-                <li><a href="#" aria-label="Главная">Home</a></li>
-                <li><a href="#" aria-label="Услуги">Services</a></li>
-                <li><a href="#" aria-label="Проекты">Projects</a></li>
-                <li><a href="#" aria-label="О компании">About</a></li>
-                <li><a href="#" aria-label="Карьера">Careers</a></li>
-                <li><a href="#" aria-label="Блог">Blogs</a></li>
-                <li><a href="#" class="contact-btn" aria-label="Связаться с нами">Contact Us</a></li>
+                <li><a href="#" aria-label="Главная">Главная</a></li>
+                <li><a href="#" aria-label="Услуги">Услуги</a></li>
+                <li><a href="#" aria-label="Проекты">Проекты</a></li>
+                <li><a href="#" aria-label="О компании">Обо мне</a></li>
+                <li><a href="#" aria-label="Карьера">Карьера</a></li>
+                <li><a href="#" aria-label="Блог">Блог</a></li>
+                <li><a href="#contact" class="contact-btn" aria-label="Связаться с нами">Контакты</a></li>
             </ul>
         </nav>
 
@@ -64,16 +64,17 @@
 
         <nav class="mobile-links" aria-hidden="true" role="menu">
             <ul>
-                <li><a href="#" role="menuitem" aria-label="Главная">Home</a></li>
-                <li><a href="#" role="menuitem" aria-label="Услуги">Services</a></li>
-                <li><a href="#" role="menuitem" aria-label="Проекты">Projects</a></li>
-                <li><a href="#" role="menuitem" aria-label="О компании">About</a></li>
-                <li><a href="#" role="menuitem" aria-label="Карьера">Careers</a></li>
-                <li><a href="#" role="menuitem" aria-label="Блог">Blogs</a></li>
-                <li><a href="#" role="menuitem" aria-label="Контакты">Contact Us</a></li>
+                <li><a href="#" role="menuitem" aria-label="Главная">Главная</a></li>
+                <li><a href="#" role="menuitem" aria-label="Услуги">Услуги</a></li>
+                <li><a href="#" role="menuitem" aria-label="Проекты">Проекты</a></li>
+                <li><a href="#" role="menuitem" aria-label="О компании">Обо мне</a></li>
+                <li><a href="#" role="menuitem" aria-label="Карьера">Карьера</a></li>
+                <li><a href="#" role="menuitem" aria-label="Блог">Блог</a></li>
+                <li><a href="#contact" role="menuitem" aria-label="Контакты">Контакты</a></li>
             </ul>
         </nav>
     </header>
+
 
     <main>
 
@@ -82,74 +83,47 @@
             <div class="hero__container">
                 <div class="hero__content container">
                     <h1 id="hero-title" class="heading-primary">
-                        Digital Solutions<br>
-                        That Drive Success
+                        Цифровые решения<br>для вашего бизнеса
                     </h1>
 
-                    <a href="/start-project" class="hero__button hero__button--primary" aria-label="Start a Project">
-                        <span><img src="images/link-arrow.svg" alt="Arrow" aria-hidden="true" width="24" height="25"
+                    <a href="/start-project" class="hero__button hero__button--primary" aria-label="Начать проект">
+                        <span><img src="images/link-arrow.svg" alt="Стрелка" aria-hidden="true" width="24" height="25"
                                 loading="lazy"></span>
-                        Start a Project
+                        Начать проект
                     </a>
 
                     <p class="hero__description paragraph">
-                        At NexGen, we believe in the transformative power of digital solutions. Our team of experts
-                        is dedicated to helping businesses like yours thrive in the fast-paced digital landscape.
+                        Я — опытный разработчик, и я готов помочь вашему бизнесу найти и внедрить эффективные цифровые
+                        решения. Работая напрямую с вами, я обеспечиваю максимальную экономию без лишних накруток.
                     </p>
 
                     <div class="hero__services-slider swiper-container" aria-label="Наши услуги">
-
                         <div class="hero__services-wrapper swiper-wrapper">
                             <div class="hero__slide swiper-slide" role="group" aria-roledescription="slide"
-                                aria-label="1 из 12">
-                                <span class="hero__service">Digital Marketing</span>
+                                aria-label="1 из 6">
+                                <span class="hero__service">Разработка сайтов</span>
                             </div>
                             <div class="hero__slide swiper-slide" role="group" aria-roledescription="slide"
-                                aria-label="2 из 12">
-                                <span class="hero__service">Website Design</span>
+                                aria-label="2 из 6">
+                                <span class="hero__service">Мобильные приложения</span>
                             </div>
                             <div class="hero__slide swiper-slide" role="group" aria-roledescription="slide"
-                                aria-label="3 из 12">
-                                <span class="hero__service">Branding</span>
+                                aria-label="3 из 6">
+                                <span class="hero__service">Дизайн и брендинг</span>
                             </div>
                             <div class="hero__slide swiper-slide" role="group" aria-roledescription="slide"
-                                aria-label="4 из 12">
-                                <span class="hero__service">Web Development</span>
+                                aria-label="4 из 6">
+                                <span class="hero__service">Цифровая стратегия</span>
                             </div>
                             <div class="hero__slide swiper-slide" role="group" aria-roledescription="slide"
-                                aria-label="5 из 12">
-                                <span class="hero__service">Mobile Apps</span>
+                                aria-label="5 из 6">
+                                <span class="hero__service">Консалтинг и поддержка</span>
                             </div>
                             <div class="hero__slide swiper-slide" role="group" aria-roledescription="slide"
-                                aria-label="6 из 12">
-                                <span class="hero__service">Digital Strategy</span>
-                            </div>
-                            <div class="hero__slide swiper-slide" role="group" aria-roledescription="slide"
-                                aria-label="7 из 12">
-                                <span class="hero__service">Digital Marketing</span>
-                            </div>
-                            <div class="hero__slide swiper-slide" role="group" aria-roledescription="slide"
-                                aria-label="8 из 12">
-                                <span class="hero__service">Website Design</span>
-                            </div>
-                            <div class="hero__slide swiper-slide" role="group" aria-roledescription="slide"
-                                aria-label="9 из 12">
-                                <span class="hero__service">Branding</span>
-                            </div>
-                            <div class="hero__slide swiper-slide" role="group" aria-roledescription="slide"
-                                aria-label="10 из 12">
-                                <span class="hero__service">Web Development</span>
-                            </div>
-                            <div class="hero__slide swiper-slide" role="group" aria-roledescription="slide"
-                                aria-label="11 из 12">
-                                <span class="hero__service">Mobile Apps</span>
-                            </div>
-                            <div class="hero__slide swiper-slide" role="group" aria-roledescription="slide"
-                                aria-label="12 из 12">
-                                <span class="hero__service">Digital Strategy</span>
+                                aria-label="6 из 6">
+                                <span class="hero__service">Интеграция и настройка</span>
                             </div>
                         </div>
-
                     </div>
                 </div>
 
@@ -157,18 +131,17 @@
                     <figure class="hero__figure">
                         <picture>
                             <source type="image/webp" srcset="images/hero__img.webp" width="593" height="465">
-                            <img src="images/hero__img.jpg" width="593" height="465"
-                                alt="EstateIn Real Estate – Web Development project preview" class="hero__image"
-                                loading="lazy">
+                            <img src="images/hero__img.jpg" width="593" height="465" alt="Проект для EstateIn"
+                                class="hero__image" loading="lazy">
                         </picture>
                         <figcaption class="hero__figcaption">
                             EstateIn Real Estate<br>
-                            <span>Web Development</span>
+                            <span>Разработка веб-сайта</span>
                         </figcaption>
                     </figure>
 
-                    <a href="#top" class="hero__visual-link" aria-label="Back to top">
-                        <span><img src="images/link-arrow-top.svg" alt="Back to top" aria-hidden="true" width="60"
+                    <a href="#top" class="hero__visual-link" aria-label="Вернуться наверх">
+                        <span><img src="images/link-arrow-top.svg" alt="Наверх" aria-hidden="true" width="60"
                                 height="60" loading="lazy"></span>
                     </a>
                 </div>
@@ -176,207 +149,201 @@
 
             <ul class="hero__stats" aria-label="Наши достижения">
                 <li class="hero__stats-item">
-                    <span class="hero__stats-label">Clients</span>
+                    <span class="hero__stats-label">Клиенты</span>
                     <span class="hero__stats-value" data-target="200">0</span>
                 </li>
                 <li class="hero__stats-item">
-                    <span class="hero__stats-label">Projects</span>
+                    <span class="hero__stats-label">Проекты</span>
                     <span class="hero__stats-value" data-target="280">0</span>
                 </li>
                 <li class="hero__stats-item">
-                    <span class="hero__stats-label">Happy Clients</span>
+                    <span class="hero__stats-label">Счастливые клиенты</span>
                     <span class="hero__stats-value" data-target="100">0</span>
                 </li>
                 <li class="hero__stats-item">
-                    <span class="hero__stats-label">Followers</span>
+                    <span class="hero__stats-label">Подписчики</span>
                     <span class="hero__stats-value" data-target="420">0</span>
                 </li>
                 <li class="hero__stats-item">
-                    <span class="hero__stats-label">Years of Experience</span>
-                    <span class="hero__stats-value" data-target="10">0</span>
+                    <span class="hero__stats-label">Годы опыта</span>
+                    <span class="hero__stats-value" data-target="5">0</span>
                 </li>
                 <li class="hero__stats-item hero__stats-item--action">
-                    <a href="/about" class="hero__stats-link" aria-label="Learn more about us">
-                        <span><img width="29" height="28" src="images/hero__stats-item.svg" alt="Know More icon"
+                    <a href="/about" class="hero__stats-link" aria-label="Узнать больше о нас">
+                        <span><img width="29" height="28" src="images/hero__stats-item.svg" alt="Знать больше"
                                 loading="lazy"></span>
-                        Know More
+                        Узнать больше
                     </a>
                 </li>
             </ul>
         </section>
 
         <section class="why-choose-us wrapper" id="services" aria-labelledby="why-title">
-            <h2 id="why-title" class="heading-secondary container">Reasons to Choose NexGen for Your Digital Journey
-            </h2>
+            <h2 id="why-title" class="heading-secondary container">Почему стоит выбрать меня для вашего проекта</h2>
             <div class="cards">
-                <a href="#" class="card container" aria-label="Expertise in Cutting-Edge Technologies">
-                    <h3 class="card__title">Expertise in Cutting-Edge Technologies</h3>
-                    <p class="card__text">NexGen ensures your projects are powered by state-of-the-art technologies,
-                        guaranteeing innovation and future-proof solutions.</p>
+                <a href="#" class="card container" aria-label="Эксперт в современных технологиях">
+                    <h3 class="card__title">Эксперт в современных технологиях</h3>
+                    <p class="card__text">Я использую передовые технологии для разработки решений, которые отвечают
+                        современным требованиям, гарантируя инновации и долговечность.</p>
                     <span class="hero__stats-link">
-                        <span><img width="29" height="28" src="images/hero__stats-item.svg" alt="Know More icon"
+                        <span><img width="29" height="28" src="images/hero__stats-item.svg" alt="Знать больше"
                                 loading="lazy"></span>
-                        Learn More
+                        Узнать больше
                     </span>
                 </a>
 
-                <a href="#" class="card container" aria-label="Proven Track Record of Success">
-                    <h3 class="card__title">Proven Track Record of Success</h3>
-                    <p class="card__text">NexGen demonstrates a consistent ability to meet and exceed client
-                        expectations, providing reliable and effective web solutions tailored to diverse needs.</p>
+                <a href="#" class="card container" aria-label="Проверенный опыт успеха">
+                    <h3 class="card__title">Проверенный опыт успеха</h3>
+                    <p class="card__text">Мой опыт позволяет мне уверенно достигать результатов, предоставляя клиентам
+                        надежные и эффективные веб-решения, которые соответствуют их уникальным потребностям.</p>
                     <span class="hero__stats-link">
-                        <span><img width="29" height="28" src="images/hero__stats-item.svg" alt="Know More icon"
+                        <span><img width="29" height="28" src="images/hero__stats-item.svg" alt="Знать больше"
                                 loading="lazy"></span>
-                        Learn More
+                        Узнать больше
                     </span>
                 </a>
 
-                <a href="#" class="card container" aria-label="Client-Centric Approach">
-                    <h3 class="card__title">Client-Centric Approach</h3>
-                    <p class="card__text">At NexGen, we prioritize understanding our clients' unique requirements,
-                        fostering transparent communication throughout the development process.</p>
+                <a href="#" class="card container" aria-label="Ориентированность на клиента">
+                    <h3 class="card__title">Ориентированность на клиента</h3>
+                    <p class="card__text">Для меня важно понимать потребности каждого клиента и обеспечить прозрачное
+                        общение на всех этапах разработки, чтобы результат полностью соответствовал ожиданиям.</p>
                     <span class="hero__stats-link">
-                        <span><img width="29" height="28" src="images/hero__stats-item.svg" alt="Know More icon"
+                        <span><img width="29" height="28" src="images/hero__stats-item.svg" alt="Знать больше"
                                 loading="lazy"></span>
-                        Learn More
+                        Узнать больше
                     </span>
                 </a>
 
-                <a href="#" class="card container" aria-label="Dedicated Team of Professionals">
-                    <h3 class="card__title">Dedicated Team of Professionals</h3>
-                    <p class="card__text">Our professionals bring a wealth of expertise to the table, ensuring the
-                        delivery of top-notch, scalable, and secure web solutions for your business.</p>
+                <a href="#" class="card container" aria-label="Команда профессионалов">
+                    <h3 class="card__title">Команда профессионалов</h3>
+                    <p class="card__text">Моя команда и я обладаем широким спектром знаний и навыков, чтобы предложить
+                        вашему бизнесу масштабируемые и безопасные веб-решения.</p>
                     <span class="hero__stats-link">
-                        <span><img width="29" height="28" src="images/hero__stats-item.svg" alt="Know More icon"
+                        <span><img width="29" height="28" src="images/hero__stats-item.svg" alt="Знать больше"
                                 loading="lazy"></span>
-                        Learn More
+                        Узнать больше
                     </span>
                 </a>
             </div>
         </section>
 
         <section id="services" class="services wrapper" aria-labelledby="services-title">
-            <h2 id="services-title" class="section__title container">Our Services</h2>
+            <h2 id="services-title" class="section__title container">Мои Услуги</h2>
             <div class="services__grid">
+                <!-- Веб-дизайн -->
                 <article class="service container" itemscope itemtype="https://schema.org/Service">
                     <div class="service__header">
                         <div class="service__header--box">
                             <div class="service__header--icon">
-                                <img src="images/icon-web-design.svg" alt="" class="service__icon" width="24"
-                                    height="24" loading="lazy" aria-hidden="true">
+                                <img src="images/icon-web-design.svg" alt="Иконка веб-дизайна" class="service__icon"
+                                    width="24" height="24" loading="lazy" aria-hidden="true">
                             </div>
-                            <h3 class="service__title" itemprop="name">Web Design</h3>
+                            <h3 class="service__title" itemprop="name">Веб-дизайн</h3>
                         </div>
                         <a href="#contact" class="service__cta hero__stats-link"
-                            aria-label="Book a call for Web Design">
-                            <span>
-                                <img src="images/hero__stats-item.svg" alt="" width="29" height="28" loading="lazy"
-                                    aria-hidden="true">
-                            </span>
-                            Book A Call
+                            aria-label="Записаться на консультацию по веб-дизайну">
+                            <span><img src="images/hero__stats-item.svg" alt="Иконка" width="29" height="28"
+                                    loading="lazy" aria-hidden="true"></span>
+
                         </a>
                     </div>
                     <p class="service__description" itemprop="description">
-                        Our Web Design service is all about creating visually stunning and user-friendly websites that
-                        leave a lasting impression.
+                        Я создаю стильные и удобные сайты, которые привлекают внимание и легко воспринимаются
+                        пользователями.
                     </p>
                     <p class="service__price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                        Starts from
-                        <span itemprop="priceCurrency" content="USD">$</span>
-                        <span itemprop="price" content="1500">1,500</span>
+                        От
+                        <span itemprop="priceCurrency" content="USD">₽</span>
+                        <span itemprop="price" content="1500">1 500</span>
                     </p>
-
-                    <a href="/" class="service__cta--link">Book A Call</a>
+                    <a href="/" class="service__cta--link">Записаться на консультацию</a>
                 </article>
 
+                <!-- Мобильные приложения -->
                 <article class="service container" itemscope itemtype="https://schema.org/Service">
                     <div class="service__header">
                         <div class="service__header--box">
                             <div class="service__header--icon">
-                                <img src="images/icon-mobile-app.svg" alt="" class="service__icon" width="24"
-                                    height="24" loading="lazy" aria-hidden="true">
+                                <img src="images/icon-mobile-app.svg" alt="Иконка мобильных приложений"
+                                    class="service__icon" width="24" height="24" loading="lazy" aria-hidden="true">
                             </div>
-                            <h3 class="service__title" itemprop="name">Mobile App Development</h3>
+                            <h3 class="service__title" itemprop="name">Разработка приложений</h3>
                         </div>
                         <a href="#contact" class="service__cta hero__stats-link"
-                            aria-label="Book a call for Mobile App Development">
-                            <span>
-                                <img src="images/hero__stats-item.svg" alt="" width="29" height="28" loading="lazy"
-                                    aria-hidden="true">
-                            </span>
-                            Book A Call
+                            aria-label="Записаться на консультацию по мобильным приложениям">
+                            <span><img src="images/hero__stats-item.svg" alt="Иконка" width="29" height="28"
+                                    loading="lazy" aria-hidden="true"></span>
+
                         </a>
                     </div>
                     <p class="service__description" itemprop="description">
-                        We harness the power of mobile technology to create cutting-edge applications that engage your
-                        customers on the go.
+                        Я использую современные технологии для создания мобильных приложений, которые обеспечивают
+                        отличный пользовательский опыт на iOS и Android.
                     </p>
                     <p class="service__price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                        Starts from
-                        <span itemprop="priceCurrency" content="USD">$</span>
-                        <span itemprop="price" content="2500">2,500</span>
+                        От
+                        <span itemprop="priceCurrency" content="USD">₽</span>
+                        <span itemprop="price" content="2500">2 500</span>
                     </p>
-                    <a href="/" class="service__cta--link">Book A Call</a>
+                    <a href="/" class="service__cta--link">Записаться на консультацию</a>
                 </article>
 
+                <!-- Разработка сайтов -->
                 <article class="service container" itemscope itemtype="https://schema.org/Service">
                     <div class="service__header">
                         <div class="service__header--box">
                             <div class="service__header--icon">
-                                <img src="images/icon-web-dev.svg" alt="" class="service__icon" width="24" height="24"
-                                    loading="lazy" aria-hidden="true">
+                                <img src="images/icon-web-dev.svg" alt="Иконка веб-разработки" class="service__icon"
+                                    width="24" height="24" loading="lazy" aria-hidden="true">
                             </div>
-                            <h3 class="service__title" itemprop="name">Web Development</h3>
+                            <h3 class="service__title" itemprop="name">Разработка сайтов</h3>
                         </div>
                         <a href="#contact" class="service__cta hero__stats-link"
-                            aria-label="Book a call for Web Development">
-                            <span>
-                                <img src="images/hero__stats-item.svg" alt="" width="29" height="28" loading="lazy"
-                                    aria-hidden="true">
-                            </span>
-                            Book A Call
+                            aria-label="Записаться на консультацию по веб-разработке">
+                            <span><img src="images/hero__stats-item.svg" alt="Иконка" width="29" height="28"
+                                    loading="lazy" aria-hidden="true"></span>
+
                         </a>
                     </div>
                     <p class="service__description" itemprop="description">
-                        Our Web Development service is focused on turning your website into a powerful digital asset. We
-                        utilize the latest technologies and industry best practices to build websites.
+                        Я превращаю сайты в мощные цифровые активы для вашего бизнеса, используя лучшие практики
+                        разработки.
                     </p>
                     <p class="service__price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                        Starts from
-                        <span itemprop="priceCurrency" content="USD">$</span>
-                        <span itemprop="price" content="1800">1,800</span>
+                        От
+                        <span itemprop="priceCurrency" content="USD">₽</span>
+                        <span itemprop="price" content="1800">1 800</span>
                     </p>
-                    <a href="/" class="service__cta--link">Book A Call</a>
+                    <a href="/" class="service__cta--link">Записаться на консультацию</a>
                 </article>
 
+                <!-- Цифровой маркетинг -->
                 <article class="service container" itemscope itemtype="https://schema.org/Service">
                     <div class="service__header">
                         <div class="service__header--box">
                             <div class="service__header--icon">
-                                <img src="images/icon-digital-marketing.svg" alt="" class="service__icon" width="24"
-                                    height="24" loading="lazy" aria-hidden="true">
+                                <img src="images/icon-digital-marketing.svg" alt="Иконка цифрового маркетинга"
+                                    class="service__icon" width="24" height="24" loading="lazy" aria-hidden="true">
                             </div>
-                            <h3 class="service__title" itemprop="name">Digital Marketing</h3>
+                            <h3 class="service__title" itemprop="name">Цифровой маркетинг</h3>
                         </div>
                         <a href="#contact" class="service__cta hero__stats-link"
-                            aria-label="Book a call for Digital Marketing">
-                            <span>
-                                <img src="images/hero__stats-item.svg" alt="" width="29" height="28" loading="lazy"
-                                    aria-hidden="true">
-                            </span>
-                            Book A Call
+                            aria-label="Записаться на консультацию по цифровому маркетингу">
+                            <span><img src="images/hero__stats-item.svg" alt="Иконка" width="29" height="28"
+                                    loading="lazy" aria-hidden="true"></span>
+
                         </a>
                     </div>
                     <p class="service__description" itemprop="description">
-                        In the digital age, marketing is a critical aspect of your business's success. Our Digital
-                        Marketing service employs data-driven strategies to enhance your brand's visibility
+                        Цифровой маркетинг — это ключ к успеху в современном бизнесе. Я использую стратегии на основе
+                        данных, чтобы повысить видимость вашего бренда в интернете.
                     </p>
                     <p class="service__price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                        Starts from
-                        <span itemprop="priceCurrency" content="USD">$</span>
-                        <span itemprop="price" content="1200">1,200</span>
+                        От
+                        <span itemprop="priceCurrency" content="USD">₽</span>
+                        <span itemprop="price" content="1200">1 200</span>
                     </p>
-                    <a href="/" class="service__cta--link">Book A Call</a>
+                    <a href="/" class="service__cta--link">Записаться на консультацию</a>
                 </article>
             </div>
         </section>
@@ -396,6 +363,7 @@
             <div class="works__grid">
                 <!-- Начало первого проекта -->
                 <article class="work" itemscope itemtype="https://schema.org/CreativeWork">
+
                     <div class="work__order-left container">
                         <div class="work__order--box">
                             <div class="work__order--header">
@@ -465,7 +433,7 @@
                                 <li><img width="50" height="50" src="images/avatar3.png" alt="Team Member 3"></li>
                             </ul>
                         </div>
-                        <a href="/" class="work__order--link">Book A Call</a>
+                        <a href="/" class="work__order--link button">Book A Call</a>
                     </div>
                 </article>
 
@@ -522,7 +490,7 @@
                     </figure>
 
                     <div class="work__order-right">
-                        <div class="work__order-right--technologies">
+                        <div class="work__order-right--technologies container">
                             <h3>Technologies Used</h3>
                             <ul>
                                 <li>WordPress</li>
@@ -532,7 +500,7 @@
                                 <li>JavaScript</li>
                             </ul>
                         </div>
-                        <div class="work__order-right--team">
+                        <div class="work__order-right--team container">
                             <h3>Team Members</h3>
                             <ul>
                                 <!-- Динамически выводить аватары участников команды через WordPress -->
