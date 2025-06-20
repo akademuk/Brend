@@ -2,8 +2,16 @@ document.addEventListener("DOMContentLoaded", () => {
   initThemeSwitcher();
   initBurgerMenu();
   initLanguageSwitcher();
-  initCounterAnimation();
-  initServicesSwiper();
+
+  // Загружаем и инициализируем счетчики только если они есть на странице
+  if (document.querySelector(".hero__stats")) {
+    initCounterAnimation();
+  }
+
+  // Загружаем и инициализируем слайдеры только если они есть на странице
+  if (document.querySelector(".hero__services-wrapper")) {
+    initServicesSwiper();
+  }
 });
 
 function initThemeSwitcher() {
@@ -38,7 +46,7 @@ function initBurgerMenu() {
   const burger = document.querySelector(".burger");
   const menu = document.querySelector(".mobile-links");
   const body = document.body;
-  const overlay = document.querySelector(".menu-overlay"); 
+  const overlay = document.querySelector(".menu-overlay");
 
   if (burger && menu && overlay) {
     function toggleMobileMenu() {
@@ -101,7 +109,7 @@ function initLanguageSwitcher() {
   });
 
   function setLanguage(language) {
-    languageOptions.forEach(option => {
+    languageOptions.forEach((option) => {
       option.classList.remove("active");
     });
 
@@ -116,8 +124,8 @@ function initLanguageSwitcher() {
 }
 
 function initCounterAnimation() {
-  const statsEl = document.querySelector('.hero__stats');
-  const values = document.querySelectorAll('.hero__stats-value');
+  const statsEl = document.querySelector(".hero__stats");
+  const values = document.querySelectorAll(".hero__stats-value");
   let started = false;
 
   const animateCount = (el) => {
@@ -135,15 +143,18 @@ function initCounterAnimation() {
     update();
   };
 
-  const obs = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting && !started) {
-        started = true;
-        values.forEach(animateCount);
-        obs.disconnect();
-      }
-    });
-  }, { threshold: 0.5 });
+  const obs = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && !started) {
+          started = true;
+          values.forEach(animateCount);
+          obs.disconnect();
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
 
   obs.observe(statsEl);
 }
@@ -163,7 +174,7 @@ function initServicesSwiper() {
   new Swiper(".hero__services-slider", {
     loop: true,
     speed: 5000,
-    slidesPerView: 'auto',
+    slidesPerView: "auto",
     spaceBetween: 0,
     autoplay: { delay: 0, disableOnInteraction: false },
     allowTouchMove: false,

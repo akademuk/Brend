@@ -9,11 +9,114 @@
     <meta name="robots" content="index, follow">
     <meta name="author" content="NexGen">
     <title>Digital Solutions</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            margin-top: -30px;
+        }
+
+        .heading-primary,
+        .heading-secondary {
+            font-family: 'RobotoFlex';
+            font-size: 28px;
+            font-weight: 600;
+            text-transform: uppercase;
+            line-height: normal;
+            transition: color 0.5s;
+        }
+
+        .paragraph {
+            transition: color 0.5s;
+        }
+
+        .container {
+            border-radius: 16px;
+            transition: background 0.5s;
+        }
+
+        .wrapper {
+            max-width: 1820px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        body {
+            font-family: "RobotoFlex", sans-serif;
+            transition: background-color 0.5s, color 0.5s;
+            font-size: 14px;
+            line-height: 150%;
+            font-style: normal;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            padding: 40px 16px;
+        }
+
+        body.light-theme {
+            background-color: var(--background-light);
+            color: var(--font-light);
+        }
+
+        body.dark-theme {
+            background-color: var(--background-dark);
+            color: var(--font-dark);
+        }
+
+        body.dark-theme .container {
+            background: var(--background-light-container);
+        }
+
+        body.light-theme .container {
+            background: grey;
+        }
+
+        body.dark-theme .paragraph {
+            color: var(--font-dark-text);
+        }
+
+        body.light-theme .paragraph {
+            color: #fff;
+        }
+
+        body.menu-open {
+            overflow: hidden;
+        }
+
+        body.menu-open header {
+            border-radius: 10px 10px 0 0;
+        }
+
+        .menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 8;
+            max-height: 0;
+            transition: max-height 0.5s;
+        }
+
+        .menu-overlay.active {
+            max-height: 100vh;
+        }
+
+        body.menu-open {
+            overflow: hidden;
+        }
+    </style>
 
     <!-- <link rel="stylesheet" href="style/aos.css" integrity="sha384-..." crossorigin="anonymous"> -->
     <link rel="stylesheet" href="style/swiper-bundle.min.css" integrity="sha384-..." crossorigin="anonymous">
-    <link rel="stylesheet" href="style/reset.css">
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/reset.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="style/style.css" media="print" onload="this.media='all'">
 
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="canonical" href="https://yourdomain.com">
@@ -155,10 +258,11 @@
 
                 <div class="hero__visual">
                     <figure class="hero__figure">
-                         <picture>
+                        <picture>
                             <source type="image/webp" srcset="images/hero__img.webp" width="593" height="465">
-                            <img src="images/hero__img.jpg" width="593" height="465" alt="EstateIn Real Estate – Web Development project preview"
-                            class="hero__image" loading="lazy">
+                            <img src="images/hero__img.jpg" width="593" height="465"
+                                alt="EstateIn Real Estate – Web Development project preview" class="hero__image"
+                                loading="lazy">
                         </picture>
                         <figcaption class="hero__figcaption">
                             EstateIn Real Estate<br>
@@ -437,10 +541,10 @@
                     </div>
 
                     <figure class="work__media" itemprop="image">
-                         <picture>
-                             <source type="image/webp" srcset="images/zenith-screenshot.webp" width="580" height="426">
-                            <img src="images/zenith-screenshot.jpg" alt="Zenith Fitness App preview" width="580" height="426" class="work__image"
-                                loading="lazy" decoding="async">
+                        <picture>
+                            <source type="image/webp" srcset="images/zenith-screenshot.webp" width="580" height="426">
+                            <img src="images/zenith-screenshot.jpg" alt="Zenith Fitness App preview" width="580"
+                                height="426" class="work__image" loading="lazy" decoding="async">
                         </picture>
                     </figure>
 
@@ -512,10 +616,11 @@
                     </div>
 
                     <figure class="work__media" itemprop="image">
-                         <picture>
-                             <source type="image/webp" srcset="images/zenith2-screenshot.webp" width="580" height="426">
-                            <img src="images/zenith2-screenshot.jpg" width="580" height="426" alt="A-Aura Ecommerce project preview"
-                            class="work__image" loading="lazy" decoding="async">
+                        <picture>
+                            <source type="image/webp" srcset="images/zenith2-screenshot.webp" width="580" height="426">
+                            <img src="images/zenith2-screenshot.jpg" width="580" height="426"
+                                alt="A-Aura Ecommerce project preview" class="work__image" loading="lazy"
+                                decoding="async">
                         </picture>
                     </figure>
 
@@ -787,8 +892,8 @@
 
     <!-- <script src="script/jquery-3.7.0.min.js"></script> -->
     <!-- <script src="script/aos.js"></script> -->
-    <script src="script/swiper-bundle.min.js"></script>
-    <script src="script/main.js"></script>
+    <script src="script/swiper-bundle.min.js" defer></script>
+    <script src="script/main.js" defer></script>
 </body>
 
 </html>
