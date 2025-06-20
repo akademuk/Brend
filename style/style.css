@@ -154,6 +154,10 @@ body.light-theme .border-light {
     border: 2px solid #E0E0E0;
 }
 
+body.light-theme .service__cta--link {
+    color: #fff;
+}
+
 body.menu-open header {
     border-radius: 10px 10px 0 0;
 }
@@ -233,6 +237,10 @@ body.light-theme .theme-toggle .switch {
 
 body.light-theme .work__order-right--technologies ul li {
   background-color: #EEF4F8;
+}
+
+body.light-theme .work__media {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -320,6 +328,7 @@ body.menu-open header {
 }
 
 .hero__service {
+    white-space: nowrap;
     color: #676665;
     font-family: "RobotoMono", sans-serif;
     font-size: 14px;
@@ -426,7 +435,7 @@ body.menu-open header {
 
 .hero__stats {
     display: flex;
-    padding: 8px 10px 5px 10px;
+    padding: 10px;
     flex-wrap: wrap;
     gap: 10px;
     border-radius: 16px;
