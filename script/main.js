@@ -22,6 +22,7 @@ function initThemeSwitcher() {
       document.body.classList.add("dark-theme");
       document.body.classList.remove("light-theme");
       switchThemeButton.classList.add("dark");
+      
     } else {
       document.body.classList.add("light-theme");
       document.body.classList.remove("dark-theme");
@@ -32,6 +33,8 @@ function initThemeSwitcher() {
       document.body.classList.toggle("dark-theme");
       document.body.classList.toggle("light-theme");
       switchThemeButton.classList.toggle("dark");
+          switchThemeButton.classList.toggle('fa-moon');
+    switchThemeButton.classList.add('animate-toggle');
 
       if (document.body.classList.contains("dark-theme")) {
         localStorage.setItem("theme", "dark");
