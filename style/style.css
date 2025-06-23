@@ -184,6 +184,87 @@ body.light-theme .service__cta--link {
     color: var(--white-color);
 }
 
+body.light-theme .faq__form-fields input {
+    background: var(--background-light);
+}
+
+body.light-theme .faq__form-fields textarea {
+    background: var(--background-light);
+}
+
+body.light-theme .faq__submit {
+    color: var(--white-color);
+}
+
+body.light-theme .cta-banner__box h2 {
+    color: var(--white-color);
+}
+
+body.light-theme .cta__btn {
+    background: var(--background-light);
+}
+
+body.light-theme .cta__btn .cta__btn-text {
+    color: var(--background-dark);
+}
+
+body.light-theme .cta__btn-icon {
+    filter: brightness(0) saturate(100%) invert(0%) sepia(5%) saturate(3560%) hue-rotate(320deg) brightness(89%) contrast(88%);
+}
+
+body.light-theme .cta-services .hero__services-slider {
+    background: var(--white-color) !important; 
+}
+
+body.light-theme .social-card__icon {
+    background: var(--background-light);
+    border: 1px solid var(--background-light);
+}
+
+body.light-theme .works__link-text {
+    background: var(--background-light);
+    border: 1px solid var(--background-light);
+}
+
+body.light-theme .footer__nav-title {
+    color: var(--color-orange);
+}
+
+body.light-theme .badge {
+    background: var(--background-light);
+    border: 1px solid var(--background-light);
+    color: var(--background-dark);
+}
+
+body.light-theme .footer__newsletter-title  {
+    color: var(--color-orange);
+}
+
+body.light-theme .footer__newsletter-btn {
+    background: var(--background-light);
+    border: 1px solid var(--background-light)
+}
+
+body.light-theme .faq__answer {
+    border-top: 1px solid var(--border-light);
+}
+
+body.light-theme .faq__form-title {
+    border-bottom: 1px solid var(--border-light);
+}
+
+body.light-theme .faq__label {
+    color: var(--color-orange);
+}
+
+body.light-theme .social-card__title {
+    color: var(--color-orange);
+}
+
+body.light-theme .cta__text {
+    color: var(--white-color);
+}
+
 body.menu-open {
     overflow: hidden;
 }
@@ -208,6 +289,11 @@ body.light-theme .hero__figure {
 
 body.light-theme .paragraph {
     color: var(--color-text);
+}
+
+body.light-theme .faq__question::after {
+    background-color: var(--background-light) !important;
+    border: 1px solid var(--background-light);
 }
 
 body.light-theme .hero__visual-link span img,
@@ -1027,16 +1113,6 @@ details[open] .faq__question::after {
     background-repeat: no-repeat;
     background-size: auto;
     background-position: center;
-    width: 40px;
-    min-width: 40px;
-    max-width: 40px;
-    padding: 10px;
-    height: 40px;
-    display: flex;
-    border-radius: 100px;
-    border: 1px solid #333;
-    box-sizing: border-box;
-    background-color: var(--bg-color);
 }
 
 .faq__form {
@@ -1365,6 +1441,7 @@ details[open] .faq__question::after {
     font-size: 16px;
     font-weight: 400;
     line-height: 150%;
+    border-radius: 0;
 }
 
 .footer__newsletter-input::placeholder {
@@ -2641,5 +2718,12 @@ details[open] .faq__question::after {
 
     .footer__links li:nth-last-of-type(1) {
         padding: 0;
+    }
+
+    .faq__question::after {
+        width: 52px;
+        min-width: 52px;
+        height: 52px;
+        background-size: 75%;
     }
 }
