@@ -1,29 +1,81 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Основное описание для поиска -->
     <meta name="description"
         content="NexGen provides cutting-edge digital solutions to help your business thrive in the digital landscape.">
     <meta name="robots" content="index, follow">
     <meta name="author" content="NexGen">
-    <title>Digital Solutions</title>
 
-    <!-- <link rel="stylesheet" href="style/aos.css" integrity="sha384-..." crossorigin="anonymous"> -->
-    <link rel="stylesheet" href="style/swiper-bundle.min.css" integrity="sha384-..." crossorigin="anonymous">
+    <!-- Open Graph для соцсетей -->
+    <meta property="og:title" content="NexGen — Digital Solutions for Your Business">
+    <meta property="og:description"
+        content="NexGen provides cutting-edge digital solutions to help your business thrive in the digital landscape.">
+    <meta property="og:url" content="https://yourdomain.com/">
+    <meta property="og:image" content="https://yourdomain.com/images/og-image.jpg">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="NexGen — Digital Solutions for Your Business">
+    <meta name="twitter:description"
+        content="NexGen provides cutting-edge digital solutions to help your business thrive in the digital landscape.">
+    <meta name="twitter:image" content="https://yourdomain.com/images/og-image.jpg">
+
+    <!-- Канонический URL и альтернативные языки -->
+    <link rel="canonical" href="https://yourdomain.com/">
+    <link rel="alternate" href="https://yourdomain.com/" hreflang="en">
+    <link rel="alternate" href="https://yourdomain.com/ru/" hreflang="ru">
+    <link rel="alternate" href="https://yourdomain.com/ua/" hreflang="uk">
+
+    <!-- Предзагрузка шрифтов и preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" as="style">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Ваши стили -->
     <link rel="stylesheet" href="style/reset.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="style/swiper-bundle.min.css">
     <link rel="stylesheet" href="style/style.css">
 
+    <!-- JSON-LD для организации и страницы -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "NexGen",
+    "url": "https://yourdomain.com/",
+    "logo": "https://yourdomain.com/images/Logo.svg",
+    "sameAs": [
+      "https://www.instagram.com/yourprofile",
+      "https://twitter.com/yourprofile",
+      "https://www.linkedin.com/company/yourprofile"
+    ]
+  }
+  </script>
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "headline": "Digital Solutions for Your Business",
+    "description": "NexGen provides cutting-edge digital solutions to help your business thrive in the digital landscape.",
+    "url": "https://yourdomain.com/"
+  }
+  </script>
+
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="canonical" href="https://yourdomain.com">
+    <title>NexGen — Digital Solutions for Your Business</title>
 </head>
 
 <body class="dark-theme">
+    <!-- ==== HEADER ==== -->
     <div class="language-switcher container">
         <div class="theme-switcher">
-            <button id="switchTheme" class="theme-toggle" aria-pressed="false" aria-label="Переключить тему">
-            </button>
+            <button id="switchTheme" class="theme-toggle" aria-pressed="false" aria-label="Toggle theme"></button>
         </div>
         <button id="languageToggle" class="language-toggle" aria-label="Select Language">
             <span class="language-option" id="en" aria-label="English">EN</span>
@@ -34,90 +86,82 @@
 
     <header class="container wrapper" role="banner">
         <div class="logo">
-            <a href="/" aria-label="Перейти на главную страницу">
-                <img width="98" height="19" src="images/Logo.svg" alt="Логотип вашего бренда" loading="lazy">
+            <a href="/" aria-label="Go to homepage">
+                <img width="98" height="19" src="images/Logo.svg" alt="NexGen logo" loading="lazy">
             </a>
         </div>
-
-        <nav class="navbar" role="navigation">
-            <ul class="desktop-menu" aria-label="Главное меню">
-                <li><a href="#" aria-label="Главная">Главная</a></li>
-                <li><a href="#" aria-label="Услуги">Услуги</a></li>
-                <li><a href="#" aria-label="Проекты">Проекты</a></li>
-                <li><a href="#" aria-label="О компании">Обо мне</a></li>
-                <li><a href="#" aria-label="Карьера">Карьера</a></li>
-                <li><a href="#" aria-label="Блог">Блог</a></li>
-                <li><a href="#contact" class="contact-btn" aria-label="Связаться с нами">Контакты</a></li>
+        <nav class="navbar" role="navigation" aria-label="Main menu">
+            <ul class="desktop-menu">
+                <li><a href="#" aria-label="Home">Home</a></li>
+                <li><a href="#services" aria-label="Services">Services</a></li>
+                <li><a href="#works" aria-label="Works">Works</a></li>
+                <li><a href="#about" aria-label="About">About</a></li>
+                <li><a href="#careers" aria-label="Careers">Careers</a></li>
+                <li><a href="#blog" aria-label="Blog">Blog</a></li>
+                <li><a href="#contact" class="contact-btn" aria-label="Contact us">Contact</a></li>
             </ul>
         </nav>
-
         <div class="mobile-menu">
-            <button class="burger" aria-label="Открыть меню" onclick="toggleMobileMenu()">
+            <button class="burger" aria-label="Open menu" onclick="toggleMobileMenu()">
                 <span class="burger-line"></span>
                 <span class="burger-line"></span>
                 <span class="burger-line"></span>
             </button>
         </div>
-
         <nav class="mobile-links" aria-hidden="true" role="menu">
             <ul>
-                <li><a href="#" role="menuitem" aria-label="Главная">Главная</a></li>
-                <li><a href="#" role="menuitem" aria-label="Услуги">Услуги</a></li>
-                <li><a href="#" role="menuitem" aria-label="Проекты">Проекты</a></li>
-                <li><a href="#" role="menuitem" aria-label="О компании">Обо мне</a></li>
-                <li><a href="#" role="menuitem" aria-label="Карьера">Карьера</a></li>
-                <li><a href="#" role="menuitem" aria-label="Блог">Блог</a></li>
-                <li><a href="#contact" role="menuitem" aria-label="Контакты">Контакты</a></li>
+                <li><a href="#" role="menuitem">Home</a></li>
+                <li><a href="#services" role="menuitem">Services</a></li>
+                <li><a href="#works" role="menuitem">Works</a></li>
+                <li><a href="#about" role="menuitem">About</a></li>
+                <li><a href="#careers" role="menuitem">Careers</a></li>
+                <li><a href="#blog" role="menuitem">Blog</a></li>
+                <li><a href="#contact" role="menuitem">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
 
-        <section class="hero wrapper" role="region" aria-labelledby="hero-title" itemscope
-            itemtype="https://schema.org/WebPage">
+        <!-- ==== HERO ==== -->
+        <section class="hero wrapper" role="region" aria-labelledby="hero-title">
             <div class="hero__container">
                 <div class="hero__content container">
                     <h1 id="hero-title" class="heading-primary">
-                        Цифровые решения<br>для вашего бизнеса
+                        Digital Solutions<br>for Your Business
                     </h1>
 
-                    <a href="/start-project" class="hero__button hero__button--primary" aria-label="Начать проект">
-                        <span><img src="images/link-arrow.svg" alt="Стрелка" aria-hidden="true" width="24" height="25"
-                                loading="lazy"></span>
-                        Начать проект
+                    <a href="/start-project" class="hero__button hero__button--primary" aria-label="Start a project">
+                        <span><img src="images/link-arrow.svg" alt="" aria-hidden="true" width="24" height="25"></span>
+                        Start a Project
                     </a>
 
                     <p class="hero__description paragraph">
-                        Я — опытный разработчик, и я готов помочь вашему бизнесу найти и внедрить эффективные цифровые
-                        решения. Работая напрямую с вами, я обеспечиваю максимальную экономию без лишних накруток.
+                        I’m an experienced developer ready to help your business adopt effective digital solutions. By
+                        working
+                        directly with you, I ensure maximum value without hidden costs.
                     </p>
 
-                    <div class="hero__services-slider swiper-container" aria-label="Наши услуги">
+                    <!-- Services slider (translated labels only) -->
+                    <div class="hero__services-slider swiper-container" aria-label="Our core services">
                         <div class="hero__services-wrapper swiper-wrapper">
-                            <div class="hero__slide swiper-slide" role="group" aria-roledescription="slide"
-                                aria-label="1 из 6">
-                                <span class="hero__service">Разработка сайтов</span>
+                            <div class="hero__slide swiper-slide" role="group" aria-label="1 of 6">
+                                <span class="hero__service">Web Development</span>
                             </div>
-                            <div class="hero__slide swiper-slide" role="group" aria-roledescription="slide"
-                                aria-label="2 из 6">
-                                <span class="hero__service">Мобильные приложения</span>
+                            <div class="hero__slide swiper-slide" role="group" aria-label="2 of 6">
+                                <span class="hero__service">Mobile Apps</span>
                             </div>
-                            <div class="hero__slide swiper-slide" role="group" aria-roledescription="slide"
-                                aria-label="3 из 6">
-                                <span class="hero__service">Дизайн и брендинг</span>
+                            <div class="hero__slide swiper-slide" role="group" aria-label="3 of 6">
+                                <span class="hero__service">Design & Branding</span>
                             </div>
-                            <div class="hero__slide swiper-slide" role="group" aria-roledescription="slide"
-                                aria-label="4 из 6">
-                                <span class="hero__service">Цифровая стратегия</span>
+                            <div class="hero__slide swiper-slide" role="group" aria-label="4 of 6">
+                                <span class="hero__service">Digital Strategy</span>
                             </div>
-                            <div class="hero__slide swiper-slide" role="group" aria-roledescription="slide"
-                                aria-label="5 из 6">
-                                <span class="hero__service">Консалтинг и поддержка</span>
+                            <div class="hero__slide swiper-slide" role="group" aria-label="5 of 6">
+                                <span class="hero__service">Consulting & Support</span>
                             </div>
-                            <div class="hero__slide swiper-slide" role="group" aria-roledescription="slide"
-                                aria-label="6 из 6">
-                                <span class="hero__service">Интеграция и настройка</span>
+                            <div class="hero__slide swiper-slide" role="group" aria-label="6 of 6">
+                                <span class="hero__service">Integration & Setup</span>
                             </div>
                         </div>
                     </div>
@@ -126,69 +170,70 @@
                 <div class="hero__visual">
                     <figure class="hero__figure">
                         <picture>
-                            <source type="image/webp" srcset="images/hero__img.webp" width="593" height="465">
-                            <img src="images/hero__img.jpg" width="593" height="465" alt="Проект для EstateIn"
-                                class="hero__image" loading="lazy">
+                            <source type="image/webp" srcset="images/hero__img.webp">
+                            <img src="images/hero__img.jpg" width="593" height="465"
+                                alt="Screenshot of EstateIn real estate project" class="hero__image" loading="lazy">
                         </picture>
                         <figcaption class="hero__figcaption">
                             EstateIn Real Estate<br>
-                            <span class="paragraph">Разработка веб-сайта</span>
+                            <span class="paragraph">Website Development</span>
                         </figcaption>
                     </figure>
 
-                    <a href="#top" class="hero__visual-link" aria-label="Вернуться наверх">
-                        <span><img src="images/link-arrow-top.svg" alt="Наверх" aria-hidden="true" width="60"
-                                height="60" loading="lazy"></span>
+                    <a href="#top" class="hero__visual-link" aria-label="Back to top">
+                        <span><img src="images/link-arrow-top.svg" alt="" aria-hidden="true" width="60"
+                                height="60"></span>
                     </a>
                 </div>
             </div>
 
-            <ul class="hero__stats border-light" aria-label="Наши достижения">
+            <!-- Hero stats -->
+            <ul class="hero__stats border-light" aria-label="Our achievements">
                 <li class="hero__stats-item container">
-                    <span class="hero__stats-label">Клиенты</span>
+                    <span class="hero__stats-label">Clients</span>
                     <span class="hero__stats-value" data-target="200">0</span>
                 </li>
                 <li class="hero__stats-item container">
-                    <span class="hero__stats-label">Проекты</span>
+                    <span class="hero__stats-label">Projects</span>
                     <span class="hero__stats-value" data-target="280">0</span>
                 </li>
                 <li class="hero__stats-item container">
-                    <span class="hero__stats-label">Счастливые клиенты</span>
+                    <span class="hero__stats-label">Happy Clients</span>
                     <span class="hero__stats-value" data-target="100">0</span>
                 </li>
                 <li class="hero__stats-item container">
-                    <span class="hero__stats-label">Подписчики</span>
+                    <span class="hero__stats-label">Subscribers</span>
                     <span class="hero__stats-value" data-target="420">0</span>
                 </li>
                 <li class="hero__stats-item container">
-                    <span class="hero__stats-label">Годы опыта</span>
+                    <span class="hero__stats-label">Years of Experience</span>
                     <span class="hero__stats-value" data-target="5">0</span>
                 </li>
                 <li class="hero__stats-item container hero__stats-item--action">
-                    <a href="/about" class="hero__stats-link" aria-label="Узнать больше о нас">
-                        <span><img width="29" height="28" src="images/hero__stats-item.svg" alt="Знать больше"
-                                loading="lazy"></span>
-                        Узнать больше
+                    <a href="/about" class="hero__stats-link" aria-label="Learn more about us">
+                        <span><img src="images/hero__stats-item.svg" alt="" width="29" height="28"></span>
+                        Learn More
                     </a>
                 </li>
             </ul>
         </section>
 
-        <section class="why-choose-us wrapper border-light" id="services" aria-labelledby="why-title">
-            <h2 id="why-title" class="heading-secondary container">Почему стоит выбрать меня для вашего проекта</h2>
+        <!-- ==== WHY CHOOSE US ==== -->
+        <section id="services" class="why-choose-us wrapper border-light" aria-labelledby="why-title">
+            <h2 id="why-title" class="heading-secondary container">Why Choose Me for Your Project</h2>
             <div class="cards">
-                <a href="#" class="card container" aria-label="Эксперт в современных технологиях">
-                    <h3 class="card__title">Эксперт в современных технологиях</h3>
-                    <p class="card__text paragraph">Я использую передовые технологии для разработки решений, которые
-                        отвечают
-                        современным требованиям, гарантируя инновации и долговечность.</p>
+                <a href="#services" class="card container" aria-label="Expert in modern technologies">
+                    <h3 class="card__title">Expert in Modern Technologies</h3>
+                    <p class="card__text paragraph">
+                        I leverage cutting-edge tools to build solutions that meet today’s standards, ensuring
+                        innovation and
+                        longevity.
+                    </p>
                     <span class="hero__stats-link">
-                        <span><img width="29" height="28" src="images/hero__stats-item.svg" alt="Знать больше"
-                                loading="lazy"></span>
-                        Узнать больше
+                        <span><img src="images/hero__stats-item.svg" alt="" width="29" height="28"></span>
+                        Learn More
                     </span>
                 </a>
-
                 <a href="#" class="card container" aria-label="Проверенный опыт успеха">
                     <h3 class="card__title">Проверенный опыт успеха</h3>
                     <p class="card__text paragraph">Мой опыт позволяет мне уверенно достигать результатов, предоставляя
@@ -227,38 +272,34 @@
             </div>
         </section>
 
-        <section id="services" class="services border-light wrapper" aria-labelledby="services-title">
-            <h2 id="services-title" class="section__title heading-secondary container">Мои Услуги</h2>
+        <!-- ==== SERVICES ==== -->
+        <section id="services-list" class="services border-light wrapper" aria-labelledby="services-title">
+            <h2 id="services-title" class="heading-secondary container">My Services</h2>
             <div class="services__grid">
-                <!-- Веб-дизайн -->
+                <!-- Web Design -->
                 <article class="service container" itemscope itemtype="https://schema.org/Service">
                     <div class="service__header">
                         <div class="service__header--box">
                             <div class="service__header--icon">
-                                <img src="images/icon-web-design.svg" alt="Иконка веб-дизайна" class="service__icon"
-                                    width="24" height="24" loading="lazy" aria-hidden="true">
+                                <img src="images/icon-web-design.svg" alt="" class="service__icon" width="24"
+                                    height="24" aria-hidden="true">
                             </div>
-                            <h3 class="service__title" itemprop="name">Веб-дизайн</h3>
+                            <h3 class="service__title" itemprop="name">Web Design</h3>
                         </div>
                         <a href="#contact" class="service__cta hero__stats-link"
-                            aria-label="Записаться на консультацию по веб-дизайну">
-                            <span><img src="images/hero__stats-item.svg" alt="Иконка" width="29" height="28"
-                                    loading="lazy" aria-hidden="true"></span>
-
+                            aria-label="Book a web design consultation">
+                            <span><img src="images/hero__stats-item.svg" alt="" width="29" height="28"></span>
                         </a>
                     </div>
                     <p class="service__description paragraph" itemprop="description">
-                        Я создаю стильные и удобные сайты, которые привлекают внимание и легко воспринимаются
-                        пользователями.
+                        I craft stylish, user-friendly websites that captivate visitors and ensure seamless interaction.
                     </p>
                     <p class="service__price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                        От
-                        <span itemprop="priceCurrency" content="USD">₽</span>
-                        <span itemprop="price" content="1500">1 500</span>
+                        From <span itemprop="priceCurrency" content="USD">$</span>
+                        <span itemprop="price" content="1500">1,500</span>
                     </p>
-                    <a href="/" class="service__cta--link">Записаться на консультацию</a>
+                    <a href="/" class="service__cta--link">Book a Consultation</a>
                 </article>
-
                 <!-- Мобильные приложения -->
                 <article class="service container" itemscope itemtype="https://schema.org/Service">
                     <div class="service__header">
@@ -766,48 +807,63 @@
     </main>
 
     <footer id="footer" class="footer wrapper" aria-labelledby="footer-title">
-        <h2 id="footer-title" class="visually-hidden">Footer</h2>
         <div class="footer__grid">
             <div class="footer__socials">
                 <a href="#" class="social-card social-card--instagram" aria-label="Instagram">
-                    <img src="images/icon-instagram.svg" alt="Instagram icon" class="social-card__icon" width="24"
-                        height="24" loading="lazy" aria-hidden="true">
+                    <div class="social-card__header">
+                        <img src="images/icon-instagram.svg" alt="Instagram icon" class="social-card__icon" width="24"
+                            height="24" loading="lazy" aria-hidden="true">
+                        <span class="works__link-text">
+                            <img src="images/hero__stats-item.svg" alt="" aria-hidden="true" width="16" height="16"
+                                loading="lazy">
+                        </span>
+                    </div>
                     <div class="social-card__info">
-                        <h3 class="social-card__title">Instagram</h3>
+                        <h3 class="social-card__title">INstagram</h3>
                         <p class="social-card__text">Share visually appealing snippets of our latest web projects.</p>
                     </div>
-                    <img src="images/icon-arrow-right.svg" alt="" class="social-card__cta-icon" width="16" height="16"
-                        loading="lazy" aria-hidden="true">
                 </a>
                 <a href="#" class="social-card social-card--twitter" aria-label="Twitter">
-                    <img src="images/icon-twitter.svg" alt="Twitter icon" class="social-card__icon" width="24"
-                        height="24" loading="lazy" aria-hidden="true">
+                    <div class="social-card__header">
+                        <img src="images/icon-twitter.svg" alt="Twitter icon" class="social-card__icon" width="24"
+                            height="24" loading="lazy" aria-hidden="true">
+                        <span class="works__link-text">
+                            <img src="images/hero__stats-item.svg" alt="" aria-hidden="true" width="16" height="16"
+                                loading="lazy">
+                        </span>
+                    </div>
                     <div class="social-card__info">
                         <h3 class="social-card__title">Twitter</h3>
                         <p class="social-card__text">Tweet about interesting coding challenges you’ve overcome.</p>
                     </div>
-                    <img src="images/icon-arrow-right.svg" alt="" class="social-card__cta-icon" width="16" height="16"
-                        loading="lazy" aria-hidden="true">
                 </a>
                 <a href="#" class="social-card social-card--dribbble" aria-label="Dribbble">
-                    <img src="images/icon-dribbble.svg" alt="Dribbble icon" class="social-card__icon" width="24"
-                        height="24" loading="lazy" aria-hidden="true">
+                    <div class="social-card__header">
+                        <img src="images/icon-dribbble.svg" alt="Dribbble icon" class="social-card__icon" width="24"
+                            height="24" loading="lazy" aria-hidden="true">
+                        <span class="works__link-text">
+                            <img src="images/hero__stats-item.svg" alt="" aria-hidden="true" width="16" height="16"
+                                loading="lazy">
+                        </span>
+                    </div>
                     <div class="social-card__info">
                         <h3 class="social-card__title">Dribbble</h3>
                         <p class="social-card__text">Showcase design elements of our web projects.</p>
                     </div>
-                    <img src="images/icon-arrow-right.svg" alt="" class="social-card__cta-icon" width="16" height="16"
-                        loading="lazy" aria-hidden="true">
                 </a>
                 <a href="#" class="social-card social-card--behance" aria-label="Behance">
-                    <img src="images/icon-behance.svg" alt="Behance icon" class="social-card__icon" width="24"
-                        height="24" loading="lazy" aria-hidden="true">
+                    <div class="social-card__header">
+                        <img src="images/icon-behance.svg" alt="Behance icon" class="social-card__icon" width="24"
+                            height="24" loading="lazy" aria-hidden="true">
+                        <span class="works__link-text">
+                            <img src="images/hero__stats-item.svg" alt="" aria-hidden="true" width="16" height="16"
+                                loading="lazy">
+                        </span>
+                    </div>
                     <div class="social-card__info">
                         <h3 class="social-card__title">Behance</h3>
                         <p class="social-card__text">Create detailed presentations for our projects.</p>
                     </div>
-                    <img src="images/icon-arrow-right.svg" alt="" class="social-card__cta-icon" width="16" height="16"
-                        loading="lazy" aria-hidden="true">
                 </a>
             </div>
 
@@ -818,7 +874,7 @@
                         <li><a href="#why" class="footer__nav-link">Why Us</a></li>
                         <li><a href="#about" class="footer__nav-link">About Us</a></li>
                         <li><a href="#testimonials" class="footer__nav-link">Testimonials</a></li>
-                        <li><a href="#faq" class="footer__nav-link">FAQs</a></li>
+                        <li><a href="#faq" class="footer__nav-link">FAQ’s</a></li>
                     </ul>
                 </div>
                 <div class="footer__nav-section">
@@ -852,24 +908,27 @@
             </nav>
 
             <div class="footer__newsletter">
-                <h3 class="footer__newsletter-title">Subscribe to our newsletter</h3>
+                <div class="footer__newsletter-box">
+                    <span>Newsletter</span>
+                    <h3 class="footer__newsletter-title">Subscribe to our newsletter</h3>
+                </div>
                 <form action="/subscribe" method="post" class="footer__newsletter-form">
                     <label for="footer-email" class="visually-hidden">Email address</label>
                     <input type="email" id="footer-email" name="email" class="footer__newsletter-input"
                         placeholder="Enter your email" required>
                     <button type="submit" class="btn btn--primary footer__newsletter-btn" aria-label="Subscribe">
-                        <img src="images/icon-arrow-right.svg" alt="Arrow Right" width="16" height="16" loading="lazy"
+                        <img src="images/link-arrow-top.svg" alt="Arrow Right" width="16" height="16" loading="lazy"
                             aria-hidden="true">
                     </button>
                 </form>
             </div>
-        </div>
 
-        <div class="footer__bottom">
-            <span class="footer__copyright">© 2025 NexGen. All rights reserved.</span>
-            <div class="footer__links">
-                <a href="/terms" class="footer__link">Terms &amp; Conditions</a>
-                <a href="/privacy" class="footer__link">Privacy Policy</a>
+            <div class="footer__bottom">
+                <span class="footer__copyright">© 2025 NexGen. All rights reserved.</span>
+                <div class="footer__links">
+                    <a href="/terms" class="footer__link">Terms &amp; Conditions</a>
+                    <a href="/privacy" class="footer__link">Privacy Policy</a>
+                </div>
             </div>
         </div>
     </footer>

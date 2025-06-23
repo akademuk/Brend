@@ -67,7 +67,7 @@
 
 
     --bg-color: #1F1F1F;
-    --color-orange: #CE7D63;
+    --color-orange: #00796B;
 }
 
 * {
@@ -1497,6 +1497,8 @@ details[open] .faq__question::after {
     justify-content: space-between;
     max-width: 100%;
     padding: 16px 14px;
+    max-width: 1820px;
+    margin: 0 auto;
     border-radius: 0 0 14px 14px;
     width: 100%;
 }
@@ -1610,6 +1612,7 @@ details[open] .faq__question::after {
     .hero__stats-item {
         width: calc(18% - 41px);
         min-height: 150px;
+        min-width: 256px;
         justify-content: center;
         border-radius: 14px;
         gap: 20px;
@@ -1619,6 +1622,7 @@ details[open] .faq__question::after {
     .hero__stats {
         justify-content: space-between;
         padding: 20px;
+        flex-wrap: wrap;
         border-radius: 24px;
         gap: 20px;
     }
@@ -2298,3 +2302,5 @@ details[open] .faq__question::after {
         font-size: 18px;
     }
 }
+
+
