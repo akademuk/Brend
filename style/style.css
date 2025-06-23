@@ -3,52 +3,59 @@
 -------------------------------- */
 
 @font-face {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 500;
-    font-display: swap;
-    src: url('../fonts/Inter-Medium.woff2') format('woff2'),
-        url('../fonts/Inter-Medium.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'RobotoFlex';
+    font-family: 'Gilroy';
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url('../fonts/RobotoFlex-Regular.woff2') format('woff2'),
-        url('../fonts/RobotoFlex-Regular.woff') format('woff');
+    src: url('../fonts/Gilroy-Regular.woff2') format('woff2'),
+        url('../fonts/Gilroy-Regular.woff') format('woff');
 }
 
-/* Roboto Mono: Regular */
 @font-face {
-    font-family: 'RobotoMono';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url('../fonts/RobotoMono-Regular.woff2') format('woff2'),
-        url('../fonts/RobotoMono-Regular.woff') format('woff');
-}
-
-/* Roboto Mono: Medium */
-@font-face {
-    font-family: 'RobotoMono';
+    font-family: 'Gilroy';
     font-style: normal;
     font-weight: 500;
     font-display: swap;
-    src: url('../fonts/RobotoMono-Medium.woff2') format('woff2'),
-        url('../fonts/RobotoMono-Medium.woff') format('woff');
+    src: url('../fonts/Gilroy-Medium.woff2') format('woff2'),
+        url('../fonts/Gilroy-Medium.woff') format('woff');
 }
 
-/* Roboto Mono: Bold */
 @font-face {
-    font-family: 'RobotoMono';
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('../fonts/Gilroy-Semibold.woff2') format('woff2'),
+        url('../fonts/Gilroy-Semibold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Gilroy';
     font-style: normal;
     font-weight: 700;
     font-display: swap;
-    src: url('../fonts/RobotoMono-Bold.woff2') format('woff2'),
-        url('../fonts/RobotoMono-Bold.woff') format('woff');
+    src: url('../fonts/Gilroy-Bold.woff2') format('woff2'),
+        url('../fonts/Gilroy-Bold.woff') format('woff');
 }
+
+@font-face {
+    font-family: 'ProximaNova';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../fonts/ProximaNova-Regular.woff2') format('woff2'),
+        url('../fonts/ProximaNova-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'ProximaNova';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('../fonts/ProximaNova-Semibold.woff2') format('woff2'),
+        url('../fonts/ProximaNova-Semibold.woff') format('woff');
+}
+
 
 
 :root {
@@ -67,7 +74,7 @@
 
 
     --bg-color: #1F1F1F;
-    --color-orange: #00796B;
+    --color-orange: #0051ad;
 }
 
 * {
@@ -82,7 +89,6 @@ main {
 
 .heading-primary,
 .heading-secondary {
-    font-family: 'RobotoFlex';
     font-size: 28px;
     font-weight: 600;
     text-transform: uppercase;
@@ -110,7 +116,7 @@ main {
 }
 
 body {
-    font-family: "RobotoFlex", sans-serif;
+    font-family: "Gilroy", sans-serif;
     transition: background-color 0.5s, color 0.5s;
     font-size: 14px;
     font-weight: 500;
@@ -120,6 +126,10 @@ body {
     flex-direction: column;
     gap: 16px;
     padding: 0 16px 40px 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'ProximaNova', sans-serif;
 }
 
 a {
@@ -324,7 +334,6 @@ body.menu-open header {
 .hero__service {
     white-space: nowrap;
     color: #676665;
-    font-family: "RobotoMono", sans-serif;
     font-weight: 400;
     text-transform: uppercase;
     position: relative;
@@ -359,7 +368,6 @@ body.menu-open header {
     align-items: center;
     gap: 9px;
     color: var(--color-orange);
-    font-family: "RobotoFlex", sans-serif;
     font-size: 20px;
     text-transform: uppercase;
     margin-bottom: 5px;
@@ -437,14 +445,12 @@ body.menu-open header {
 .hero__stats-label {
     color: #B3B3B2;
     text-align: center;
-    font-family: "RobotoMono";
     text-transform: uppercase;
 }
 
 .hero__stats-value {
     color: var(--color-orange);
     text-align: center;
-    font-family: "RobotoFlex";
     font-size: 40px;
     font-weight: 600;
     line-height: normal;
@@ -478,7 +484,6 @@ body.menu-open header {
     align-items: center;
     justify-content: center;
     color: #B3B3B2;
-    font-family: "RobotoMono";
     text-transform: uppercase;
     gap: 10px;
 }
@@ -562,7 +567,6 @@ body.menu-open header {
 .why-choose-us .hero__stats-link {
     color: #B3B3B2;
     font-size: 16px;
-    font-family: 'RobotoFlex';
     font-weight: 400;
     gap: 8px;
     text-transform: capitalize;
@@ -631,21 +635,18 @@ body.menu-open header {
 }
 
 .service__title {
-    font-family: "RobotoFlex", sans-serif;
     font-size: 20px;
     text-transform: uppercase;
 }
 
 .service__price {
     order: 1;
-    font-family: "RobotoFlex", sans-serif;
     font-size: 18px;
     text-transform: uppercase;
     margin-bottom: 6px;
 }
 
 .service__price span {
-    font-family: "RobotoFlex", sans-serif;
     font-size: 18px;
     text-transform: uppercase;
 }
@@ -653,7 +654,6 @@ body.menu-open header {
 .service__description {
     order: 2;
     color: #B3B3B2;
-    font-family: "RobotoFlex", sans-serif;
     font-weight: 400;
     margin-bottom: 20px;
 }
@@ -669,7 +669,6 @@ body.menu-open header {
     width: 100%;
     color: var(--background-dark);
     text-align: center;
-    font-family: "RobotoFlex", sans-serif;
     text-transform: uppercase;
 }
 
@@ -754,7 +753,6 @@ body.menu-open header {
 }
 
 .work__order__title {
-    font-family: "RobotoFlex", sans-serif;
     font-size: 16px;
     text-transform: uppercase;
 }
@@ -780,7 +778,6 @@ body.menu-open header {
 
 .work__meta li strong {
     color: #B3B3B2;
-    font-family: "RobotoFlex", sans-serif;
     font-size: 12px;
     font-weight: 400;
     display: flex;
@@ -801,13 +798,11 @@ body.menu-open header {
 .work__meta li span,
 .work__meta li time {
     color: #E6E6E6;
-    font-family: "RobotoFlex", sans-serif;
     font-size: 12px;
 }
 
 .work__order-left--text {
     color: #B3B3B2;
-    font-family: "RobotoFlex", sans-serif;
     font-weight: 400;
 }
 
@@ -824,7 +819,6 @@ body.menu-open header {
     background: var(--bg-color);
     padding: 10px;
     color: #B3B3B2;
-    font-family: "RobotoMono", sans-serif;
     font-size: 16px;
     text-transform: uppercase;
     gap: 8px;
@@ -882,14 +876,12 @@ body.menu-open header {
 }
 
 .testimonial__header h3 {
-    font-family: "RobotoFlex";
     font-size: 18px;
     text-transform: uppercase;
 }
 
 .testimonial__quote {
     color: #B3B3B2;
-    font-family: "RobotoFlex";
     font-size: 14px;
     font-weight: 400;
     line-height: 150%;
@@ -920,13 +912,11 @@ body.menu-open header {
 }
 
 .testimonial__author-name {
-    font-family: "RobotoFlex";
     font-size: 16px;
 }
 
 .testimonial__author-role {
     color: #81807E;
-    font-family: "RobotoFlex";
     font-weight: 400;
 }
 
@@ -1003,7 +993,6 @@ body.menu-open header {
     justify-content: space-between;
     gap: 20px;
     width: 100%;
-    font-family: "RobotoFlex";
     font-size: 18px;
     font-weight: 500;
 }
@@ -1013,7 +1002,6 @@ body.menu-open header {
     padding-top: 20px;
     border-top: 1px solid #262626;
     color: #B3B3B2;
-    font-family: "RobotoFlex";
     font-size: 14px;
     font-weight: 400;
     line-height: 150%;
@@ -1056,7 +1044,6 @@ details[open] .faq__question::after {
 }
 
 .faq__form-title {
-    font-family: "RobotoFlex";
     font-size: 18px;
     font-weight: 500;
     line-height: 150%;
@@ -1075,7 +1062,6 @@ details[open] .faq__question::after {
 
 .faq__label {
     color: #F3DFD8;
-    font-family: "RobotoFlex";
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
@@ -1091,7 +1077,6 @@ details[open] .faq__question::after {
     background: var(--font-light);
     border: none;
     color: #676665;
-    font-family: "RobotoFlex";
     font-size: 16px;
     font-weight: 400;
     line-height: 150%;
@@ -1100,7 +1085,6 @@ details[open] .faq__question::after {
 
 .faq__form-fields input::placeholder {
     color: #676665;
-    font-family: "RobotoFlex";
     font-size: 16px;
     font-weight: 400;
     line-height: 150%;
@@ -1115,7 +1099,6 @@ details[open] .faq__question::after {
     background: var(--font-light);
     border: none;
     color: #676665;
-    font-family: "RobotoFlex";
     font-size: 16px;
     font-weight: 400;
     line-height: 150%;
@@ -1125,7 +1108,6 @@ details[open] .faq__question::after {
 
 .faq__form-fields textarea {
     color: #676665;
-    font-family: "RobotoFlex";
     font-size: 16px;
     font-weight: 400;
     line-height: 150%;
@@ -1142,7 +1124,6 @@ details[open] .faq__question::after {
     border: none;
     color: var(--font-light);
     text-align: center;
-    font-family: "RobotoFlex";
     font-size: 14px;
     font-weight: 500;
     line-height: 150%;
@@ -1167,7 +1148,6 @@ details[open] .faq__question::after {
 
 .cta-banner__box h2 {
     color: var(--font-light);
-    font-family: "RobotoFlex";
     font-size: 28px;
     font-weight: 500;
     line-height: 120%;
@@ -1176,7 +1156,6 @@ details[open] .faq__question::after {
 
 .cta__text {
     color: #262626;
-    font-family: "RobotoFlex";
     font-size: 14px;
     font-weight: 400;
     line-height: 150%;
@@ -1198,7 +1177,6 @@ details[open] .faq__question::after {
 
 .cta__btn span {
     color: #F3DFD8;
-    font-family: "RobotoFlex";
     font-size: 14px;
     font-weight: 500;
     line-height: 150%;
@@ -1425,7 +1403,6 @@ details[open] .faq__question::after {
 .mobile-links ul a {
     color: #81807E;
     text-align: center;
-    font-family: "RobotoMono", sans-serif;
     text-transform: uppercase;
 }
 
@@ -1517,7 +1494,6 @@ details[open] .faq__question::after {
 .language-option {
     color: #81807E;
     text-align: center;
-    font-family: "RobotoMono", sans-serif;
     text-transform: uppercase;
     transition: color 0.5s;
 }
@@ -1590,7 +1566,6 @@ details[open] .faq__question::after {
     .desktop-menu li a {
         color: #81807E;
         text-align: center;
-        font-family: "RobotoMono", sans-serif;
         font-size: 18px;
         text-transform: uppercase;
     }
@@ -1779,14 +1754,12 @@ details[open] .faq__question::after {
         align-items: flex-start;
         gap: 8px;
         color: #F9EFEC;
-        font-family: "RobotoFlex";
         font-size: 24px;
         text-transform: uppercase;
     }
 
     .hero__figcaption span {
         color: #B3B3B2;
-        font-family: "RobotoFlex";
         font-size: 18px;
         font-weight: 400;
         text-transform: capitalize;
@@ -2047,7 +2020,6 @@ details[open] .faq__question::after {
 
     .work__order-right--technologies h3 {
         color: #FFF;
-        font-family: "RobotoFlex";
         font-size: 18px;
         text-transform: uppercase;
     }
@@ -2065,7 +2037,6 @@ details[open] .faq__question::after {
         border-radius: 45px;
         background: var(--bg-color);
         color: #E6E6E6;
-        font-family: "RobotoMono";
         font-size: 16px;
         font-weight: 400;
     }
@@ -2081,7 +2052,6 @@ details[open] .faq__question::after {
 
     .work__order-right--team h3 {
         color: #FFF;
-        font-family: "RobotoFlex";
         font-size: 18px;
         text-transform: uppercase;
     }
@@ -2101,7 +2071,6 @@ details[open] .faq__question::after {
         background: var(--color-orange);
         color: var(--font-light);
         text-align: center;
-        font-family: "RobotoFlex";
         font-size: 18px;
         text-transform: uppercase;
     }
