@@ -809,7 +809,7 @@
     <footer id="footer" class="footer wrapper" aria-labelledby="footer-title">
         <div class="footer__grid">
             <div class="footer__socials">
-                <a href="#" class="social-card social-card--instagram" aria-label="Instagram">
+                <a href="#" class="social-card social-card--instagram container" aria-label="Instagram">
                     <div class="social-card__header">
                         <img src="images/icon-instagram.svg" alt="Instagram icon" class="social-card__icon" width="24"
                             height="24" loading="lazy" aria-hidden="true">
@@ -823,7 +823,7 @@
                         <p class="social-card__text">Share visually appealing snippets of our latest web projects.</p>
                     </div>
                 </a>
-                <a href="#" class="social-card social-card--twitter" aria-label="Twitter">
+                <a href="#" class="social-card social-card--twitter container" aria-label="Twitter">
                     <div class="social-card__header">
                         <img src="images/icon-twitter.svg" alt="Twitter icon" class="social-card__icon" width="24"
                             height="24" loading="lazy" aria-hidden="true">
@@ -837,7 +837,7 @@
                         <p class="social-card__text">Tweet about interesting coding challenges you’ve overcome.</p>
                     </div>
                 </a>
-                <a href="#" class="social-card social-card--dribbble" aria-label="Dribbble">
+                <a href="#" class="social-card social-card--dribbble container" aria-label="Dribbble">
                     <div class="social-card__header">
                         <img src="images/icon-dribbble.svg" alt="Dribbble icon" class="social-card__icon" width="24"
                             height="24" loading="lazy" aria-hidden="true">
@@ -851,7 +851,7 @@
                         <p class="social-card__text">Showcase design elements of our web projects.</p>
                     </div>
                 </a>
-                <a href="#" class="social-card social-card--behance" aria-label="Behance">
+                <a href="#" class="social-card social-card--behance container" aria-label="Behance">
                     <div class="social-card__header">
                         <img src="images/icon-behance.svg" alt="Behance icon" class="social-card__icon" width="24"
                             height="24" loading="lazy" aria-hidden="true">
@@ -867,67 +867,73 @@
                 </a>
             </div>
 
-            <nav class="footer__nav" aria-label="Footer navigation">
-                <div class="footer__nav-section">
-                    <h3 class="footer__nav-title">Home</h3>
-                    <ul class="footer__nav-list">
-                        <li><a href="#why" class="footer__nav-link">Why Us</a></li>
-                        <li><a href="#about" class="footer__nav-link">About Us</a></li>
-                        <li><a href="#testimonials" class="footer__nav-link">Testimonials</a></li>
-                        <li><a href="#faq" class="footer__nav-link">FAQ’s</a></li>
-                    </ul>
+            <div class="footer__grid-box">
+                <nav class="footer__nav container" aria-label="Footer navigation">
+                    <div class="footer__nav-section">
+                        <h3 class="footer__nav-title">Home</h3>
+                        <ul class="footer__nav-list">
+                            <li><a href="#why" class="footer__nav-link">Why Us</a></li>
+                            <li><a href="#about" class="footer__nav-link">About Us</a></li>
+                            <li><a href="#testimonials" class="footer__nav-link">Testimonials</a></li>
+                            <li><a href="#faq" class="footer__nav-link">FAQ’s</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__nav-section">
+                        <h3 class="footer__nav-title">Services</h3>
+                        <ul class="footer__nav-list">
+                            <li><a href="#services" class="footer__nav-link">Web Development</a></li>
+                            <li><a href="#services" class="footer__nav-link">App Development</a></li>
+                            <li><a href="#services" class="footer__nav-link">Web Design</a></li>
+                            <li><a href="#services" class="footer__nav-link">Digital Marketing</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__nav-section">
+                        <h3 class="footer__nav-title">Projects</h3>
+                        <ul class="footer__nav-list">
+                            <li><a href="/works/klothink" class="footer__nav-link">Klothink</a></li>
+                            <li><a href="/works/zenith-fitness" class="footer__nav-link">Zenith</a></li>
+                            <li><a href="/works/novus" class="footer__nav-link">Novus</a></li>
+                            <li><a href="/works/apex" class="footer__nav-link">Apex</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__nav-section">
+                        <h3 class="footer__nav-title">Blogs</h3>
+                        <ul class="footer__nav-list">
+                            <li><a href="/blog/business" class="footer__nav-link">Business</a></li>
+                            <li><a href="/blog/design" class="footer__nav-link">Design <span
+                                        class="badge">Soon</span></a>
+                            </li>
+                            <li><a href="/blog/development" class="footer__nav-link">Development <span
+                                        class="badge">Soon</span></a></li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <div class="footer__newsletter container">
+                    <div class="footer__newsletter-box">
+                        <span>Newsletter</span>
+                        <h3 class="footer__newsletter-title">Subscribe to our newsletter</h3>
+                    </div>
+                    <form action="/subscribe" method="post" class="footer__newsletter-form">
+                        <input type="email" id="footer-email" name="email" class="footer__newsletter-input"
+                            placeholder="Enter your email" required>
+                        <button type="submit" class="btn btn--primary footer__newsletter-btn" aria-label="Subscribe">
+                            <img src="images/link-arrow-top.svg" alt="Arrow Right" width="16" height="16" loading="lazy"
+                                aria-hidden="true">
+                        </button>
+                    </form>
                 </div>
-                <div class="footer__nav-section">
-                    <h3 class="footer__nav-title">Services</h3>
-                    <ul class="footer__nav-list">
-                        <li><a href="#services" class="footer__nav-link">Web Development</a></li>
-                        <li><a href="#services" class="footer__nav-link">App Development</a></li>
-                        <li><a href="#services" class="footer__nav-link">Web Design</a></li>
-                        <li><a href="#services" class="footer__nav-link">Digital Marketing</a></li>
-                    </ul>
-                </div>
-                <div class="footer__nav-section">
-                    <h3 class="footer__nav-title">Projects</h3>
-                    <ul class="footer__nav-list">
-                        <li><a href="/works/klothink" class="footer__nav-link">Klothink</a></li>
-                        <li><a href="/works/zenith-fitness" class="footer__nav-link">Zenith</a></li>
-                        <li><a href="/works/novus" class="footer__nav-link">Novus</a></li>
-                        <li><a href="/works/apex" class="footer__nav-link">Apex</a></li>
-                    </ul>
-                </div>
-                <div class="footer__nav-section">
-                    <h3 class="footer__nav-title">Blogs</h3>
-                    <ul class="footer__nav-list">
-                        <li><a href="/blog/business" class="footer__nav-link">Business</a></li>
-                        <li><a href="/blog/design" class="footer__nav-link">Design <span class="badge">Soon</span></a>
+
+                <div class="footer__bottom container">
+                    <span class="footer__copyright">© 2025 NexGen. All rights reserved.</span>
+                    <ul class="footer__links">
+                        <li>
+                            <a href="/terms" class="footer__link">Terms &amp; Conditions</a>
                         </li>
-                        <li><a href="/blog/development" class="footer__nav-link">Development <span
-                                    class="badge">Soon</span></a></li>
+                        <li>
+                            <a href="/privacy" class="footer__link">Privacy Policy</a>
+                        </li>
                     </ul>
-                </div>
-            </nav>
-
-            <div class="footer__newsletter">
-                <div class="footer__newsletter-box">
-                    <span>Newsletter</span>
-                    <h3 class="footer__newsletter-title">Subscribe to our newsletter</h3>
-                </div>
-                <form action="/subscribe" method="post" class="footer__newsletter-form">
-                    <label for="footer-email" class="visually-hidden">Email address</label>
-                    <input type="email" id="footer-email" name="email" class="footer__newsletter-input"
-                        placeholder="Enter your email" required>
-                    <button type="submit" class="btn btn--primary footer__newsletter-btn" aria-label="Subscribe">
-                        <img src="images/link-arrow-top.svg" alt="Arrow Right" width="16" height="16" loading="lazy"
-                            aria-hidden="true">
-                    </button>
-                </form>
-            </div>
-
-            <div class="footer__bottom">
-                <span class="footer__copyright">© 2025 NexGen. All rights reserved.</span>
-                <div class="footer__links">
-                    <a href="/terms" class="footer__link">Terms &amp; Conditions</a>
-                    <a href="/privacy" class="footer__link">Privacy Policy</a>
                 </div>
             </div>
         </div>
