@@ -1606,9 +1606,6 @@ details[open] .faq__question::after {
         border-radius: 16px;
     }
 
-    #switchTheme {
-        height: 62px;
-    }
 
     .hero__stats-item {
         width: calc(18% - 41px);
