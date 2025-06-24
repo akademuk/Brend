@@ -183,11 +183,5 @@ function initCounterAnimation() {
 // }
 
 
-function toggleMobileMenu() {
-    var menu = document.getElementById('mobileMenu');
-    var isHidden = menu.getAttribute('aria-hidden') === 'true';
-    
-    menu.setAttribute('aria-hidden', isHidden ? 'false' : 'true');
-}
 
 
