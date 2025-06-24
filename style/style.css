@@ -81,7 +81,6 @@
 * {
     box-sizing: border-box;
     outline: none;
-    transition: all 0.5s;
 }
 
 a {
