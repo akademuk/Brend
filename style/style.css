@@ -65,11 +65,11 @@
     --white-color: #ffffff;
     --border-light: #E0E0E0;
     --color-text: #333333;
-    --gray-color: #808080;
+    --gray-color: #D3D3D3;
 
     /* Цвета для темной темы */
     --font-dark: #F9EFEC;
-    --font-dark-text: #676665;
+    --font-dark-text: #D3D3D3;
     --background-dark: #0F0F0F;
     --background-light-container: #1A1A1A;
 
@@ -80,6 +80,12 @@
 
 * {
     box-sizing: border-box;
+    outline: none;
+    transition: all 0.5s;
+}
+
+a {
+    color: inherit;
 }
 
 main {
@@ -169,6 +175,26 @@ body.light-theme .testimonial__footer {
 body.light-theme .testimonial__author-name,
 body.light-theme .testimonial__author-role {
     color: var(--white-color);
+}
+
+body.light-theme .language-option {
+    color: #404040;
+}
+
+body.light-theme .desktop-menu li a {
+    color: #404040;
+}
+
+body.light-theme .desktop-menu li.active {
+    background: var(--color-orange);
+}
+
+body.light-theme .desktop-menu li.active a {
+    color: var(--white-color);
+}
+
+body.light-theme .language-option.active {
+    color: var(--color-orange);
 }
 
 body.dark-theme .paragraph,
@@ -375,9 +401,6 @@ body.light-theme .mobile-links {
 body.menu-open {
     overflow: hidden;
 }
-
-
-
 
 
 
@@ -901,6 +924,11 @@ body.menu-open header {
 .work__order-left--text {
     color: var(--gray-color);
     font-weight: 400;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .work__mobile-link {
@@ -1090,6 +1118,7 @@ body.menu-open header {
     gap: 20px;
     width: 100%;
     font-size: 18px;
+    cursor: pointer;
     font-weight: 500;
 }
 
@@ -1744,7 +1773,7 @@ details[open] .faq__question::after {
 }
 
 .language-option {
-    color: #81807E;
+    color: #D3D3D3;
     text-align: center;
     text-transform: uppercase;
     transition: color 0.5s;
@@ -1816,7 +1845,7 @@ details[open] .faq__question::after {
     }
 
     .desktop-menu li a {
-        color: #81807E;
+        color: #D3D3D3;
         text-align: center;
         font-size: 18px;
         text-transform: uppercase;
