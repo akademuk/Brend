@@ -647,7 +647,7 @@ body.menu-open header {
 
 /* Контейнер блока "Почему выбирают нас" */
 .why-choose-us {
-    padding: 8px;
+    padding: 10px;
     border-radius: 16px;
     border: 2px solid var(--bg-color);
     display: flex;
@@ -658,7 +658,6 @@ body.menu-open header {
 .why-choose-us .cards {
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-start;
     gap: 10px;
 }
 
@@ -701,6 +700,7 @@ body.menu-open header {
 
 .why-choose-us .hero__stats-link {
     color: var(--gray-color);
+    margin-top: auto;
     font-size: 16px;
     font-weight: 600;
     gap: 8px;
@@ -732,7 +732,7 @@ body.menu-open header {
     display: flex;
     padding: 24px;
     flex-direction: column;
-    justify-content: center;
+    justify-content:flex-start;
     align-items: flex-start;
     border-radius: 14px;
     min-width: 264px;
@@ -798,6 +798,7 @@ body.menu-open header {
     order: 3;
     padding: 14px 20px;
     justify-content: center;
+    margin-top: auto;
     align-items: center;
     border-radius: 8px;
     background: var(--color-orange);
