@@ -73,11 +73,12 @@
 
 <body class="dark-theme">
     <!-- ==== HEADER ==== -->
-    <div class="language-switcher container">
+    <div class="language-switcher container" role="region" aria-label="Language selection">
         <div class="theme-switcher">
-            <button id="switchTheme" class="theme-toggle" aria-pressed="false" aria-label="Toggle theme"></button>
+            <button id="switchTheme" class="theme-toggle" aria-pressed="false" aria-label="Toggle theme"
+                aria-live="polite"></button>
         </div>
-        <button id="languageToggle" class="language-toggle" aria-label="Select Language">
+        <button id="languageToggle" class="language-toggle" aria-label="Select Language" aria-expanded="false">
             <span class="language-option" id="en" aria-label="English">EN</span>
             <span class="language-option" id="ua" aria-label="Ukrainian">UA</span>
             <span class="language-option" id="ru" aria-label="Russian">RU</span>
@@ -102,7 +103,7 @@
             </ul>
         </nav>
         <div class="mobile-menu">
-            <button class="burger" aria-label="Open menu" onclick="toggleMobileMenu()">
+            <button class="burger" aria-label="Open menu" onclick="toggleMobileMenu()" aria-expanded="false">
                 <span class="burger-line"></span>
                 <span class="burger-line"></span>
                 <span class="burger-line"></span>
@@ -121,6 +122,7 @@
         </nav>
     </header>
 
+
     <main>
 
         <!-- ==== HERO ==== -->
@@ -138,8 +140,7 @@
 
                     <p class="hero__description paragraph">
                         I’m an experienced developer ready to help your business adopt effective digital solutions. By
-                        working
-                        directly with you, I ensure maximum value without hidden costs.
+                        working directly with you, I ensure maximum value without hidden costs.
                     </p>
 
                     <!-- Services slider (translated labels only) -->
@@ -172,9 +173,10 @@
                         <picture>
                             <source type="image/webp" srcset="images/hero__img.webp">
                             <img src="images/hero__img.jpg" width="593" height="465"
-                                alt="Screenshot of EstateIn real estate project" class="hero__image" loading="lazy">
+                                alt="Screenshot of EstateIn real estate project" class="hero__image" loading="lazy"
+                                aria-describedby="hero-description">
                         </picture>
-                        <figcaption class="hero__figcaption">
+                        <figcaption class="hero__figcaption" id="hero-description">
                             EstateIn Real Estate<br>
                             <span class="paragraph">Website Development</span>
                         </figcaption>
@@ -188,28 +190,28 @@
             </div>
 
             <!-- Hero stats -->
-            <ul class="hero__stats border-light" aria-label="Our achievements">
-                <li class="hero__stats-item container">
+            <ul class="hero__stats border-light" aria-label="Our achievements" role="list">
+                <li class="hero__stats-item container" role="listitem">
                     <span class="hero__stats-label">Clients</span>
-                    <span class="hero__stats-value" data-target="200">0</span>
+                    <span class="hero__stats-value" data-target="200" aria-live="polite">0</span>
                 </li>
-                <li class="hero__stats-item container">
+                <li class="hero__stats-item container" role="listitem">
                     <span class="hero__stats-label">Projects</span>
-                    <span class="hero__stats-value" data-target="280">0</span>
+                    <span class="hero__stats-value" data-target="280" aria-live="polite">0</span>
                 </li>
-                <li class="hero__stats-item container">
+                <li class="hero__stats-item container" role="listitem">
                     <span class="hero__stats-label">Happy Clients</span>
-                    <span class="hero__stats-value" data-target="100">0</span>
+                    <span class="hero__stats-value" data-target="100" aria-live="polite">0</span>
                 </li>
-                <li class="hero__stats-item container">
+                <li class="hero__stats-item container" role="listitem">
                     <span class="hero__stats-label">Subscribers</span>
-                    <span class="hero__stats-value" data-target="420">0</span>
+                    <span class="hero__stats-value" data-target="420" aria-live="polite">0</span>
                 </li>
-                <li class="hero__stats-item container">
+                <li class="hero__stats-item container" role="listitem">
                     <span class="hero__stats-label">Years of Experience</span>
-                    <span class="hero__stats-value" data-target="5">0</span>
+                    <span class="hero__stats-value" data-target="5" aria-live="polite">0</span>
                 </li>
-                <li class="hero__stats-item container hero__stats-item--action">
+                <li class="hero__stats-item container hero__stats-item--action" role="listitem">
                     <a href="/" class="hero__stats-link" aria-label="Learn more about us">
                         <span><img src="images/hero__stats-item.svg" alt="" width="29" height="28"></span>
                         Learn More
@@ -218,77 +220,84 @@
             </ul>
         </section>
 
+
         <!-- ==== WHY CHOOSE US ==== -->
         <section id="services" class="why-choose-us wrapper border-light" aria-labelledby="why-title">
             <h2 id="why-title" class="heading-secondary container">Why Choose Me for Your Project</h2>
             <div class="cards">
-                <a href="#services" class="card container" aria-label="Expert in modern technologies">
+                <a href="#services" class="card container" aria-label="Expert in modern technologies" role="article">
                     <h3 class="card__title">Expert in Modern Technologies</h3>
                     <p class="card__text paragraph">
                         I leverage cutting-edge tools to build solutions that meet today’s standards, ensuring
-                        innovation and
-                        longevity.
+                        innovation and longevity.
                     </p>
                     <span class="hero__stats-link">
-                        <span><img src="images/hero__stats-item.svg" alt="" width="29" height="28"></span>
+                        <span><img src="images/hero__stats-item.svg" alt="Arrow icon" aria-hidden="true" width="29"
+                                height="28"></span>
                         Learn More
                     </span>
                 </a>
-                <a href="#" class="card container" aria-label="Проверенный опыт успеха">
+                <a href="#" class="card container" aria-label="Proven track record of success" role="article">
                     <h3 class="card__title">Проверенный опыт успеха</h3>
-                    <p class="card__text paragraph">Мой опыт позволяет мне уверенно достигать результатов, предоставляя
-                        клиентам
-                        надежные и эффективные веб-решения, которые соответствуют их уникальным потребностям.</p>
+                    <p class="card__text paragraph">
+                        Мой опыт позволяет мне уверенно достигать результатов, предоставляя клиентам надежные и
+                        эффективные веб-решения, которые соответствуют их уникальным потребностям.
+                    </p>
                     <span class="hero__stats-link">
-                        <span><img width="29" height="28" src="images/hero__stats-item.svg" alt="Знать больше"
-                                loading="lazy"></span>
+                        <span><img width="29" height="28" src="images/hero__stats-item.svg" alt="Arrow icon"
+                                aria-hidden="true" loading="lazy"></span>
                         Узнать больше
                     </span>
                 </a>
 
-                <a href="#" class="card container" aria-label="Ориентированность на клиента">
+                <a href="#" class="card container" aria-label="Client-oriented approach" role="article">
                     <h3 class="card__title">Ориентированность на клиента</h3>
-                    <p class="card__text paragraph">Для меня важно понимать потребности каждого клиента и обеспечить
-                        прозрачное
-                        общение на всех этапах разработки, чтобы результат полностью соответствовал ожиданиям.</p>
+                    <p class="card__text paragraph">
+                        Для меня важно понимать потребности каждого клиента и обеспечить прозрачное общение на всех
+                        этапах разработки, чтобы результат полностью соответствовал ожиданиям.
+                    </p>
                     <span class="hero__stats-link">
-                        <span><img width="29" height="28" src="images/hero__stats-item.svg" alt="Знать больше"
-                                loading="lazy"></span>
+                        <span><img width="29" height="28" src="images/hero__stats-item.svg" alt="Arrow icon"
+                                aria-hidden="true" loading="lazy"></span>
                         Узнать больше
                     </span>
                 </a>
 
-                <a href="#" class="card container" aria-label="Команда профессионалов">
+                <a href="#" class="card container" aria-label="Professional team" role="article">
                     <h3 class="card__title">Команда профессионалов</h3>
-                    <p class="card__text paragraph">Моя команда и я обладаем широким спектром знаний и навыков, чтобы
-                        предложить
-                        вашему бизнесу масштабируемые и безопасные веб-решения.</p>
+                    <p class="card__text paragraph">
+                        Моя команда и я обладаем широким спектром знаний и навыков, чтобы предложить вашему бизнесу
+                        масштабируемые и безопасные веб-решения.
+                    </p>
                     <span class="hero__stats-link">
-                        <span><img width="29" height="28" src="images/hero__stats-item.svg" alt="Знать больше"
-                                loading="lazy"></span>
+                        <span><img width="29" height="28" src="images/hero__stats-item.svg" alt="Arrow icon"
+                                aria-hidden="true" loading="lazy"></span>
                         Узнать больше
                     </span>
                 </a>
             </div>
         </section>
 
+
         <!-- ==== SERVICES ==== -->
         <section id="services-list" class="services border-light wrapper" aria-labelledby="services-title">
             <h2 id="services-title" class="heading-secondary container">My Services</h2>
             <div class="services__grid">
                 <!-- Web Design -->
-                <article class="service container" itemscope itemtype="https://schema.org/Service">
+                <article class="service container" itemscope itemtype="https://schema.org/Service" role="article"
+                    aria-labelledby="web-design-title">
                     <div class="service__header">
                         <div class="service__header--box">
                             <div class="service__header--icon">
-                                <img src="images/icon-web-design.svg" alt="" class="service__icon" width="24"
-                                    height="24" aria-hidden="true">
+                                <img src="images/icon-web-design.svg" alt="Web Design Icon" class="service__icon"
+                                    width="24" height="24" aria-hidden="true">
                             </div>
-                            <h3 class="service__title" itemprop="name">Web Design</h3>
+                            <h3 id="web-design-title" class="service__title" itemprop="name">Web Design</h3>
                         </div>
                         <a href="#contact" class="service__cta hero__stats-link"
                             aria-label="Book a web design consultation">
-                            <span><img src="images/hero__stats-item.svg" alt="" width="29" height="28"></span>
+                            <span><img src="images/hero__stats-item.svg" alt="Arrow Icon" aria-hidden="true" width="29"
+                                    height="28"></span>
                         </a>
                     </div>
                     <p class="service__description paragraph" itemprop="description">
@@ -298,23 +307,25 @@
                         From <span itemprop="priceCurrency" content="USD">$</span>
                         <span itemprop="price" content="1500">1,500</span>
                     </p>
-                    <a href="/" class="service__cta--link">Book a Consultation</a>
+                    <a href="/" class="service__cta--link" aria-label="Book a consultation for Web Design">Book a
+                        Consultation</a>
                 </article>
-                <!-- Мобильные приложения -->
-                <article class="service container" itemscope itemtype="https://schema.org/Service">
+
+                <!-- Mobile Apps -->
+                <article class="service container" itemscope itemtype="https://schema.org/Service" role="article"
+                    aria-labelledby="mobile-app-title">
                     <div class="service__header">
                         <div class="service__header--box">
                             <div class="service__header--icon">
-                                <img src="images/icon-mobile-app.svg" alt="Иконка мобильных приложений"
-                                    class="service__icon" width="24" height="24" loading="lazy" aria-hidden="true">
+                                <img src="images/icon-mobile-app.svg" alt="Mobile App Icon" class="service__icon"
+                                    width="24" height="24" loading="lazy" aria-hidden="true">
                             </div>
-                            <h3 class="service__title" itemprop="name">Разработка приложений</h3>
+                            <h3 id="mobile-app-title" class="service__title" itemprop="name">Разработка приложений</h3>
                         </div>
                         <a href="#contact" class="service__cta hero__stats-link"
                             aria-label="Записаться на консультацию по мобильным приложениям">
-                            <span><img src="images/hero__stats-item.svg" alt="Иконка" width="29" height="28"
-                                    loading="lazy" aria-hidden="true"></span>
-
+                            <span><img src="images/hero__stats-item.svg" alt="Arrow Icon" aria-hidden="true" width="29"
+                                    height="28" loading="lazy"></span>
                         </a>
                     </div>
                     <p class="service__description paragraph" itemprop="description">
@@ -322,28 +333,28 @@
                         отличный пользовательский опыт на iOS и Android.
                     </p>
                     <p class="service__price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                        От
-                        <span itemprop="priceCurrency" content="USD">₽</span>
-                        <span itemprop="price" content="2500">2 500</span>
+                        От <span itemprop="priceCurrency" content="USD">₽</span>
+                        <span itemprop="price" content="2500">2,500</span>
                     </p>
-                    <a href="/" class="service__cta--link">Записаться на консультацию</a>
+                    <a href="/" class="service__cta--link"
+                        aria-label="Записаться на консультацию по мобильным приложениям">Записаться на консультацию</a>
                 </article>
 
-                <!-- Разработка сайтов -->
-                <article class="service container" itemscope itemtype="https://schema.org/Service">
+                <!-- Web Development -->
+                <article class="service container" itemscope itemtype="https://schema.org/Service" role="article"
+                    aria-labelledby="web-dev-title">
                     <div class="service__header">
                         <div class="service__header--box">
                             <div class="service__header--icon">
-                                <img src="images/icon-web-dev.svg" alt="Иконка веб-разработки" class="service__icon"
+                                <img src="images/icon-web-dev.svg" alt="Web Development Icon" class="service__icon"
                                     width="24" height="24" loading="lazy" aria-hidden="true">
                             </div>
-                            <h3 class="service__title" itemprop="name">Разработка сайтов</h3>
+                            <h3 id="web-dev-title" class="service__title" itemprop="name">Разработка сайтов</h3>
                         </div>
                         <a href="#contact" class="service__cta hero__stats-link"
                             aria-label="Записаться на консультацию по веб-разработке">
-                            <span><img src="images/hero__stats-item.svg" alt="Иконка" width="29" height="28"
-                                    loading="lazy" aria-hidden="true"></span>
-
+                            <span><img src="images/hero__stats-item.svg" alt="Arrow Icon" aria-hidden="true" width="29"
+                                    height="28" loading="lazy"></span>
                         </a>
                     </div>
                     <p class="service__description paragraph" itemprop="description">
@@ -351,28 +362,29 @@
                         разработки.
                     </p>
                     <p class="service__price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                        От
-                        <span itemprop="priceCurrency" content="USD">₽</span>
-                        <span itemprop="price" content="1800">1 800</span>
+                        От <span itemprop="priceCurrency" content="USD">₽</span>
+                        <span itemprop="price" content="1800">1,800</span>
                     </p>
-                    <a href="/" class="service__cta--link">Записаться на консультацию</a>
+                    <a href="/" class="service__cta--link"
+                        aria-label="Записаться на консультацию по веб-разработке">Записаться на консультацию</a>
                 </article>
 
-                <!-- Цифровой маркетинг -->
-                <article class="service container" itemscope itemtype="https://schema.org/Service">
+                <!-- Digital Marketing -->
+                <article class="service container" itemscope itemtype="https://schema.org/Service" role="article"
+                    aria-labelledby="digital-marketing-title">
                     <div class="service__header">
                         <div class="service__header--box">
                             <div class="service__header--icon">
-                                <img src="images/icon-digital-marketing.svg" alt="Иконка цифрового маркетинга"
+                                <img src="images/icon-digital-marketing.svg" alt="Digital Marketing Icon"
                                     class="service__icon" width="24" height="24" loading="lazy" aria-hidden="true">
                             </div>
-                            <h3 class="service__title" itemprop="name">Цифровой маркетинг</h3>
+                            <h3 id="digital-marketing-title" class="service__title" itemprop="name">Цифровой маркетинг
+                            </h3>
                         </div>
                         <a href="#contact" class="service__cta hero__stats-link"
                             aria-label="Записаться на консультацию по цифровому маркетингу">
-                            <span><img src="images/hero__stats-item.svg" alt="Иконка" width="29" height="28"
-                                    loading="lazy" aria-hidden="true"></span>
-
+                            <span><img src="images/hero__stats-item.svg" alt="Arrow Icon" aria-hidden="true" width="29"
+                                    height="28" loading="lazy"></span>
                         </a>
                     </div>
                     <p class="service__description paragraph" itemprop="description">
@@ -380,22 +392,23 @@
                         данных, чтобы повысить видимость вашего бренда в интернете.
                     </p>
                     <p class="service__price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                        От
-                        <span itemprop="priceCurrency" content="USD">₽</span>
-                        <span itemprop="price" content="1200">1 200</span>
+                        От <span itemprop="priceCurrency" content="USD">₽</span>
+                        <span itemprop="price" content="1200">1,200</span>
                     </p>
-                    <a href="/" class="service__cta--link">Записаться на консультацию</a>
+                    <a href="/" class="service__cta--link"
+                        aria-label="Записаться на консультацию по цифровому маркетингу">Записаться на консультацию</a>
                 </article>
             </div>
         </section>
+
 
         <section id="works" class="works border-light wrapper" aria-labelledby="works-title">
             <div class="works__header container">
                 <h2 id="works-title" class="section__title heading-secondary">Our Works</h2>
                 <a href="/works" class="works__link hero__stats-link" aria-label="View all works">
                     <span class="works__link-text">
-                        <img src="images/hero__stats-item.svg" alt="" aria-hidden="true" width="16" height="16"
-                            loading="lazy">
+                        <img src="images/hero__stats-item.svg" alt="Arrow icon" aria-hidden="true" width="16"
+                            height="16" loading="lazy">
                     </span>
                     ALL Works
                 </a>
@@ -403,23 +416,23 @@
 
             <div class="works__grid">
                 <!-- Начало первого проекта -->
-                <article class="work border-light" itemscope itemtype="https://schema.org/CreativeWork">
-
+                <article class="work border-light" itemscope itemtype="https://schema.org/CreativeWork" role="article"
+                    aria-labelledby="zenith-title">
                     <div class="work__order-left container">
                         <div class="work__order--box">
                             <div class="work__order--header">
                                 <div class="work__order--icon">
-                                    <img src="images/order1.svg" alt="" class="work__order__icon" width="24" height="24"
-                                        loading="lazy" aria-hidden="true">
+                                    <img src="images/order1.svg" alt="Zenith Fitness App Icon" class="work__order__icon"
+                                        width="24" height="24" loading="lazy" aria-hidden="true">
                                 </div>
-                                <h3 class="work__order__title" itemprop="name">Zenith Fitness App</h3>
+                                <h3 id="zenith-title" class="work__order__title" itemprop="name">Zenith Fitness App</h3>
                             </div>
 
                             <a href="#contact" class="work__order__cta hero__stats-link"
-                                aria-label="Book a call for Web Design">
+                                aria-label="Book a call for Zenith Fitness App">
                                 <span>
-                                    <img src="images/hero__stats-item.svg" alt="" width="29" height="28" loading="lazy"
-                                        aria-hidden="true">
+                                    <img src="images/hero__stats-item.svg" alt="Arrow icon" aria-hidden="true"
+                                        width="29" height="28" loading="lazy">
                                 </span>
                                 Details
                             </a>
@@ -428,8 +441,7 @@
                         <ul class="work__meta">
                             <li><strong>Category</strong> <span itemprop="genre" class="paragraph">Mobile App
                                     Development</span></li>
-                            <li><strong>Time Taken</strong> <time itemprop="duration" class="paragraph">6
-                                    months</time>
+                            <li><strong>Time Taken</strong> <time itemprop="duration" class="paragraph">6 months</time>
                             </li>
                         </ul>
 
@@ -439,10 +451,10 @@
                         </p>
 
                         <a href="#contact" class="work__mobile-link hero__stats-link"
-                            aria-label="Book a call for Web Design">
+                            aria-label="Book a call for Zenith Fitness App">
                             <span>
-                                <img src="images/hero__stats-item.svg" alt="" width="29" height="28" loading="lazy"
-                                    aria-hidden="true">
+                                <img src="images/hero__stats-item.svg" alt="Arrow icon" aria-hidden="true" width="29"
+                                    height="28" loading="lazy">
                             </span>
                             Details
                         </a>
@@ -470,10 +482,12 @@
                         <div class="work__order-right--team container">
                             <h3 class="paragraph">Team Members</h3>
                             <ul>
-                                <!-- Динамически выводить аватары участников команды через WordPress -->
-                                <li><img width="50" height="50" src="images/avatar1.png" alt="Team Member 1"></li>
-                                <li><img width="50" height="50" src="images/avatar2.png" alt="Team Member 2"></li>
-                                <li><img width="50" height="50" src="images/avatar3.png" alt="Team Member 3"></li>
+                                <li><img width="50" height="50" src="images/avatar1.png" alt="Team Member 1: John Doe">
+                                </li>
+                                <li><img width="50" height="50" src="images/avatar2.png"
+                                        alt="Team Member 2: Jane Smith"></li>
+                                <li><img width="50" height="50" src="images/avatar3.png"
+                                        alt="Team Member 3: Bob Johnson"></li>
                             </ul>
                         </div>
                         <a href="/" class="work__order--link button">Book A Call</a>
@@ -481,22 +495,23 @@
                 </article>
 
                 <!-- Начало второго проекта -->
-                <article class="work border-light" itemscope itemtype="https://schema.org/CreativeWork">
+                <article class="work border-light" itemscope itemtype="https://schema.org/CreativeWork" role="article"
+                    aria-labelledby="a-aura-title">
                     <div class="work__order-left container">
                         <div class="work__order--box">
                             <div class="work__order--header">
                                 <div class="work__order--icon">
-                                    <img src="images/order2.svg" alt="" class="work__order__icon" width="24" height="24"
-                                        loading="lazy" aria-hidden="true">
+                                    <img src="images/order2.svg" alt="A-Aura Ecommerce Icon" class="work__order__icon"
+                                        width="24" height="24" loading="lazy" aria-hidden="true">
                                 </div>
-                                <h3 class="work__order__title" itemprop="name">A-Aura Ecommerce</h3>
+                                <h3 id="a-aura-title" class="work__order__title" itemprop="name">A-Aura Ecommerce</h3>
                             </div>
 
                             <a href="#contact" class="work__order__cta hero__stats-link"
-                                aria-label="Book a call for Web Design">
+                                aria-label="Book a call for A-Aura Ecommerce">
                                 <span>
-                                    <img src="images/hero__stats-item.svg" alt="" width="29" height="28" loading="lazy"
-                                        aria-hidden="true">
+                                    <img src="images/hero__stats-item.svg" alt="Arrow icon" aria-hidden="true"
+                                        width="29" height="28" loading="lazy">
                                 </span>
                                 Details
                             </a>
@@ -505,9 +520,8 @@
                         <ul class="work__meta">
                             <li><strong>Category</strong> <span itemprop="genre" class="paragraph">Web Design &
                                     Development</span></li>
-                            <li><strong>Time Taken</strong> <time datetime="P6M" itemprop="duration" class="paragraph">3
-                                    months</time>
-                            </li>
+                            <li><strong>Time Taken</strong> <time datetime="P3M" itemprop="duration" class="paragraph">3
+                                    months</time></li>
                         </ul>
 
                         <p class="work__order-left--text paragraph" itemprop="description">
@@ -516,10 +530,10 @@
                         </p>
 
                         <a href="#contact" class="work__mobile-link hero__stats-link"
-                            aria-label="Book a call for Web Design">
+                            aria-label="Book a call for A-Aura Ecommerce">
                             <span>
-                                <img src="images/hero__stats-item.svg" alt="" width="29" height="28" loading="lazy"
-                                    aria-hidden="true">
+                                <img src="images/hero__stats-item.svg" alt="Arrow icon" aria-hidden="true" width="29"
+                                    height="28" loading="lazy">
                             </span>
                             Details
                         </a>
@@ -543,16 +557,17 @@
                                 <li class="paragraph">HTML5</li>
                                 <li class="paragraph">CSS3</li>
                                 <li class="paragraph">JavaScript</li>
-                                <li class="paragraph">HTML5</li>
                             </ul>
                         </div>
                         <div class="work__order-right--team container">
                             <h3 class="paragraph">Team Members</h3>
                             <ul>
-                                <!-- Динамически выводить аватары участников команды через WordPress -->
-                                <li><img width="50" height="50" src="images/avatar1.png" alt="Team Member 1"></li>
-                                <li><img width="50" height="50" src="images/avatar2.png" alt="Team Member 2"></li>
-                                <li><img width="50" height="50" src="images/avatar3.png" alt="Team Member 3"></li>
+                                <li><img width="50" height="50" src="images/avatar1.png" alt="Team Member 1: John Doe">
+                                </li>
+                                <li><img width="50" height="50" src="images/avatar2.png"
+                                        alt="Team Member 2: Jane Smith"></li>
+                                <li><img width="50" height="50" src="images/avatar3.png"
+                                        alt="Team Member 3: Bob Johnson"></li>
                             </ul>
                         </div>
                         <a href="/" class="work__order--link">Book A Call</a>
@@ -562,27 +577,30 @@
 
             <a href="/works" class="works__link-mob container hero__stats-link" aria-label="View all works">
                 <span class="works__link-text">
-                    <img src="images/arrow-bottom.svg" alt="" aria-hidden="true" width="20" height="20" loading="lazy">
+                    <img src="images/arrow-bottom.svg" alt="Arrow icon" aria-hidden="true" width="20" height="20"
+                        loading="lazy">
                 </span>
                 ALL Works
             </a>
         </section>
 
+
         <section id="testimonials" class="testimonials border-light wrapper" aria-labelledby="testimonials-title">
             <div class="testimonials__header container">
                 <h2 id="testimonials-title" class="section__title heading-secondary">Testimonials</h2>
-                <a href="/" class="hero__stats-link" aria-label="View all works">
+                <a href="/" class="hero__stats-link" aria-label="View all testimonials">
                     <span class="works__link-text">
-                        <img src="images/hero__stats-item.svg" alt="" aria-hidden="true" width="16" height="16"
-                            loading="lazy">
+                        <img src="images/hero__stats-item.svg" alt="Arrow icon" aria-hidden="true" width="16"
+                            height="16" loading="lazy">
                     </span>
                     ALL Testimonials
                 </a>
             </div>
             <div class="testimonials__grid">
-                <article class="testimonial container" itemscope itemtype="https://schema.org/Review">
+                <article class="testimonial container" itemscope itemtype="https://schema.org/Review" role="article"
+                    aria-labelledby="testimonial1-title">
                     <div class="testimonial__header">
-                        <h3>NexGen turned our business around!</h3>
+                        <h3 id="testimonial1-title">NexGen turned our business around!</h3>
                         <blockquote class="testimonial__quote" itemprop="reviewBody">
                             “Their digital marketing strategies helped us reach new customers and increase our revenue
                             by 30% within just a few months. Highly recommended!”
@@ -590,7 +608,7 @@
                     </div>
 
                     <div class="testimonial__footer">
-                        <img src="images/testimonial__photo1.png" alt="Photo of Sarah Thompson"
+                        <img src="images/testimonial__photo1.png" alt="Photo of Sarah Thompson, CEO of BlueBloom"
                             class="testimonial__photo" width="60" height="60" loading="lazy" aria-hidden="true">
                         <div class="testimonial__author" itemprop="author" itemscope
                             itemtype="https://schema.org/Person">
@@ -600,15 +618,17 @@
                         <a href="/" class="testimonial__details hero__stats-link"
                             aria-label="Read full testimonial by Sarah Thompson">
                             <span class="works__link-text">
-                                <img src="images/hero__stats-item.svg" alt="" aria-hidden="true" width="16" height="16"
-                                    loading="lazy">
+                                <img src="images/hero__stats-item.svg" alt="Arrow icon" aria-hidden="true" width="16"
+                                    height="16" loading="lazy">
                             </span>
                         </a>
                     </div>
                 </article>
-                <article class="testimonial container" itemscope itemtype="https://schema.org/Review">
+
+                <article class="testimonial container" itemscope itemtype="https://schema.org/Review" role="article"
+                    aria-labelledby="testimonial2-title">
                     <div class="testimonial__header">
-                        <h3>NexGen turned our business around!</h3>
+                        <h3 id="testimonial2-title">NexGen turned our business around!</h3>
                         <blockquote class="testimonial__quote" itemprop="reviewBody">
                             “Their digital marketing strategies helped us reach new customers and increase our revenue
                             by 30% within just a few months. Highly recommended!”
@@ -616,8 +636,8 @@
                     </div>
 
                     <div class="testimonial__footer">
-                        <img src="images/testimonial__photo2.png" alt="Photo of Wade Warren" class="testimonial__photo"
-                            width="60" height="60" loading="lazy" aria-hidden="true">
+                        <img src="images/testimonial__photo2.png" alt="Photo of Wade Warren, Art Director"
+                            class="testimonial__photo" width="60" height="60" loading="lazy" aria-hidden="true">
                         <div class="testimonial__author" itemprop="author" itemscope
                             itemtype="https://schema.org/Person">
                             <span class="testimonial__author-name" itemprop="name">Wade Warren</span>
@@ -626,15 +646,17 @@
                         <a href="/" class="testimonial__details hero__stats-link"
                             aria-label="Read full testimonial by Wade Warren">
                             <span class="works__link-text">
-                                <img src="images/hero__stats-item.svg" alt="" aria-hidden="true" width="16" height="16"
-                                    loading="lazy">
+                                <img src="images/hero__stats-item.svg" alt="Arrow icon" aria-hidden="true" width="16"
+                                    height="16" loading="lazy">
                             </span>
                         </a>
                     </div>
                 </article>
-                <article class="testimonial container" itemscope itemtype="https://schema.org/Review">
+
+                <article class="testimonial container" itemscope itemtype="https://schema.org/Review" role="article"
+                    aria-labelledby="testimonial3-title">
                     <div class="testimonial__header">
-                        <h3>Working with NexGen was a pleasure.</h3>
+                        <h3 id="testimonial3-title">Working with NexGen was a pleasure.</h3>
                         <blockquote class="testimonial__quote" itemprop="reviewBody">
                             “Their web design team created a stunning website that perfectly captured our brand's
                             essence. The feedback from our customers has been overwhelmingly positive.”
@@ -642,25 +664,27 @@
                     </div>
 
                     <div class="testimonial__footer">
-                        <img src="images/testimonial__photo3.png" alt="Photo of Lisa Williams"
+                        <img src="images/testimonial__photo3.png" alt="Photo of Lisa Williams, CEO Of HealthTech"
                             class="testimonial__photo" width="60" height="60" loading="lazy" aria-hidden="true">
                         <div class="testimonial__author" itemprop="author" itemscope
                             itemtype="https://schema.org/Person">
                             <span class="testimonial__author-name" itemprop="name">Lisa Williams</span>
-                            <span class="testimonial__author-role" itemprop="jobTitle">CEO Of HealthTech</span>
+                            <span class="testimonial__author-role" itemprop="jobTitle">CEO of HealthTech</span>
                         </div>
                         <a href="/" class="testimonial__details hero__stats-link"
                             aria-label="Read full testimonial by Lisa Williams">
                             <span class="works__link-text">
-                                <img src="images/hero__stats-item.svg" alt="" aria-hidden="true" width="16" height="16"
-                                    loading="lazy">
+                                <img src="images/hero__stats-item.svg" alt="Arrow icon" aria-hidden="true" width="16"
+                                    height="16" loading="lazy">
                             </span>
                         </a>
                     </div>
                 </article>
-                <article class="testimonial container" itemscope itemtype="https://schema.org/Review">
+
+                <article class="testimonial container" itemscope itemtype="https://schema.org/Review" role="article"
+                    aria-labelledby="testimonial4-title">
                     <div class="testimonial__header">
-                        <h3>NexGen's web design team brought our vision to life.</h3>
+                        <h3 id="testimonial4-title">NexGen's web design team brought our vision to life.</h3>
                         <blockquote class="testimonial__quote" itemprop="reviewBody">
                             “Their responsive design ensures our website looks stunning on all devices, contributing to
                             increased user engagement.”
@@ -668,8 +692,8 @@
                     </div>
 
                     <div class="testimonial__footer">
-                        <img src="images/testimonial__photo4.png" alt="Photo of Jennifer Lee" class="testimonial__photo"
-                            width="60" height="60" loading="lazy" aria-hidden="true">
+                        <img src="images/testimonial__photo4.png" alt="Photo of Jennifer Lee, COO of Foodie Haven"
+                            class="testimonial__photo" width="60" height="60" loading="lazy" aria-hidden="true">
                         <div class="testimonial__author" itemprop="author" itemscope
                             itemtype="https://schema.org/Person">
                             <span class="testimonial__author-name" itemprop="name">Jennifer Lee</span>
@@ -678,88 +702,101 @@
                         <a href="/" class="testimonial__details hero__stats-link"
                             aria-label="Read full testimonial by Jennifer Lee">
                             <span class="works__link-text">
-                                <img src="images/hero__stats-item.svg" alt="" aria-hidden="true" width="16" height="16"
-                                    loading="lazy">
+                                <img src="images/hero__stats-item.svg" alt="Arrow icon" aria-hidden="true" width="16"
+                                    height="16" loading="lazy">
                             </span>
                         </a>
                     </div>
                 </article>
             </div>
-            <a href="/works" class="works__link-mob container hero__stats-link" aria-label="View all works">
+
+            <a href="/works" class="works__link-mob container hero__stats-link" aria-label="View all testimonials">
                 <span class="works__link-text">
-                    <img src="images/arrow-bottom.svg" alt="" aria-hidden="true" width="20" height="20" loading="lazy">
+                    <img src="images/arrow-bottom.svg" alt="Arrow icon" aria-hidden="true" width="20" height="20"
+                        loading="lazy">
                 </span>
                 ALL Testimonials
             </a>
         </section>
 
+
         <section id="faq" class="faq wrapper" aria-labelledby="faq-title">
             <div class="faq__header container">
                 <h2 id="faq-title" class="section__title heading-secondary">Frequently Asked Questions</h2>
-                <a href="/" class="works__link hero__stats-link" aria-label="View all">
+                <a href="/" class="works__link hero__stats-link" aria-label="View all FAQ">
                     <span class="works__link-text">
-                        <img src="images/hero__stats-item.svg" alt="" aria-hidden="true" width="16" height="16"
-                            loading="lazy">
+                        <img src="images/hero__stats-item.svg" alt="Arrow icon" aria-hidden="true" width="16"
+                            height="16" loading="lazy">
                     </span>
                     View All
                 </a>
             </div>
             <div class="faq__box">
                 <div class="faq__list">
-                    <details class="faq__item container border-light" open>
-                        <summary class="faq__question">How long does it take to complete a web development project?
-                        </summary>
+                    <details class="faq__item container border-light" open aria-expanded="true"
+                        aria-labelledby="faq1-title">
+                        <summary id="faq1-title" class="faq__question">How long does it take to complete a web
+                            development project?</summary>
                         <p class="faq__answer">The timeline varies depending on the project's complexity and
-                            requirements.
-                            Our team strives to deliver projects on time while maintaining the highest quality
-                            standards.
-                        </p>
+                            requirements. Our team strives to deliver projects on time while maintaining the highest
+                            quality standards.</p>
                     </details>
-                    <details class="faq__item container border-light">
-                        <summary class="faq__question">Can you handle large-scale mobile app development projects?
-                        </summary>
+                    <details class="faq__item container border-light" aria-expanded="false"
+                        aria-labelledby="faq2-title">
+                        <summary id="faq2-title" class="faq__question">Can you handle large-scale mobile app development
+                            projects?</summary>
                         <p class="faq__answer">Yes, we have extensive experience in building scalable mobile
-                            applications
-                            for enterprises and startups alike.</p>
+                            applications for enterprises and startups alike.</p>
                     </details>
-                    <details class="faq__item container border-light">
-                        <summary class="faq__question">Can you integrate third-party APIs into our mobile app?</summary>
+                    <details class="faq__item container border-light" aria-expanded="false"
+                        aria-labelledby="faq3-title">
+                        <summary id="faq3-title" class="faq__question">Can you integrate third-party APIs into our
+                            mobile app?</summary>
                         <p class="faq__answer">Absolutely. We specialize in integrating RESTful and GraphQL APIs to
-                            enrich
-                            your mobile app's functionality.</p>
+                            enrich your mobile app's functionality.</p>
                     </details>
-                    <details class="faq__item container border-light">
-                        <summary class="faq__question">How do you ensure cross-platform compatibility for mobile apps?
-                        </summary>
+                    <details class="faq__item container border-light" aria-expanded="false"
+                        aria-labelledby="faq4-title">
+                        <summary id="faq4-title" class="faq__question">How do you ensure cross-platform compatibility
+                            for mobile apps?</summary>
                         <p class="faq__answer">We leverage React Native and Flutter to build apps that provide
-                            native-like
-                            performance across iOS and Android devices.</p>
+                            native-like performance across iOS and Android devices.</p>
                     </details>
-                    <details class="faq__item container border-light">
-                        <summary class="faq__question">What is your approach to user experience (UX) design?</summary>
+                    <details class="faq__item container border-light" aria-expanded="false"
+                        aria-labelledby="faq5-title">
+                        <summary id="faq5-title" class="faq__question">What is your approach to user experience (UX)
+                            design?</summary>
                         <p class="faq__answer">Our UX process involves user research, wireframing, prototyping, and
                             iterative testing to ensure intuitive and user-centric designs.</p>
                     </details>
                 </div>
+
                 <aside class="faq__form container">
                     <h3 class="faq__form-title">Ask Your Question</h3>
-                    <form action="/contact" method="post" class="faq__form-fields">
+                    <form action="/contact" method="post" class="faq__form-fields" aria-labelledby="faq-form-title">
                         <label for="faq-name" class="faq__label">Name</label>
                         <input type="text" id="faq-name" name="name" class="faq__input" placeholder="Enter your name"
-                            required>
+                            required aria-describedby="name-description">
+                        <small id="name-description">Please provide your full name.</small>
+
                         <label for="faq-email" class="faq__label">Email</label>
                         <input type="email" id="faq-email" name="email" class="faq__input"
-                            placeholder="Enter your email" required>
+                            placeholder="Enter your email" required aria-describedby="email-description">
+                        <small id="email-description">We will reply to your email address.</small>
+
                         <label for="faq-question" class="faq__label">Your Question</label>
                         <textarea id="faq-question" name="question" class="faq__textarea" rows="4"
-                            placeholder="Enter your question here..." required></textarea>
+                            placeholder="Enter your question here..." required
+                            aria-describedby="question-description"></textarea>
+                        <small id="question-description">Please enter your question about our services.</small>
+
                         <button type="submit" class="btn btn--primary faq__submit" aria-label="Send your message">Send
-                            your
-                            message</button>
+                            your message</button>
                     </form>
                 </aside>
             </div>
         </section>
+
 
         <section id="cta" class="cta wrapper" aria-labelledby="cta-title">
             <div class="cta-banner">
@@ -768,69 +805,72 @@
                     <p class="cta__text">Take the first step towards digital success with NexGen by your side. Our team
                         of experts is eager to craft tailored solutions that drive growth for your business.</p>
                 </div>
-                <a href="#contact" class="cta__btn btn btn--secondary" aria-label="Get in touch">
+                <a href="#contact" class="cta__btn btn btn--secondary"
+                    aria-label="Get in touch with us for digital solutions">
                     <span class="cta__btn-text">Get in Touch</span>
-                    <img src="images/link-arrow-top.svg" alt="Arrow Right" class="cta__btn-icon" width="16" height="16"
-                        loading="lazy" aria-hidden="true">
+                    <img src="images/link-arrow-top.svg" alt="Right arrow icon" class="cta__btn-icon" width="16"
+                        height="16" loading="lazy" aria-hidden="true">
                 </a>
             </div>
             <div class="cta-services">
-                <div class="hero__services-slider swiper-container" aria-label="Наши услуги">
+                <div class="hero__services-slider swiper-container" aria-roledescription="carousel" aria-live="polite"
+                    aria-label="Our Services">
                     <div class="hero__services-wrapper swiper-wrapper">
                         <div class="hero__slide swiper-slide" role="group" aria-roledescription="slide"
-                            aria-label="1 из 6">
+                            aria-label="1 of 6">
                             <span class="hero__service">Follow Us on Social Media</span>
                         </div>
                         <div class="hero__slide swiper-slide" role="group" aria-roledescription="slide"
-                            aria-label="2 из 6">
+                            aria-label="2 of 6">
                             <span class="hero__service">Follow Us on Social Media</span>
                         </div>
                         <div class="hero__slide swiper-slide" role="group" aria-roledescription="slide"
-                            aria-label="3 из 6">
+                            aria-label="3 of 6">
                             <span class="hero__service">Follow Us on Social Media</span>
                         </div>
                         <div class="hero__slide swiper-slide" role="group" aria-roledescription="slide"
-                            aria-label="4 из 6">
+                            aria-label="4 of 6">
                             <span class="hero__service">Follow Us on Social Media</span>
                         </div>
                         <div class="hero__slide swiper-slide" role="group" aria-roledescription="slide"
-                            aria-label="5 из 6">
+                            aria-label="5 of 6">
                             <span class="hero__service">Follow Us on Social Media</span>
                         </div>
                         <div class="hero__slide swiper-slide" role="group" aria-roledescription="slide"
-                            aria-label="6 из 6">
+                            aria-label="6 of 6">
                             <span class="hero__service">Follow Us on Social Media</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
     </main>
 
-    <footer id="footer" class="footer wrapper" aria-labelledby="footer-title">
+    <footer id="footer" class="footer wrapper">
         <div class="footer__grid">
             <div class="footer__socials">
-                <a href="#" class="social-card social-card--instagram container" aria-label="Instagram">
+                <a href="#" class="social-card social-card--instagram container" aria-label="Follow us on Instagram">
                     <div class="social-card__header">
                         <img src="images/icon-instagram.svg" alt="Instagram icon" class="social-card__icon" width="24"
                             height="24" loading="lazy" aria-hidden="true">
                         <span class="works__link-text">
-                            <img src="images/hero__stats-item.svg" alt="" aria-hidden="true" width="16" height="16"
-                                loading="lazy">
+                            <img src="images/hero__stats-item.svg" alt="Arrow right icon" aria-hidden="true" width="16"
+                                height="16" loading="lazy">
                         </span>
                     </div>
                     <div class="social-card__info">
-                        <h3 class="social-card__title">INstagram</h3>
+                        <h3 class="social-card__title">Instagram</h3>
                         <p class="social-card__text">Share visually appealing snippets of our latest web projects.</p>
                     </div>
                 </a>
-                <a href="#" class="social-card social-card--twitter container" aria-label="Twitter">
+                <a href="#" class="social-card social-card--twitter container" aria-label="Follow us on Twitter">
                     <div class="social-card__header">
                         <img src="images/icon-twitter.svg" alt="Twitter icon" class="social-card__icon" width="24"
                             height="24" loading="lazy" aria-hidden="true">
                         <span class="works__link-text">
-                            <img src="images/hero__stats-item.svg" alt="" aria-hidden="true" width="16" height="16"
-                                loading="lazy">
+                            <img src="images/hero__stats-item.svg" alt="Arrow right icon" aria-hidden="true" width="16"
+                                height="16" loading="lazy">
                         </span>
                     </div>
                     <div class="social-card__info">
@@ -838,13 +878,13 @@
                         <p class="social-card__text">Tweet about interesting coding challenges you’ve overcome.</p>
                     </div>
                 </a>
-                <a href="#" class="social-card social-card--dribbble container" aria-label="Dribbble">
+                <a href="#" class="social-card social-card--dribbble container" aria-label="Follow us on Dribbble">
                     <div class="social-card__header">
                         <img src="images/icon-dribbble.svg" alt="Dribbble icon" class="social-card__icon" width="24"
                             height="24" loading="lazy" aria-hidden="true">
                         <span class="works__link-text">
-                            <img src="images/hero__stats-item.svg" alt="" aria-hidden="true" width="16" height="16"
-                                loading="lazy">
+                            <img src="images/hero__stats-item.svg" alt="Arrow right icon" aria-hidden="true" width="16"
+                                height="16" loading="lazy">
                         </span>
                     </div>
                     <div class="social-card__info">
@@ -852,13 +892,13 @@
                         <p class="social-card__text">Showcase design elements of our web projects.</p>
                     </div>
                 </a>
-                <a href="#" class="social-card social-card--behance container" aria-label="Behance">
+                <a href="#" class="social-card social-card--behance container" aria-label="Follow us on Behance">
                     <div class="social-card__header">
                         <img src="images/icon-behance.svg" alt="Behance icon" class="social-card__icon" width="24"
                             height="24" loading="lazy" aria-hidden="true">
                         <span class="works__link-text">
-                            <img src="images/hero__stats-item.svg" alt="" aria-hidden="true" width="16" height="16"
-                                loading="lazy">
+                            <img src="images/hero__stats-item.svg" alt="Arrow right icon" aria-hidden="true" width="16"
+                                height="16" loading="lazy">
                         </span>
                     </div>
                     <div class="social-card__info">
@@ -901,11 +941,10 @@
                         <h3 class="footer__nav-title">Blogs</h3>
                         <ul class="footer__nav-list">
                             <li><a href="/blog/business" class="footer__nav-link">Business</a></li>
-                            <li><a href="/blog/design" class="footer__nav-link">Design <span
-                                        class="badge">Soon</span></a>
-                            </li>
-                            <li><a href="/blog/development" class="footer__nav-link">Development <span
-                                        class="badge">Soon</span></a></li>
+                            <li><a href="/blog/design" class="footer__nav-link">Design <span class="badge"
+                                        aria-live="polite">Soon</span></a></li>
+                            <li><a href="/blog/development" class="footer__nav-link">Development <span class="badge"
+                                        aria-live="polite">Soon</span></a></li>
                         </ul>
                     </div>
                 </nav>
@@ -918,9 +957,10 @@
                     <form action="/subscribe" method="post" class="footer__newsletter-form">
                         <input type="email" id="footer-email" name="email" class="footer__newsletter-input"
                             placeholder="Enter your email" required>
-                        <button type="submit" class="btn btn--primary footer__newsletter-btn" aria-label="Subscribe">
-                            <img src="images/link-arrow-top.svg" alt="Arrow Right" width="16" height="16" loading="lazy"
-                                aria-hidden="true">
+                        <button type="submit" class="btn btn--primary footer__newsletter-btn"
+                            aria-label="Subscribe to the newsletter">
+                            <img src="images/link-arrow-top.svg" alt="Arrow right icon" width="16" height="16"
+                                loading="lazy" aria-hidden="true">
                         </button>
                     </form>
                 </div>
@@ -941,7 +981,9 @@
     </footer>
 
 
-    <div class="menu-overlay"></div>
+
+    <div class="menu-overlay" aria-hidden="true" role="presentation" onclick="closeMenu()"></div>
+
 
     <!-- <script src="script/jquery-3.7.0.min.js"></script> -->
     <!-- <script src="script/aos.js"></script> -->
