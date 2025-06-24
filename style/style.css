@@ -163,6 +163,15 @@ body.light-theme .container {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+body.dark-theme .hero__visual {
+    background: var(--bg-color);
+}
+
+body.dark-theme .language-switcher.container {
+    background: var(--background-light-container);
+}
+
+
 body.light-theme .hero__visual {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -415,7 +424,17 @@ body.menu-open {
     overflow: hidden;
 }
 
+/* Скрываем страницу до того, как тема будет применена */
+body {
+  visibility: hidden; /* Скрываем все содержимое */
+  transition: visibility 0s linear 0.5s; /* Плавное появление */
+}
 
+body.dark-theme,
+body.light-theme {
+  visibility: visible; /* Показываем контент, когда тема применена */
+  transition: visibility 0s linear 0s; /* Плавно переходим к видимости */
+}
 
 
 
@@ -572,7 +591,6 @@ body.menu-open header {
     flex-direction: column;
     align-items: center;
     min-height: 91px;
-    background: var(--background-light-container);
 }
 
 .hero__stats-label {
@@ -1121,7 +1139,6 @@ body.menu-open header {
 .faq__item {
     border-radius: 14px;
     border: 1px solid var(--bg-color);
-    background: var(--background-light-container);
     display: flex;
     flex-direction: column;
     padding: 24px 30px;
@@ -1353,7 +1370,6 @@ details[open] .faq__question::after {
     flex: 1 0 0;
     border-radius: 10px;
     border: 1px solid #333;
-    background: #1F1F1F;
     text-decoration: none;
 }
 
@@ -1368,7 +1384,6 @@ details[open] .faq__question::after {
     align-items: flex-start;
     gap: 30px;
     border-radius: 14px;
-    background: #1A1A1A;
 }
 
 .footer__nav-section {
@@ -1425,7 +1440,6 @@ details[open] .faq__question::after {
     align-items: flex-start;
     gap: 16px;
     border-radius: 14px;
-    background: #1A1A1A;
 }
 
 .footer__newsletter-box {
@@ -1765,7 +1779,6 @@ details[open] .faq__question::after {
 
 
 .language-switcher.container {
-    background: var(--background-light-container);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1990,7 +2003,6 @@ details[open] .faq__question::after {
         width: 593px;
         border-radius: 12px;
         position: relative;
-        background: var(--bg-color);
     }
 
     .hero__image {

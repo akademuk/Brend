@@ -17,24 +17,26 @@ document.addEventListener("DOMContentLoaded", () => {
 function initThemeSwitcher() {
   const switchThemeButton = document.getElementById("switchTheme");
 
-  if (switchThemeButton) {
-    if (localStorage.getItem("theme") === "dark") {
-      document.body.classList.add("dark-theme");
-      document.body.classList.remove("light-theme");
-      switchThemeButton.classList.add("dark");
-    } else {
-      document.body.classList.add("light-theme");
-      document.body.classList.remove("dark-theme");
-      switchThemeButton.classList.remove("dark");
-    }
+  // Проверка сохраненной темы в localStorage и установка нужной темы сразу
+  const savedTheme = localStorage.getItem("theme");
 
+  // Если сохраненная тема темная, применяем её сразу
+  if (savedTheme === "dark") {
+    document.body.classList.add("dark-theme");
+    document.body.classList.remove("light-theme");
+  } else {
+    document.body.classList.add("light-theme");
+    document.body.classList.remove("dark-theme");
+  }
+
+  // Установка обработчика для кнопки переключения темы
+  if (switchThemeButton) {
     switchThemeButton.addEventListener("click", () => {
+      // Переключаем классы на body
       document.body.classList.toggle("dark-theme");
       document.body.classList.toggle("light-theme");
-      switchThemeButton.classList.toggle("dark");
-      switchThemeButton.classList.toggle("fa-moon");
-      switchThemeButton.classList.add("animate-toggle");
 
+      // Сохраняем текущую тему в localStorage
       if (document.body.classList.contains("dark-theme")) {
         localStorage.setItem("theme", "dark");
       } else {
@@ -43,7 +45,6 @@ function initThemeSwitcher() {
     });
   }
 }
-
 function initBurgerMenu() {
   const burger = document.querySelector(".burger");
   const menu = document.querySelector(".mobile-links");
