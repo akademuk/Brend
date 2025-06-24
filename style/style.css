@@ -1921,7 +1921,7 @@ details[open] .faq__question::after {
 
     .hero__stats-link span {
         width: 68px;
-        min-width: 52px;
+        min-width: 68px;
         height: 68px;
     }
 
@@ -2464,6 +2464,7 @@ details[open] .faq__question::after {
 
     .testimonial__details .works__link-text {
         width: 52px;
+        min-width: 52px;
         height: 52px;
         padding: 14px;
     }
