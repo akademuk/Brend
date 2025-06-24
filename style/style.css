@@ -188,6 +188,16 @@ body.light-theme .desktop-menu li a {
     color: #404040;
 }
 
+body.light-theme .testimonial__quote  {
+    color: #404040;
+    font-weight: 500;
+}
+
+body.light-theme .faq__answer  {
+    color: #404040;
+    font-weight: 500;
+}
+
 body.light-theme .desktop-menu li.active {
     background: var(--color-orange);
 }
@@ -607,6 +617,7 @@ body.menu-open header {
     align-items: center;
     justify-content: center;
     color: var(--gray-color);
+    font-weight: 600;
     text-transform: uppercase;
     gap: 10px;
 }
@@ -691,7 +702,7 @@ body.menu-open header {
 .why-choose-us .hero__stats-link {
     color: var(--gray-color);
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 600;
     gap: 8px;
     text-transform: capitalize;
 }
@@ -903,7 +914,7 @@ body.menu-open header {
 .work__meta li strong {
     color: var(--gray-color);
     font-size: 12px;
-    font-weight: 400;
+    font-weight: 500;
     display: flex;
     gap: 4px;
     align-items: center;
