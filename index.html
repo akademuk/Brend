@@ -79,19 +79,19 @@
                 aria-live="polite"></button>
         </div>
         <button id="languageToggle" class="language-toggle" aria-label="Select Language" aria-expanded="false">
-            <span class="language-option" id="en" aria-label="English">EN</span>
-            <span class="language-option" id="ua" aria-label="Ukrainian">UA</span>
-            <span class="language-option" id="ru" aria-label="Russian">RU</span>
+            <span class="language-option" id="en">EN</span>
+            <span class="language-option" id="ua">UA</span>
+            <span class="language-option" id="ru">RU</span>
         </button>
     </div>
 
-    <header class="container wrapper" role="banner">
+    <header class="container wrapper">
         <div class="logo">
             <a href="/" aria-label="Go to homepage">
                 <img width="98" height="19" src="images/Logo.svg" alt="NexGen logo" loading="lazy">
             </a>
         </div>
-        <nav class="navbar" role="navigation" aria-label="Main menu">
+        <nav class="navbar" aria-label="Main menu">
             <ul class="desktop-menu">
                 <li><a href="#" aria-label="Home">Home</a></li>
                 <li><a href="#services" aria-label="Services">Services</a></li>
@@ -126,7 +126,7 @@
     <main>
 
         <!-- ==== HERO ==== -->
-        <section class="hero wrapper" role="region" aria-labelledby="hero-title">
+        <section class="hero wrapper" aria-labelledby="hero-title">
             <div class="hero__container">
                 <div class="hero__content container">
                     <h1 id="hero-title" class="heading-primary">
@@ -144,7 +144,7 @@
                     </p>
 
                     <!-- Services slider (translated labels only) -->
-                    <div class="hero__services-slider swiper-container" aria-label="Our core services">
+                    <div class="hero__services-slider swiper-container" aria-roledescription="carousel" aria-live="polite">
                         <div class="hero__services-wrapper swiper-wrapper">
                             <div class="hero__slide swiper-slide" role="group" aria-label="1 of 6">
                                 <span class="hero__service">Web Development</span>
@@ -190,29 +190,29 @@
             </div>
 
             <!-- Hero stats -->
-            <ul class="hero__stats border-light" aria-label="Our achievements" role="list">
-                <li class="hero__stats-item container" role="listitem">
+            <ul class="hero__stats border-light" aria-label="Our achievements">
+                <li class="hero__stats-item container">
                     <span class="hero__stats-label">Clients</span>
                     <span class="hero__stats-value" data-target="200" aria-live="polite">0</span>
                 </li>
-                <li class="hero__stats-item container" role="listitem">
+                <li class="hero__stats-item container">
                     <span class="hero__stats-label">Projects</span>
                     <span class="hero__stats-value" data-target="280" aria-live="polite">0</span>
                 </li>
-                <li class="hero__stats-item container" role="listitem">
+                <li class="hero__stats-item container">
                     <span class="hero__stats-label">Happy Clients</span>
                     <span class="hero__stats-value" data-target="100" aria-live="polite">0</span>
                 </li>
-                <li class="hero__stats-item container" role="listitem">
+                <li class="hero__stats-item container">
                     <span class="hero__stats-label">Subscribers</span>
                     <span class="hero__stats-value" data-target="420" aria-live="polite">0</span>
                 </li>
-                <li class="hero__stats-item container" role="listitem">
+                <li class="hero__stats-item container">
                     <span class="hero__stats-label">Years of Experience</span>
                     <span class="hero__stats-value" data-target="5" aria-live="polite">0</span>
                 </li>
-                <li class="hero__stats-item container hero__stats-item--action" role="listitem">
-                    <a href="/" class="hero__stats-link" aria-label="Learn more about us">
+                <li class="hero__stats-item container hero__stats-item--action">
+                    <a href="/" class="hero__stats-link" aria-label="Learn more Our achievements">
                         <span><img src="images/hero__stats-item.svg" alt="" width="29" height="28"></span>
                         Learn More
                     </a>
@@ -225,7 +225,7 @@
         <section id="services" class="why-choose-us wrapper border-light" aria-labelledby="why-title">
             <h2 id="why-title" class="heading-secondary container">Why Choose Me for Your Project</h2>
             <div class="cards">
-                <a href="#services" class="card container" aria-label="Expert in modern technologies" role="article">
+                <a href="#services" class="card container" aria-label="Expert in modern technologies">
                     <h3 class="card__title">Expert in Modern Technologies</h3>
                     <p class="card__text paragraph">
                         I leverage cutting-edge tools to build solutions that meet today’s standards, ensuring
@@ -237,7 +237,7 @@
                         Learn More
                     </span>
                 </a>
-                <a href="#" class="card container" aria-label="Proven track record of success" role="article">
+                <a href="#" class="card container" aria-label="Proven track record of success">
                     <h3 class="card__title">Проверенный опыт успеха</h3>
                     <p class="card__text paragraph">
                         Мой опыт позволяет мне уверенно достигать результатов, предоставляя клиентам надежные и
@@ -250,7 +250,7 @@
                     </span>
                 </a>
 
-                <a href="#" class="card container" aria-label="Client-oriented approach" role="article">
+                <a href="#" class="card container" aria-label="Client-oriented approach">
                     <h3 class="card__title">Ориентированность на клиента</h3>
                     <p class="card__text paragraph">
                         Для меня важно понимать потребности каждого клиента и обеспечить прозрачное общение на всех
@@ -263,7 +263,7 @@
                     </span>
                 </a>
 
-                <a href="#" class="card container" aria-label="Professional team" role="article">
+                <a href="#" class="card container" aria-label="Professional team">
                     <h3 class="card__title">Команда профессионалов</h3>
                     <p class="card__text paragraph">
                         Моя команда и я обладаем широким спектром знаний и навыков, чтобы предложить вашему бизнесу
@@ -284,7 +284,7 @@
             <h2 id="services-title" class="heading-secondary container">My Services</h2>
             <div class="services__grid">
                 <!-- Web Design -->
-                <article class="service container" itemscope itemtype="https://schema.org/Service" role="article"
+                <article class="service container" itemscope itemtype="https://schema.org/Service"
                     aria-labelledby="web-design-title">
                     <div class="service__header">
                         <div class="service__header--box">
@@ -312,7 +312,7 @@
                 </article>
 
                 <!-- Mobile Apps -->
-                <article class="service container" itemscope itemtype="https://schema.org/Service" role="article"
+                <article class="service container" itemscope itemtype="https://schema.org/Service"
                     aria-labelledby="mobile-app-title">
                     <div class="service__header">
                         <div class="service__header--box">
@@ -341,7 +341,7 @@
                 </article>
 
                 <!-- Web Development -->
-                <article class="service container" itemscope itemtype="https://schema.org/Service" role="article"
+                <article class="service container" itemscope itemtype="https://schema.org/Service"
                     aria-labelledby="web-dev-title">
                     <div class="service__header">
                         <div class="service__header--box">
@@ -370,7 +370,7 @@
                 </article>
 
                 <!-- Digital Marketing -->
-                <article class="service container" itemscope itemtype="https://schema.org/Service" role="article"
+                <article class="service container" itemscope itemtype="https://schema.org/Service"
                     aria-labelledby="digital-marketing-title">
                     <div class="service__header">
                         <div class="service__header--box">
@@ -416,8 +416,7 @@
 
             <div class="works__grid">
                 <!-- Начало первого проекта -->
-                <article class="work border-light" itemscope itemtype="https://schema.org/CreativeWork" role="article"
-                    aria-labelledby="zenith-title">
+                <article class="work border-light" itemscope itemtype="https://schema.org/CreativeWork" aria-labelledby="zenith-title">
                     <div class="work__order-left container">
                         <div class="work__order--box">
                             <div class="work__order--header">
@@ -441,7 +440,7 @@
                         <ul class="work__meta">
                             <li><strong>Category</strong> <span itemprop="genre" class="paragraph">Mobile App
                                     Development</span></li>
-                            <li><strong>Time Taken</strong> <time itemprop="duration" class="paragraph">6 months</time>
+                            <li><strong>Time Taken</strong> <span class="paragraph">6 months</span>
                             </li>
                         </ul>
 
@@ -495,8 +494,7 @@
                 </article>
 
                 <!-- Начало второго проекта -->
-                <article class="work border-light" itemscope itemtype="https://schema.org/CreativeWork" role="article"
-                    aria-labelledby="a-aura-title">
+                <article class="work border-light" itemscope itemtype="https://schema.org/CreativeWork" aria-labelledby="a-aura-title">
                     <div class="work__order-left container">
                         <div class="work__order--box">
                             <div class="work__order--header">
@@ -520,8 +518,7 @@
                         <ul class="work__meta">
                             <li><strong>Category</strong> <span itemprop="genre" class="paragraph">Web Design &
                                     Development</span></li>
-                            <li><strong>Time Taken</strong> <time datetime="P3M" itemprop="duration" class="paragraph">3
-                                    months</time></li>
+                            <li><strong>Time Taken</strong> <span class="paragraph">3 months</span></li>
                         </ul>
 
                         <p class="work__order-left--text paragraph" itemprop="description">
@@ -597,8 +594,7 @@
                 </a>
             </div>
             <div class="testimonials__grid">
-                <article class="testimonial container" itemscope itemtype="https://schema.org/Review" role="article"
-                    aria-labelledby="testimonial1-title">
+                <article class="testimonial container" itemscope itemtype="https://schema.org/Review" aria-labelledby="testimonial1-title">
                     <div class="testimonial__header">
                         <h3 id="testimonial1-title">NexGen turned our business around!</h3>
                         <blockquote class="testimonial__quote" itemprop="reviewBody">
@@ -625,8 +621,7 @@
                     </div>
                 </article>
 
-                <article class="testimonial container" itemscope itemtype="https://schema.org/Review" role="article"
-                    aria-labelledby="testimonial2-title">
+                <article class="testimonial container" itemscope itemtype="https://schema.org/Review" aria-labelledby="testimonial2-title">
                     <div class="testimonial__header">
                         <h3 id="testimonial2-title">NexGen turned our business around!</h3>
                         <blockquote class="testimonial__quote" itemprop="reviewBody">
@@ -653,8 +648,7 @@
                     </div>
                 </article>
 
-                <article class="testimonial container" itemscope itemtype="https://schema.org/Review" role="article"
-                    aria-labelledby="testimonial3-title">
+                <article class="testimonial container" itemscope itemtype="https://schema.org/Review" aria-labelledby="testimonial3-title">
                     <div class="testimonial__header">
                         <h3 id="testimonial3-title">Working with NexGen was a pleasure.</h3>
                         <blockquote class="testimonial__quote" itemprop="reviewBody">
@@ -681,8 +675,7 @@
                     </div>
                 </article>
 
-                <article class="testimonial container" itemscope itemtype="https://schema.org/Review" role="article"
-                    aria-labelledby="testimonial4-title">
+                <article class="testimonial container" itemscope itemtype="https://schema.org/Review" aria-labelledby="testimonial4-title">
                     <div class="testimonial__header">
                         <h3 id="testimonial4-title">NexGen's web design team brought our vision to life.</h3>
                         <blockquote class="testimonial__quote" itemprop="reviewBody">
@@ -772,7 +765,7 @@
                 </div>
 
                 <aside class="faq__form container">
-                    <h3 class="faq__form-title">Ask Your Question</h3>
+                    <h3 id="faq-form-title" class="faq__form-title">Ask Your Question</h3>
                     <form action="/contact" method="post" class="faq__form-fields" aria-labelledby="faq-form-title">
                         <label for="faq-name" class="faq__label">Name</label>
                         <input type="text" id="faq-name" name="name" class="faq__input" placeholder="Enter your name"
@@ -813,8 +806,7 @@
                 </a>
             </div>
             <div class="cta-services">
-                <div class="hero__services-slider swiper-container" aria-roledescription="carousel" aria-live="polite"
-                    aria-label="Our Services">
+                <div class="hero__services-slider swiper-container" aria-roledescription="carousel" aria-live="polite">
                     <div class="hero__services-wrapper swiper-wrapper">
                         <div class="hero__slide swiper-slide" role="group" aria-roledescription="slide"
                             aria-label="1 of 6">

@@ -921,7 +921,7 @@ body.menu-open header {
 }
 
 .work__meta li span,
-.work__meta li time {
+.work__meta li span {
     color: #E6E6E6;
     font-size: 12px;
 }
@@ -2284,7 +2284,7 @@ details[open] .faq__question::after {
     }
 
     .work__meta li span,
-    .work__meta li time {
+    .work__meta li span {
         font-size: 18px;
     }
 
