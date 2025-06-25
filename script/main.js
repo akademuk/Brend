@@ -3,24 +3,15 @@ document.addEventListener("DOMContentLoaded", () => {
   initBurgerMenu();
   initLanguageSwitcher();
 
-  // Загружаем и инициализируем счетчики только если они есть на странице
   if (document.querySelector(".hero__stats")) {
     initCounterAnimation();
   }
-
-  // Загружаем и инициализируем слайдеры только если они есть на странице
-  // if (document.querySelector(".hero__services-wrapper")) {
-  //   initServicesSwiper();
-  // }
 });
 
 function initThemeSwitcher() {
   const switchThemeButton = document.getElementById("switchTheme");
-
-  // Проверка сохраненной темы в localStorage и установка нужной темы сразу
   const savedTheme = localStorage.getItem("theme");
 
-  // Если сохраненная тема темная, применяем её сразу
   if (savedTheme === "dark") {
     document.body.classList.add("dark-theme");
     document.body.classList.remove("light-theme");
@@ -29,22 +20,17 @@ function initThemeSwitcher() {
     document.body.classList.remove("dark-theme");
   }
 
-  // Установка обработчика для кнопки переключения темы
   if (switchThemeButton) {
     switchThemeButton.addEventListener("click", () => {
-      // Переключаем классы на body
       document.body.classList.toggle("dark-theme");
       document.body.classList.toggle("light-theme");
 
-      // Сохраняем текущую тему в localStorage
-      if (document.body.classList.contains("dark-theme")) {
-        localStorage.setItem("theme", "dark");
-      } else {
-        localStorage.setItem("theme", "light");
-      }
+      const theme = document.body.classList.contains("dark-theme") ? "dark" : "light";
+      localStorage.setItem("theme", theme);
     });
   }
 }
+
 function initBurgerMenu() {
   const burger = document.querySelector(".burger");
   const menu = document.querySelector(".mobile-links");
@@ -72,21 +58,16 @@ function initBurgerMenu() {
 
     burger.addEventListener("click", toggleMobileMenu);
 
-    document.addEventListener("click", function (event) {
+    document.addEventListener("click", (event) => {
       const menuContainer = document.querySelector(".mobile-menu");
-      if (
-        !menuContainer.contains(event.target) &&
-        menu.classList.contains("open")
-      ) {
+      if (!menuContainer.contains(event.target) && menu.classList.contains("open")) {
         toggleMobileMenu();
       }
     });
 
-    document.addEventListener("keydown", function (event) {
-      if (event.key === "Escape") {
-        if (menu.classList.contains("open")) {
-          toggleMobileMenu();
-        }
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && menu.classList.contains("open")) {
+        toggleMobileMenu();
       }
     });
   }
@@ -95,12 +76,11 @@ function initBurgerMenu() {
 function initLanguageSwitcher() {
   const languageToggle = document.getElementById("languageToggle");
   const languageOptions = document.querySelectorAll(".language-option");
-
   const savedLanguage = localStorage.getItem("language") || "en";
   setLanguage(savedLanguage);
 
   languageToggle.addEventListener("click", () => {
-    let newLanguage = "en"; // Default to English
+    let newLanguage = "en";
 
     if (document.body.classList.contains("en-language")) {
       newLanguage = "ua";
@@ -112,14 +92,11 @@ function initLanguageSwitcher() {
   });
 
   function setLanguage(language) {
-    languageOptions.forEach((option) => {
-      option.classList.remove("active");
-    });
+    languageOptions.forEach((option) => option.classList.remove("active"));
 
     document.body.classList.remove("en-language", "ua-language", "ru-language");
     document.body.classList.add(`${language}-language`);
     languageToggle.classList.add("active");
-
     document.getElementById(language).classList.add("active");
 
     localStorage.setItem("language", language);
@@ -143,46 +120,62 @@ function initCounterAnimation() {
         requestAnimationFrame(update);
       }
     };
+
     update();
   };
 
-  const obs = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting && !started) {
-          started = true;
-          values.forEach(animateCount);
-          obs.disconnect();
-        }
-      });
-    },
-    { threshold: 0.5 }
-  );
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting && !started) {
+        started = true;
+        values.forEach(animateCount);
+        observer.disconnect();
+      }
+    });
+  }, { threshold: 0.5 });
 
-  obs.observe(statsEl);
+  observer.observe(statsEl);
 }
 
-// function initServicesSwiper() {
-//   const wrapper = document.querySelector(".hero__services-wrapper");
-//   if (!wrapper) return;
+document.addEventListener('DOMContentLoaded', () => {
+  const serviceLists = document.querySelectorAll('.hero__service-list'); 
 
-//   const originalSlides = Array.from(wrapper.children);
-//   const neededClones = 10;
-//   for (let i = 0; i < neededClones; i++) {
-//     const slide = originalSlides[i % originalSlides.length].cloneNode(true);
-//     wrapper.appendChild(slide);
-//   }
+  serviceLists.forEach(serviceList => {
+    const services = serviceList.querySelectorAll('.hero__service');
 
-//   new Swiper(".hero__services-slider", {
-//     loop: true,
-//     speed: 5000,
-//     slidesPerView: "auto",
-//     spaceBetween: 0,
-//     autoplay: { delay: 0, disableOnInteraction: false },
-//     allowTouchMove: false,
-//   });
-// }
+    services.forEach(service => {
+      const clonedService = service.cloneNode(true);
+      serviceList.appendChild(clonedService);
+    });
 
+    let currentPosition = 0;
+    const moveSpeed = 1;
+    const totalWidth = serviceList.scrollWidth;
+    const resetThreshold = totalWidth / 2;
 
+    function moveMarquee() {
+      currentPosition -= moveSpeed;
+
+      if (Math.abs(currentPosition) >= resetThreshold) {
+        currentPosition = 0;
+        serviceList.style.transition = 'none';
+        serviceList.style.transform = `translateX(${currentPosition}px)`;
+
+        setTimeout(() => {
+          serviceList.style.transition = 'transform 0.5s linear';
+        }, 50);
+      }
+
+      serviceList.style.transform = `translateX(${currentPosition}px)`;
+    }
+
+    function animate() {
+      moveMarquee();
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+  });
+});
 
 
