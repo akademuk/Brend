@@ -2906,84 +2906,83 @@ details[open] .faq__question::after {
 .light-theme .bg::before,
 .light-theme .bg::after {
     opacity: 1;
+    transition: all 0.5s;
 }
 
 .dark-theme .bg::before,
 .dark-theme .bg::after {
- opacity: 0.2;
+    opacity: 0.1;
+    transition: all 0.5s;
 }
 
 .bg {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  min-height: 100%;
-  max-height: 100%;
-  z-index: -30;
-  animation: animatedBackground 1200s linear infinite;
-}
-.bg:after {
-  content: "";
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: -20;
-  height: 100%;
-  min-height: 100%;
-  max-height: 100%;
-  width: 700%;
-  background-image: url(../images/after.svg);
- background-position: center bottom;
-  animation: animatedBk 1200s linear infinite;
-  z-index: -10;
-}
-.bg:before {
- content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  min-height: 100%;
-  max-height: 100%;
-  width: 700%;
-  background-image: url("../images/before.svg");
-  background-position: center bottom;
-  animation: animatedBackground 1200s linear infinite;
-  z-index: -10;
+    position: fixed;
+    will-change: background-position;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    z-index: -30;
+    animation: animatedBackground 1200s linear infinite;
 }
 
+.bg:after,
+.bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    width: 700%;
+    will-change: background-position;
+    z-index: -10;
+}
+
+.bg:after {
+    background-image: url(../images/after.svg);
+    background-position: center bottom;
+    animation: animatedBk 100s linear infinite;
+}
+
+.bg::before {
+    background-image: url("../images/before.svg");
+    background-position: center bottom;
+    animation: animatedBackground 100s linear infinite;
+}
+
+
+
 @keyframes animatedBackground {
-  0% {
-    background-position: 0 100%;
-  }
-  50% {
-    background-position: 100% 100%;
-  }
-  100% {
-    background-position: 0% 100%;
-  }
+    0% {
+        background-position: 0 100%;
+    }
+
+    50% {
+        background-position: 100% 100%;
+    }
+
+    100% {
+        background-position: 0% 100%;
+    }
 }
 
 @keyframes animatedBk {
-  0% {
-    background-position: 100% 100%;
-  }
-  50% {
-    background-position: 0% 100%;
-  }
-  100% {
-    background-position: 100% 100%;
-  }
-}
+    0% {
+        background-position: 100% 100%;
+    }
 
-.bg, .bg:after, .bg:before {
-  will-change: background-position;
-}
+    50% {
+        background-position: 0% 100%;
+    }
 
+    100% {
+        background-position: 100% 100%;
+    }
+}
