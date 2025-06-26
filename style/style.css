@@ -493,6 +493,7 @@ body.menu-open header {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    overflow: hidden;
 }
 
 .hero__visual {
@@ -527,8 +528,12 @@ body.menu-open header {
 
 .hero__content {
     display: flex;
+    width: 100%;
     flex-direction: column;
+    justify-content: center;
     gap: 16px;
+    min-width: 256px;
+    flex: 1;
     padding: 30px 24px 16px 24px;
 }
 
@@ -867,7 +872,7 @@ body.menu-open header {
 
 .works__grid {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: 10px;
 }
 
@@ -878,6 +883,8 @@ body.menu-open header {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    min-width: 256px;
+    flex: 1;
 }
 
 .work__media {
@@ -937,7 +944,7 @@ body.menu-open header {
 
 .work__meta li {
     display: flex;
-    width: 100%;
+    width: max-content;
     max-width: 100%;
     padding: 6px 10px;
     flex-wrap: wrap;
@@ -1742,7 +1749,96 @@ details[open] .faq__question::after {
     }
 }
 
+   .hero__visual {
+        display: flex;
+        width: 100%;
+        min-width: 256px;
+        flex: 1;
+        border-radius: 12px;
+        position: relative;
+    }
 
+    .hero__figure {
+        width: 100%;
+    }
+
+    .hero__services-marquee {
+        margin-top: auto;
+    }
+
+    #hero-title {
+        font-size: 68px;
+    }
+
+    .hero__image {
+        width: 100%;
+        height: calc(100% - 132px);
+        object-fit: cover;
+        border-radius: 12px 12px 0 0;
+        object-position: -1px;
+    }
+
+    .hero__visual-link {
+        position: absolute;
+        width: 191px;
+        height: 191px;
+        top: -22px;
+        right: -37px;
+        border-radius: 200px;
+        background: var(--background-dark);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero__visual-link span {
+        display: flex;
+        padding: 10px;
+        align-items: center;
+        justify-content: center;
+        width: 88px;
+        height: 88px;
+        border-radius: 100px;
+        background: var(--color-orange);
+    }
+
+    .hero__visual-link span img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .hero__visual-link span::before {
+        content: '';
+        position: absolute;
+        background: url(../images/Shape.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        top: 50%;
+        left: 50%;
+        width: 140px;
+        height: 140px;
+        transform: translate(-50%, -50%);
+        animation: moveAround 10s linear infinite;
+    }
+
+    .hero__figcaption {
+        display: flex;
+        padding: 35px 30px 15px 30px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        color: #F9EFEC;
+        font-size: 24px;
+        text-transform: uppercase;
+    }
+
+    .hero__figcaption span {
+        color: var(--gray-color);
+        font-size: 18px;
+        font-weight: 400;
+        text-transform: capitalize;
+    }
 
 
 
@@ -1948,7 +2044,11 @@ details[open] .faq__question::after {
     z-index: 1;
 }
 
-
+.hero__container {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
 
 
 
@@ -2144,6 +2244,7 @@ details[open] .faq__question::after {
     #hero-title {
         font-size: 78px;
         line-height: 130%;
+        padding: 0 32px;
     }
 
     .hero__button span::before {
@@ -2170,11 +2271,12 @@ details[open] .faq__question::after {
     .hero__button {
         font-size: 24px;
         gap: 24px;
+        padding: 0 32px;
     }
 
     .hero__description {
         max-width: 927px;
-        margin-bottom: 70px;
+        padding: 0 32px;
     }
 
     .hero__container {
@@ -2194,86 +2296,6 @@ details[open] .faq__question::after {
         height: 70px;
     }
 
-    .hero__figure {
-        width: 100%;
-    }
-
-    .hero__visual {
-        display: flex;
-        width: 593px;
-        border-radius: 12px;
-        position: relative;
-    }
-
-    .hero__image {
-        width: 100%;
-        height: calc(100% - 132px);
-        object-fit: cover;
-        border-radius: 12px 12px 0 0;
-        object-position: -1px;
-    }
-
-    .hero__visual-link {
-        position: absolute;
-        width: 191px;
-        height: 191px;
-        top: -22px;
-        right: -37px;
-        border-radius: 200px;
-        background: var(--background-dark);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .hero__visual-link span {
-        display: flex;
-        padding: 10px;
-        align-items: center;
-        justify-content: center;
-        width: 88px;
-        height: 88px;
-        border-radius: 100px;
-        background: var(--color-orange);
-    }
-
-    .hero__visual-link span img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-    }
-
-    .hero__visual-link span::before {
-        content: '';
-        position: absolute;
-        background: url(../images/Shape.svg);
-        background-repeat: no-repeat;
-        background-size: contain;
-        top: 50%;
-        left: 50%;
-        width: 140px;
-        height: 140px;
-        transform: translate(-50%, -50%);
-        animation: moveAround 10s linear infinite;
-    }
-
-    .hero__figcaption {
-        display: flex;
-        padding: 35px 30px 15px 30px;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
-        color: #F9EFEC;
-        font-size: 24px;
-        text-transform: uppercase;
-    }
-
-    .hero__figcaption span {
-        color: var(--gray-color);
-        font-size: 18px;
-        font-weight: 400;
-        text-transform: capitalize;
-    }
 
     .why-choose-us {
         padding: 20px;
@@ -2421,6 +2443,7 @@ details[open] .faq__question::after {
         border: 2px solid var(--bg-color);
         flex-direction: row;
         gap: 20px;
+        min-width: auto;
     }
 
     .work__order-left {
@@ -2587,6 +2610,7 @@ details[open] .faq__question::after {
 
     .works__grid {
         gap: 20px;
+        flex-direction: column;
     }
 
     .works__link-mob {
@@ -2994,5 +3018,23 @@ details[open] .faq__question::after {
         background-image: url("../images/before.svg");
         background-position: center bottom;
         animation: animatedBackground 1000s linear infinite;
+    }
+
+       .hero__visual {
+        display: flex;
+        max-width: 593px;
+        border-radius: 12px;
+        position: relative;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .hero__container {
+        flex-direction: column;
+    }
+
+    #hero-title {
+        font-size: 42px;
     }
 }
