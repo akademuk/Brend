@@ -1588,6 +1588,160 @@ details[open] .faq__question::after {
 
 
 
+.hero__services-marquee {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero__service-list {
+    display: flex;
+    gap: 8px;
+    transition: transform 0.5s linear;
+}
+
+
+
+
+
+
+
+
+
+
+.buttons {
+    position: relative;
+    overflow: hidden;
+    transition: color 300ms ease, transform 300ms ease;
+}
+
+.buttons .buttons-text {
+    position: relative;
+    z-index: 2;
+}
+
+.buttons:hover::after {
+    transform: translateY(calc(-100% + 2px));
+}
+
+.buttons:active {
+    transform: scale(0.9);
+    background: var(--color-orange);
+}
+
+.links {
+    transition: all 0.4s;
+}
+
+.links:active {
+    transform: scale(0.9);
+}
+
+.buttons:active::after {
+    background: var(--color-orange);
+}
+
+.buttons:active::after {
+    transform: translateY(calc(-100% + 2px)) scale(0.9);
+}
+
+.buttons::after {
+    content: "";
+    display: flex;
+    background: linear-gradient(to top, #CE7D63, #D99F89);
+    height: calc(100% + 2px);
+    width: 100%;
+    position: absolute;
+    bottom: calc(-100% - 2px);
+    left: 0;
+    z-index: 1;
+    transition: transform 300ms ease;
+}
+
+.light-theme .bg::before,
+.light-theme .bg::after {
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+.dark-theme .bg::before,
+.dark-theme .bg::after {
+    opacity: 0.1;
+    transition: all 0.5s;
+}
+
+.bg {
+    position: fixed;
+    will-change: background-position;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    z-index: -30;
+    animation: animatedBackground 1200s linear infinite;
+}
+
+.bg:after,
+.bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    width: 700%;
+    will-change: background-position;
+    z-index: -10;
+}
+
+.bg:after {
+    background-image: url(../images/after.svg);
+    background-position: center bottom;
+    animation: animatedBk 100s linear infinite;
+}
+
+.bg::before {
+    background-image: url("../images/before.svg");
+    background-position: center bottom;
+    animation: animatedBackground 100s linear infinite;
+}
+
+
+
+@keyframes animatedBackground {
+    0% {
+        background-position: 0 100%;
+    }
+
+    50% {
+        background-position: 100% 100%;
+    }
+
+    100% {
+        background-position: 0% 100%;
+    }
+}
+
+@keyframes animatedBk {
+    0% {
+        background-position: 100% 100%;
+    }
+
+    50% {
+        background-position: 0% 100%;
+    }
+
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
 
 
 
@@ -2829,160 +2983,16 @@ details[open] .faq__question::after {
         height: 52px;
         background-size: 75%;
     }
-}
 
-
-
-.hero__services-marquee {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-}
-
-.hero__service-list {
-    display: flex;
-    gap: 8px;
-    transition: transform 0.5s linear;
-}
-
-
-
-
-
-
-
-
-
-
-.buttons {
-    position: relative;
-    overflow: hidden;
-    transition: color 300ms ease, transform 300ms ease;
-}
-
-.buttons .buttons-text {
-    position: relative;
-    z-index: 2;
-}
-
-.buttons:hover::after {
-    transform: translateY(calc(-100% + 2px));
-}
-
-.buttons:active {
-    transform: scale(0.9);
-    background: var(--color-orange);
-}
-
-.links {
-    transition: all 0.4s;
-}
-
-.links:active {
-    transform: scale(0.9);
-}
-
-.buttons:active::after {
-    background: var(--color-orange);
-}
-
-.buttons:active::after {
-    transform: translateY(calc(-100% + 2px)) scale(0.9);
-}
-
-.buttons::after {
-    content: "";
-    display: flex;
-    background: linear-gradient(to top, #CE7D63, #D99F89);
-    height: calc(100% + 2px);
-    width: 100%;
-    position: absolute;
-    bottom: calc(-100% - 2px);
-    left: 0;
-    z-index: 1;
-    transition: transform 300ms ease;
-}
-
-.light-theme .bg::before,
-.light-theme .bg::after {
-    opacity: 1;
-    transition: all 0.5s;
-}
-
-.dark-theme .bg::before,
-.dark-theme .bg::after {
-    opacity: 0.1;
-    transition: all 0.5s;
-}
-
-.bg {
-    position: fixed;
-    will-change: background-position;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    min-height: 100%;
-    max-height: 100%;
-    z-index: -30;
-    animation: animatedBackground 1200s linear infinite;
-}
-
-.bg:after,
-.bg::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    min-height: 100%;
-    max-height: 100%;
-    width: 700%;
-    will-change: background-position;
-    z-index: -10;
-}
-
-.bg:after {
-    background-image: url(../images/after.svg);
-    background-position: center bottom;
-    animation: animatedBk 100s linear infinite;
-}
-
-.bg::before {
-    background-image: url("../images/before.svg");
-    background-position: center bottom;
-    animation: animatedBackground 100s linear infinite;
-}
-
-
-
-@keyframes animatedBackground {
-    0% {
-        background-position: 0 100%;
+    .bg:after {
+        background-image: url(../images/after.svg);
+        background-position: center bottom;
+        animation: animatedBk 1000s linear infinite;
     }
 
-    50% {
-        background-position: 100% 100%;
-    }
-
-    100% {
-        background-position: 0% 100%;
-    }
-}
-
-@keyframes animatedBk {
-    0% {
-        background-position: 100% 100%;
-    }
-
-    50% {
-        background-position: 0% 100%;
-    }
-
-    100% {
-        background-position: 100% 100%;
+    .bg::before {
+        background-image: url("../images/before.svg");
+        background-position: center bottom;
+        animation: animatedBackground 1000s linear infinite;
     }
 }
