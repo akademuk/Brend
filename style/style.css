@@ -99,20 +99,14 @@ main {
     font-weight: 600;
     text-transform: uppercase;
     line-height: normal;
-    transition: color 0.5s;
 }
 
 .heading-secondary {
     padding: 24px;
 }
 
-.paragraph {
-    transition: color 0.5s;
-}
-
 .container {
     border-radius: 14px;
-    transition: background 0.5s;
 }
 
 .wrapper {
@@ -127,7 +121,6 @@ html {
 
 body {
     font-family: "Gilroy", sans-serif;
-    transition: background-color 0.5s, color 0.5s;
     font-size: 16px;
     font-weight: 500;
     line-height: 150%;
@@ -164,17 +157,25 @@ body.dark-theme .container {
 }
 
 body.dark-theme .social-card__icon {
-    border: 1px solid #333;
-    background: #1F1F1F;
+    border: none;
+    background: transparent;
 }
 
 body.dark-theme .footer__nav-link {
     color: var(--font-dark);
 }
 
+body.dark-theme .desktop-menu .links {
+    background: #0F0F0F;
+}
+
+body.dark-theme .desktop-menu li:nth-last-of-type(1) a{
+    background: var(--color-orange);
+}
+
 body.light-theme .social-card__icon {
-    border: 1px solid var(--background-light);
-    background: var(--background-light);
+    border: none;
+    background: transparent;
 }
 
 body.light-theme .container {
@@ -498,9 +499,6 @@ header.container {
     margin-top: -8px;
 }
 
-body.menu-open header {
-    transition: all 0.1s;
-}
 
 .navbar {
     display: none;
@@ -532,7 +530,6 @@ body.menu-open header {
 .hero__service {
     display: flex;
     align-items: center;
-    transition: transform 0.5s linear;
     white-space: nowrap;
     color: #676665;
     gap: 8px;
@@ -1483,7 +1480,6 @@ details[open] .faq__question::after {
     bottom: 0;
     left: 0;
     background: var(--color-orange);
-    transition: all 0.4s;
 }
 
 .footer__nav-list li a:hover::before {
@@ -1636,7 +1632,6 @@ details[open] .faq__question::after {
 .hero__service-list {
     display: flex;
     gap: 8px;
-    transition: transform 0.5s linear;
 }
 
 
@@ -1700,13 +1695,11 @@ details[open] .faq__question::after {
 .light-theme .bg::before,
 .light-theme .bg::after {
     opacity: 1;
-    transition: all 0.5s;
 }
 
 .dark-theme .bg::before,
 .dark-theme .bg::after {
     opacity: 0.1;
-    transition: all 0.5s;
 }
 
 .bg {
@@ -3073,6 +3066,16 @@ details[open] .faq__question::after {
         width: 140px;
         height: 140px;
     }
+
+    body.light-theme .social-card__icon {
+        border: 1px solid var(--background-light);
+        background: var(--background-light);
+    }
+
+    body.dark-theme .social-card__icon {
+    border: 1px solid #333;
+    background: #1F1F1F;
+}
 }
 
 
