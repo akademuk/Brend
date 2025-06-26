@@ -121,6 +121,10 @@ main {
     margin: 0 auto;
 }
 
+html {
+    overflow-x: hidden;
+}
+
 body {
     font-family: "Gilroy", sans-serif;
     transition: background-color 0.5s, color 0.5s;
