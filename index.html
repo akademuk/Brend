@@ -32,7 +32,6 @@
     <link rel="alternate" href="https://yourdomain.com/ua/" hreflang="uk">
 
     <!-- Ваши стили -->
-   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style/reset.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="style/style.css">
 
@@ -120,7 +119,7 @@
     <main>
         <section class="hero wrapper" aria-labelledby="hero-title">
             <div class="hero__container">
-                <div class="hero__content container" data-aos="fade-right">
+                <div class="hero__content container"
                     <h1 id="hero-title" class="heading-primary">
                         Digital Solutions for Your Business
                     </h1>
@@ -146,7 +145,7 @@
                     </div>
                 </div>
 
-                <div class="hero__visual" data-aos="fade-left">
+                <div class="hero__visual">
                     <figure class="hero__figure">
                         <picture>
                             <source type="image/webp" srcset="images/hero__img.webp">
@@ -168,7 +167,7 @@
             </div>
 
             <!-- Hero stats -->
-            <ul class="hero__stats border-light" aria-label="Our achievements" data-aos="fade-up">
+            <ul class="hero__stats border-light" aria-label="Our achievements">
                 <li class="hero__stats-item container">
                     <span class="hero__stats-label">Clients</span>
                     <span class="hero__stats-value" data-target="200" aria-live="polite">0</span>
@@ -204,7 +203,7 @@
             <h2 id="why-title" class="heading-secondary container">Why Choose Me for Your Project</h2>
             <div class="cards">
                 <a href="#services" class="card container links"
-                    aria-label="Learn more about our expertise in modern technologies" data-aos="fade-up" data-aos-delay="100">
+                    aria-label="Learn more about our expertise in modern technologies">
                     <h3 class="card__title">Expert in Modern Technologies</h3>
                     <p class="card__text paragraph">
                         I leverage cutting-edge tools to build solutions that meet today’s standards, ensuring
@@ -217,7 +216,7 @@
                     </span>
                 </a>
                 <a href="#" class="card container links"
-                    aria-label="Learn more about our Proven track record of success" data-aos="fade-up" data-aos-delay="200">
+                    aria-label="Learn more about our Proven track record of success">
                     <h3 class="card__title">Проверенный опыт успеха</h3>
                     <p class="card__text paragraph">
                         Мой опыт позволяет мне уверенно достигать результатов, предоставляя клиентам надежные и
@@ -230,7 +229,7 @@
                     </span>
                 </a>
 
-                <a href="#" class="card container links" aria-label="Learn more about our Client-oriented approach" data-aos="fade-up" data-aos-delay="300">
+                <a href="#" class="card container links" aria-label="Learn more about our Client-oriented approach">
                     <h3 class="card__title">Ориентированность на клиента</h3>
                     <p class="card__text paragraph">
                         Для меня важно понимать потребности каждого клиента и обеспечить прозрачное общение на всех
@@ -243,7 +242,7 @@
                     </span>
                 </a>
 
-                <a href="#" class="card container links" aria-label="Learn more about our Professional team" data-aos="fade-up" data-aos-delay="400">
+                <a href="#" class="card container links" aria-label="Learn more about our Professional team">
                     <h3 class="card__title">Команда профессионалов</h3>
                     <p class="card__text paragraph">
                         Моя команда и я обладаем широким спектром знаний и навыков, чтобы предложить вашему бизнесу
@@ -264,7 +263,7 @@
             <div class="services__grid">
                 <!-- Web Design -->
                 <article class="service container" itemscope itemtype="https://schema.org/Service"
-                    aria-labelledby="web-design-title" data-aos="fade-right" data-aos-delay="100">
+                    aria-labelledby="web-design-title">
                     <div class="service__header">
                         <div class="service__header--box">
                             <div class="service__header--icon">
@@ -292,7 +291,7 @@
 
                 <!-- Mobile Apps -->
                 <article class="service container" itemscope itemtype="https://schema.org/Service"
-                    aria-labelledby="mobile-app-title" data-aos="fade-left" data-aos-delay="100">
+                    aria-labelledby="mobile-app-title">
                     <div class="service__header">
                         <div class="service__header--box">
                             <div class="service__header--icon">
@@ -321,7 +320,7 @@
 
                 <!-- Web Development -->
                 <article class="service container" itemscope itemtype="https://schema.org/Service"
-                    aria-labelledby="web-dev-title" data-aos="fade-right" data-aos-delay="100">
+                    aria-labelledby="web-dev-title">
                     <div class="service__header">
                         <div class="service__header--box">
                             <div class="service__header--icon">
@@ -350,7 +349,7 @@
 
                 <!-- Digital Marketing -->
                 <article class="service container" itemscope itemtype="https://schema.org/Service"
-                    aria-labelledby="digital-marketing-title" data-aos="fade-left" data-aos-delay="100">
+                    aria-labelledby="digital-marketing-title">
                     <div class="service__header">
                         <div class="service__header--box">
                             <div class="service__header--icon">
@@ -943,17 +942,8 @@
     <div class="bg"></div>
     <div class="menu-overlay" aria-hidden="true" role="presentation" onclick="closeMenu()"></div>
 
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script src="script/main.js" defer></script>
 
-    <script>
-        AOS.init({
-            duration: 1000,
-            easing: 'ease-in-out',
-            once: true,
-            mirror: true,
-        });
-    </script>
 </body>
 
 </html>
