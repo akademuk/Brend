@@ -163,6 +163,20 @@ body.dark-theme .container {
     background: var(--background-light-container);
 }
 
+body.dark-theme .social-card__icon {
+    border: 1px solid #333;
+    background: #1F1F1F;
+}
+
+body.dark-theme .footer__nav-link {
+    color: var(--font-dark);
+}
+
+body.light-theme .social-card__icon {
+    border: 1px solid var(--background-light);
+    background: var(--background-light);
+}
+
 body.light-theme .container {
     background: var(--white-color);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -239,10 +253,6 @@ body.light-theme .language-option {
 body.dark-theme .paragraph,
 body.light-theme .mobile-links ul a {
     color: var(--font-dark-text);
-}
-
-body.dark-theme .logo img {
-    filter: brightness(0) saturate(100%) invert(90%) sepia(0%) saturate(7490%) hue-rotate(8deg) brightness(108%) contrast(108%);
 }
 
 body.light-theme .paragraph,
@@ -497,14 +507,14 @@ body.menu-open header {
 }
 
 .logo {
-    width: 116px;
-    height: 32px;
+    width: 145px;
+    height: 45px;
 }
 
 .logo a img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 
@@ -1677,7 +1687,7 @@ details[open] .faq__question::after {
 .buttons::after {
     content: "";
     display: flex;
-    background: linear-gradient(to top, #A95A43 , #D99F89);
+    background: linear-gradient(to top, #A95A43, #D99F89);
     height: calc(100% + 2px);
     width: 100%;
     position: absolute;
@@ -2164,8 +2174,8 @@ details[open] .faq__question::after {
     }
 
     .logo {
-        width: 200px;
-        height: 45px;
+        width: 205px;
+        height: 60px;
     }
 
     .container {
@@ -2871,8 +2881,6 @@ details[open] .faq__question::after {
         width: 66px;
         height: 66px;
         border-radius: 12px;
-        border: 1px solid #333;
-        background: #1F1F1F;
     }
 
     .social-card__header .works__link-text {
