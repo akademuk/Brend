@@ -2193,7 +2193,6 @@ details[open] .faq__question::after {
     }
 
     .desktop-menu li a {
-        background: var(--background-dark);
         border-radius: 12px;
         color: #D3D3D3;
         padding: 18px 24px;
@@ -2204,10 +2203,6 @@ details[open] .faq__question::after {
         text-transform: uppercase;
     }
 
-    .desktop-menu li.active a {
-        background: var(--color-orange);
-        color: var(--background-dark);
-    }
 
     header.container {
         padding: 24px;

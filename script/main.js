@@ -25,7 +25,9 @@ function initThemeSwitcher() {
       document.body.classList.toggle("dark-theme");
       document.body.classList.toggle("light-theme");
 
-      const theme = document.body.classList.contains("dark-theme") ? "dark" : "light";
+      const theme = document.body.classList.contains("dark-theme")
+        ? "dark"
+        : "light";
       localStorage.setItem("theme", theme);
     });
   }
@@ -60,7 +62,10 @@ function initBurgerMenu() {
 
     document.addEventListener("click", (event) => {
       const menuContainer = document.querySelector(".mobile-menu");
-      if (!menuContainer.contains(event.target) && menu.classList.contains("open")) {
+      if (
+        !menuContainer.contains(event.target) &&
+        menu.classList.contains("open")
+      ) {
         toggleMobileMenu();
       }
     });
@@ -124,26 +129,29 @@ function initCounterAnimation() {
     update();
   };
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting && !started) {
-        started = true;
-        values.forEach(animateCount);
-        observer.disconnect();
-      }
-    });
-  }, { threshold: 0.5 });
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && !started) {
+          started = true;
+          values.forEach(animateCount);
+          observer.disconnect();
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
 
   observer.observe(statsEl);
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  const serviceLists = document.querySelectorAll('.hero__service-list'); 
+document.addEventListener("DOMContentLoaded", () => {
+  const serviceLists = document.querySelectorAll(".hero__service-list");
 
-  serviceLists.forEach(serviceList => {
-    const services = serviceList.querySelectorAll('.hero__service');
+  serviceLists.forEach((serviceList) => {
+    const services = serviceList.querySelectorAll(".hero__service");
 
-    services.forEach(service => {
+    services.forEach((service) => {
       const clonedService = service.cloneNode(true);
       serviceList.appendChild(clonedService);
     });
@@ -158,11 +166,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (Math.abs(currentPosition) >= resetThreshold) {
         currentPosition = 0;
-        serviceList.style.transition = 'none';
+        serviceList.style.transition = "none";
         serviceList.style.transform = `translateX(${currentPosition}px)`;
 
         setTimeout(() => {
-          serviceList.style.transition = 'transform 0.5s linear';
+          serviceList.style.transition = "transform 0.5s linear";
         }, 50);
       }
 
@@ -177,5 +185,3 @@ document.addEventListener('DOMContentLoaded', () => {
     animate();
   });
 });
-
-
