@@ -284,7 +284,6 @@ body.light-theme .cta-services .hero__services-slider {
 }
 
 body.light-theme .social-card__icon {
-    background: var(--background-light);
     border: 1px solid transparent;
 }
 
@@ -971,7 +970,6 @@ body.menu-open header {
 }
 
 .work__meta li strong {
-    color: var(--gray-color);
     font-size: 12px;
     font-weight: 500;
     display: flex;
@@ -1453,7 +1451,7 @@ details[open] .faq__question::after {
 }
 
 .footer__nav-list li a {
-    color: #81807E;
+    color: var(--color-text);
     font-weight: 400;
     line-height: 150%;
     display: flex;
@@ -1594,7 +1592,7 @@ details[open] .faq__question::after {
 
 .footer__links li {
     padding-bottom: 20px;
-    border-bottom: 1px solid #232329;
+    border-bottom: 1px solid var(--border-light);
     width: 100%;
     text-align: center;
 }
