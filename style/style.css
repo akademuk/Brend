@@ -130,6 +130,7 @@ body {
     font-style: normal;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
     gap: 16px;
     padding: 0 16px 20px 16px;
 }
@@ -509,7 +510,6 @@ body.menu-open header {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    overflow: hidden;
 }
 
 .hero__visual {
