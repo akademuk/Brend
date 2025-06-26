@@ -1800,10 +1800,10 @@ details[open] .faq__question::after {
 
 .hero__visual-link {
     position: absolute;
-    width: 191px;
-    height: 191px;
-    top: -22px;
-    right: -37px;
+    width: 120px;
+    height: 120px;
+    top: -20px;
+    right: -20px;
     border-radius: 200px;
     background: var(--background-dark);
     display: flex;
@@ -1816,8 +1816,8 @@ details[open] .faq__question::after {
     padding: 10px;
     align-items: center;
     justify-content: center;
-    width: 88px;
-    height: 88px;
+    width: 48px;
+    height: 48px;
     border-radius: 100px;
     background: var(--color-orange);
 }
@@ -1836,8 +1836,8 @@ details[open] .faq__question::after {
     background-size: contain;
     top: 50%;
     left: 50%;
-    width: 140px;
-    height: 140px;
+    width: 90px;
+    height: 90px;
     transform: translate(-50%, -50%);
     animation: moveAround 10s linear infinite;
 }
@@ -3045,6 +3045,25 @@ details[open] .faq__question::after {
         max-width: 593px;
         border-radius: 12px;
         position: relative;
+    }
+
+    .hero__visual-link {
+        width: 191px;
+        height: 191px;
+        top: -22px;
+        right: -37px;
+    }
+
+    .hero__visual-link span {
+        width: 88px;
+        height: 88px;
+    }
+
+    .hero__visual-link span::before {
+
+
+        width: 140px;
+        height: 140px;
     }
 }
 
