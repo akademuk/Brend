@@ -235,3 +235,30 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const tabsContainer = document.querySelector('.works__tabs');
+  if (!tabsContainer) return;
+
+  const tabs = Array.from(tabsContainer.querySelectorAll('.works__tab'));
+  const grids = Array.from(document.querySelectorAll('.works__grid'));
+
+  const showCategory = target => {
+    tabs.forEach(t => t.classList.toggle('works__tab--active', t.dataset.target === target));
+    grids.forEach(grid => {
+      const match = grid.dataset.category === target;
+      grid.style.display = match ? '' : 'none';
+      grid.classList.toggle('works__grid--active', match);
+    });
+  };
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      showCategory(tab.dataset.target);
+    });
+  });
+
+  const initialTab = tabsContainer.querySelector('.works__tab--active') || tabs[0];
+  showCategory(initialTab.dataset.target);
+});

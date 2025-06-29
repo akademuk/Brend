@@ -2398,20 +2398,83 @@ details[open] .faq__question::after {
     margin-bottom: 0;
 }
 
+.projects-showcase .works__grid {
+    display: none;
+}
 
+.projects-showcase .works__grid.works__grid--active {
+    display: flex;
+}
 
+.works.projects-showcase .works__header  {
+    display: flex;
+    flex-wrap: wrap;
+    background: transparent;
+    padding: 0;
+    gap: 10px;
+}
 
+.dark-theme .works.projects-showcase .works__header h2 {
+    padding: 24px !important;
+    background: var(--background-light-container);
+    border-radius: 14px;
+    width: 100%;
+}
 
+.works__tabs {
+    display: flex;
+    gap: 10px;
+    flex-wrap: nowrap;
+    overflow: auto;
+    padding-bottom: 20px;
+}
 
+.dark-theme .works__tab {
+    background: var(--background-light-container);
+}
 
+.dark-theme .works__tab.works__tab--active {
+    background: var(--color-orange);
+    color: var(--font-light);
+}
 
+.works__tab {
+    padding: 14px 20px;
+    border-radius: 8px;
+    color: #B3B3B2;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 150%; 
+    cursor: pointer;
+    white-space: nowrap;
+    text-transform: uppercase;
+    border: none;
+}
 
+.light-theme .works__tab.works__tab--active {
+    color: var(--white-color)
+}
 
+.works.projects-showcase .works__header {
+    box-shadow: none;
+}
 
+.light-theme .works.projects-showcase .works__header h2{
+    padding: 24px !important;
+    background: var(--white-color);
+    width: 100%;
+    border-radius: 14px;
+}
 
+.light-theme .works__tab {
+    background: var(--white-color);
+    color: var(--color-text)
+}
 
-
-
+.light-theme .works__tab.works__tab--active {
+    background: var(--color-orange) !important;
+}
 
 
 
@@ -3383,7 +3446,7 @@ details[open] .faq__question::after {
 
     body.dark-theme .social-card__icon {
         border: 1px solid #333;
-        background: #1F1F1F;
+        background: var(--bg-color);
     }
 
     .hero__content {
@@ -3556,6 +3619,55 @@ details[open] .faq__question::after {
 
     .key-section .card {
         gap: 12px;
+    }
+
+    .works.projects-showcase .works__header {
+        align-items: center;
+        padding: 50px;
+    }
+
+    .dark-theme .works.projects-showcase .works__header {
+        background: var(--background-light-container);
+    }
+
+    .light-theme .works.projects-showcase .works__header {
+        background: var(--white-color);
+    }
+
+    .dark-theme .works.projects-showcase .works__header h2 {
+        padding: 0 !important;
+        width: auto;
+    }
+
+    .works__tabs {
+        padding-bottom: 0;
+        gap: 12px;
+    }
+
+    .works__tab.works__tab--active {
+        background: var(--color-orange) !important;
+    }
+
+    .works__tab {
+        padding: 18px 24px;
+        font-size: 18px;
+        border-radius: 12px;
+        background: var(--bg-color);
+    }
+
+    .dark-theme .works__tab {
+        background: var(--bg-color);
+    }
+    
+
+    .light-theme .works__tab {
+        background: var(--background-light);
+            color: var(--color-text);
+    }
+    
+    .light-theme .works.projects-showcase .works__header h2 {
+        width: auto;
+        padding: 0 !important;
     }
 }
 
