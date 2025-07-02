@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Основное описание для поиска -->
+    <meta name="description"
+        content="NexGen provides cutting-edge digital solutions to help your business thrive in the digital landscape.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="NexGen">
+
+    <!-- Open Graph для соцсетей -->
+    <meta property="og:title" content="NexGen — Digital Solutions for Your Business">
+    <meta property="og:description"
+        content="NexGen provides cutting-edge digital solutions to help your business thrive in the digital landscape.">
+    <meta property="og:url" content="https://yourdomain.com/">
+    <meta property="og:image" content="https://yourdomain.com/images/og-image.jpg">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="NexGen — Digital Solutions for Your Business">
+    <meta name="twitter:description"
+        content="NexGen provides cutting-edge digital solutions to help your business thrive in the digital landscape.">
+    <meta name="twitter:image" content="https://yourdomain.com/images/og-image.jpg">
+
+    <!-- Канонический URL и альтернативные языки -->
+    <link rel="canonical" href="https://yourdomain.com/">
+    <link rel="alternate" href="https://yourdomain.com/" hreflang="en">
+    <link rel="alternate" href="https://yourdomain.com/ru/" hreflang="ru">
+    <link rel="alternate" href="https://yourdomain.com/ua/" hreflang="uk">
+
+    <!-- Ваши стили -->
+    <link rel="stylesheet" href="style/reset.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="style/style.css">
+
+    <!-- JSON-LD для организации и страницы -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "NexGen",
+    "url": "https://yourdomain.com/",
+    "logo": "https://yourdomain.com/images/Logo.svg",
+    "sameAs": [
+      "https://www.instagram.com/yourprofile",
+      "https://twitter.com/yourprofile",
+      "https://www.linkedin.com/company/yourprofile"
+    ]
+  }
+  </script>
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "headline": "Digital Solutions for Your Business",
+    "description": "NexGen provides cutting-edge digital solutions to help your business thrive in the digital landscape.",
+    "url": "https://yourdomain.com/"
+  }
+  </script>
+
+    <link rel="icon" href="images/favicon.svg" type="image/x-icon">
+    <title>NexGen — Services Page</title>
+</head>
+
+<body>
+
+
+    <!-- ==== HEADER ==== -->
+    <div class="language-switcher container" role="region" aria-label="Language selection">
+        <div class="theme-switcher">
+            <button id="switchTheme" class="theme-toggle" aria-pressed="false" aria-label="Toggle theme"
+                aria-live="polite"></button>
+        </div>
+        <button id="languageToggle" class="language-toggle" aria-label="Select Language" aria-expanded="false">
+            <span class="language-option links" id="en">EN</span>
+            <span class="language-option links" id="ua">UA</span>
+            <span class="language-option links" id="ru">RU</span>
+        </button>
+    </div>
+
+    <header class="container wrapper">
+        <div class="logo">
+            <a href="/" aria-label="Go to homepage">
+                <img width="205" height="60" src="images/Logo.svg" alt="NexGen logo" loading="lazy">
+            </a>
+        </div>
+        <nav class="navbar" aria-label="Main menu">
+            <ul class="desktop-menu">
+                <li><a href="/" aria-label="Home" class="links">Home</a></li>
+                <li><a href="services.html" aria-label="Services" class="links">Services</a></li>
+                <li><a href="works.html" aria-label="Works" class="links">Works</a></li>
+                <li><a href="about.html" aria-label="About" class="links">About</a></li>
+                <li><a href="careers.html" aria-label="Careers" class="links">Careers</a></li>
+                <li><a href="blog.html" aria-label="Blog" class="links">Blog</a></li>
+                <li class="active"><a href="contact.html" class="contact-btn links" aria-label="Contact us">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="mobile-menu">
+            <button class="burger" aria-label="Open menu" onclick="toggleMobileMenu()" aria-expanded="false">
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+            </button>
+        </div>
+        <nav class="mobile-links" aria-hidden="true" role="menu">
+            <ul>
+                <li><a href="/" role="menuitem">Home</a></li>
+                <li><a href="services.html" role="menuitem">Services</a></li>
+                <li><a href="works.html" role="menuitem">Works</a></li>
+                <li><a href="about.html" role="menuitem">About</a></li>
+                <li><a href="careers.html" role="menuitem">Careers</a></li>
+                <li><a href="blog.html" role="menuitem">Blog</a></li>
+                <li><a href="contact.html" role="menuitem">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero wrapper" aria-labelledby="hero-title">
+            <div class="hero__container">
+                <div class="hero__content container">
+                    <h1 id="hero-title" class="heading-primary">
+                        Elevating Brands in the Digital Age
+                    </h1>
+
+                    <a href="contact.html" class="hero__button hero__button--primary" aria-label="Start a project">
+                        <span><img src="images/link-arrow.svg" alt="" aria-hidden="true" width="24" height="25"></span>
+                        Start a Project
+                    </a>
+                </div>
+
+                <div class="hero__visual services-hero__visual">
+                    <!-- Hero stats -->
+                    <ul class="hero__stats border-light" aria-label="Our achievements">
+                        <li class="hero__stats-item container">
+                            <span class="hero__stats-label">Clients</span>
+                            <span class="hero__stats-value" data-target="200" aria-live="polite">0</span>
+                        </li>
+                        <li class="hero__stats-item container">
+                            <span class="hero__stats-label">Projects</span>
+                            <span class="hero__stats-value" data-target="280" aria-live="polite">0</span>
+                        </li>
+                        <li class="hero__stats-item container">
+                            <span class="hero__stats-label">Happy Clients</span>
+                            <span class="hero__stats-value" data-target="100" aria-live="polite">0</span>
+                        </li>
+                        <li class="hero__stats-item container">
+                            <span class="hero__stats-label">Subscribers</span>
+                            <span class="hero__stats-value" data-target="420" aria-live="polite">0</span>
+                        </li>
+                        <li class="hero__stats-item container hero__stats-item--action">
+                            <a href="about.html" class="hero__stats-link"
+                                aria-label="Learn more about our achievements in web development">
+                                <span><img src="images/hero__stats-item.svg" alt="" width="29" height="28"></span>
+                                Know More
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials border-light wrapper meet-section" aria-labelledby="meet-title">
+            <div class="testimonials__header container">
+                <h2 id="meet-title" class="section__title heading-secondary">Meet the brilliant minds behind NexGen</h2>
+                <a href="/" class="hero__stats-link" aria-label="View all testimonials">
+                    <span class="works__link-text">
+                        <img src="images/hero__stats-item.svg" alt="Arrow icon" aria-hidden="true" width="16"
+                            height="16" loading="lazy">
+                    </span>
+                    ALL Members
+                </a>
+            </div>
+            <div class="testimonials__grid">
+                <article class="testimonial container">
+                    <div class="testimonial__header">
+                        <h3 class="meet-section__title">John Smith</h3>
+                        <span class="meet-section__position">Co-Founder & CEO</span>
+                    </div>
+
+                    <div class="testimonial__footer">
+                        <picture>
+                            <source type="image/webp" srcset="images/meet1.webp">
+                            <img src="images/meet1.png" width="370" height="211"
+                                alt="Screenshot of EstateIn real estate project" loading="lazy">
+                        </picture>
+                        <ul class="meet-section__list">
+                            <li class="meet-section__item">
+                                <a href="/" class="meet-section__link">
+                                    <img width="24" height="24" src="images/social1.svg" alt="icon">
+                                </a>
+                            </li>
+                            <li class="meet-section__item">
+                                <a href="/" class="meet-section__link">
+                                    <img width="24" height="24" src="images/social2.svg" alt="icon">
+                                </a>
+                            </li>
+                            <li class="meet-section__item">
+                                <a href="/" class="meet-section__link">
+                                    <img width="24" height="24" src="images/social3.svg" alt="icon">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="testimonial container">
+                    <div class="testimonial__header">
+                        <h3 class="meet-section__title">Sarah Adams</h3>
+                        <span class="meet-section__position">Head of Design</span>
+                    </div>
+
+                    <div class="testimonial__footer">
+                        <picture>
+                            <source type="image/webp" srcset="images/meet2.webp">
+                            <img src="images/meet2.png" width="370" height="211"
+                                alt="Screenshot of EstateIn real estate project" loading="lazy">
+                        </picture>
+                        <ul class="meet-section__list">
+                            <li class="meet-section__item">
+                                <a href="/" class="meet-section__link">
+                                    <img width="24" height="24" src="images/social1.svg" alt="icon">
+                                </a>
+                            </li>
+                            <li class="meet-section__item">
+                                <a href="/" class="meet-section__link">
+                                    <img width="24" height="24" src="images/social2.svg" alt="icon">
+                                </a>
+                            </li>
+                            <li class="meet-section__item">
+                                <a href="/" class="meet-section__link">
+                                    <img width="24" height="24" src="images/social3.svg" alt="icon">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="testimonial container">
+                    <div class="testimonial__header">
+                        <h3 class="meet-section__title">Emily Johnson</h3>
+                        <span class="meet-section__position">Lead Web Developer</span>
+                    </div>
+
+                    <div class="testimonial__footer">
+                        <picture>
+                            <source type="image/webp" srcset="images/meet3.webp">
+                            <img src="images/meet3.png" width="370" height="211"
+                                alt="Screenshot of EstateIn real estate project" loading="lazy">
+                        </picture>
+                        <ul class="meet-section__list">
+                            <li class="meet-section__item">
+                                <a href="/" class="meet-section__link">
+                                    <img width="24" height="24" src="images/social1.svg" alt="icon">
+                                </a>
+                            </li>
+                            <li class="meet-section__item">
+                                <a href="/" class="meet-section__link">
+                                    <img width="24" height="24" src="images/social2.svg" alt="icon">
+                                </a>
+                            </li>
+                            <li class="meet-section__item">
+                                <a href="/" class="meet-section__link">
+                                    <img width="24" height="24" src="images/social3.svg" alt="icon">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="testimonial container">
+                    <div class="testimonial__header">
+                        <h3 class="meet-section__title">William Lee</h3>
+                        <span class="meet-section__position">Lead Backend Developer</span>
+                    </div>
+
+                    <div class="testimonial__footer">
+                        <picture>
+                            <source type="image/webp" srcset="images/meet4.webp">
+                            <img src="images/meet4.png" width="370" height="211"
+                                alt="Screenshot of EstateIn real estate project" loading="lazy">
+                        </picture>
+                        <ul class="meet-section__list">
+                            <li class="meet-section__item">
+                                <a href="/" class="meet-section__link">
+                                    <img width="24" height="24" src="images/social1.svg" alt="icon">
+                                </a>
+                            </li>
+                            <li class="meet-section__item">
+                                <a href="/" class="meet-section__link">
+                                    <img width="24" height="24" src="images/social2.svg" alt="icon">
+                                </a>
+                            </li>
+                            <li class="meet-section__item">
+                                <a href="/" class="meet-section__link">
+                                    <img width="24" height="24" src="images/social3.svg" alt="icon">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+
+            <a href="/works" class="works__link-mob container hero__stats-link" aria-label="View all testimonials">
+                <span class="works__link-text">
+                    <img src="images/arrow-bottom.svg" alt="Arrow icon" aria-hidden="true" width="20" height="20"
+                        loading="lazy">
+                </span>
+                ALL Members
+            </a>
+        </section>
+
+        <section class="testimonials border-light wrapper achievements-section" aria-labelledby="achievements-title">
+            <div class="testimonials__header container">
+                <h2 id="achievements-title" class="section__title heading-secondary">Our Achievements</h2>
+            </div>
+            <div class="testimonials__grid">
+                <article class="testimonial container achievements__article">
+                    <time datetime="2023-09">September 2023</time>
+                    <h3>Global Recognition for Innovation</h3>
+                    <p>In 2023, our digital agency gained global acclaim for innovative solutions, setting new standards
+                        in the ever-evolving digital landscape.</p>
+                </article>
+
+                <article class="testimonial container achievements__article">
+                    <time datetime="2023-09">March 2019</time>
+                    <h3>Industry Leadership Acknowledged</h3>
+                    <p>Recognized as an industry leader in 2019, our agency received prestigious awards, affirming our
+                        commitment to excellence and client satisfaction.</p>
+                </article>
+
+                <article class="testimonial container achievements__article">
+                    <time datetime="2023-09">August 2015</time>
+                    <h3>Expansion into International Markets</h3>
+                    <p>Expanding horizons in 2015, our agency successfully entered international markets, establishing a
+                        global presence and serving clients on a broader scale.</p>
+                </article>
+
+                <article class="testimonial container achievements__article">
+                    <time datetime="2023-09">January 2010</time>
+                    <h3>Pioneering the Digital Frontier</h3>
+                    <p>In 2010, our agency was born, pioneering the digital frontier and establishing core principles
+                        that have guided us through a decade of innovation.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="testimonials border-light wrapper awards-section" aria-labelledby="awards-title">
+            <div class="testimonials__header container">
+                <h2 id="awards-title" class="section__title heading-secondary">Awards & Recognitions</h2>
+            </div>
+            <div class="testimonials__grid">
+                <article class="testimonial container awards__article">
+                    <div class="awards__article--box">
+                        <span class="awards__article--date">Date<time datetime="2023-09">2023</time></span>
+                        <span class="awards__article--boxs">
+                            <img width="34" height="34" src="images/star-icon.svg" alt="icon">
+                        </span>
+                    </div>
+                    <h3>Digital Excellence Award</h3>
+                    <p>Recognition for outstanding contributions to the digital industry, celebrating our ability to
+                        deliver exceptional web design and development solutions that push the boundaries of creativity
+                        and functionality.</p>
+                </article>
+
+                <article class="testimonial container awards__article">
+                    <div class="awards__article--box">
+                        <span class="awards__article--date">Date<time datetime="2023-09">2019</time></span>
+                        <span class="awards__article--boxs">
+                            <img width="34" height="34" src="images/star-icon.svg" alt="icon">
+                        </span>
+                    </div>
+                    <h3>Top Mobile App Development Agency</h3>
+                    <p>Recognized as a top mobile app development agency by industry experts, highlighting our proficiency in delivering seamless and user-centric mobile applications.</p>
+                </article>
+
+                <article class="testimonial container awards__article">
+                    <div class="awards__article--box">
+                        <span class="awards__article--date">Date<time datetime="2023-09">2022</time></span>
+                        <span class="awards__article--boxs">
+                            <img width="34" height="34" src="images/star-icon.svg" alt="icon">
+                        </span>
+                    </div>
+                    <h3>Best Digital Marketing Campaign</h3>
+                    <p>Awarded for an exceptional digital marketing campaign with outstanding results, showcasing our data-driven strategies and targeted marketing efforts that achieved remarkable business growth for our clients.</p>
+                </article>
+
+                <article class="testimonial container awards__article">
+                    <div class="awards__article--box">
+                        <span class="awards__article--date">Date<time datetime="2023-09">2024</time></span>
+                        <span class="awards__article--boxs">
+                            <img width="34" height="34" src="images/star-icon.svg" alt="icon">
+                        </span>
+                    </div>
+                    <h3>Innovative Tech Startup Award</h3>
+                    <p>Recognition of our pioneering efforts as a technology startup, acknowledging our commitment to exploring and implementing cutting-edge technologies to drive innovation in the digital space.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="testimonials" class="testimonials border-light wrapper" aria-labelledby="testimonials-title">
+            <div class="testimonials__header container">
+                <h2 id="testimonials-title" class="section__title heading-secondary">Testimonials</h2>
+                <a href="/" class="hero__stats-link" aria-label="View all testimonials">
+                    <span class="works__link-text">
+                        <img src="images/hero__stats-item.svg" alt="Arrow icon" aria-hidden="true" width="16"
+                            height="16" loading="lazy">
+                    </span>
+                    ALL Testimonials
+                </a>
+            </div>
+            <div class="testimonials__grid">
+                <article class="testimonial container" itemscope itemtype="https://schema.org/Review"
+                    aria-labelledby="testimonial1-title">
+                    <div class="testimonial__header">
+                        <h3 id="testimonial1-title">NexGen turned our business around!</h3>
+                        <blockquote class="testimonial__quote" itemprop="reviewBody">
+                            “Their digital marketing strategies helped us reach new customers and increase our revenue
+                            by 30% within just a few months. Highly recommended!”
+                        </blockquote>
+                    </div>
+
+                    <div class="testimonial__footer">
+                        <img src="images/testimonial__photo1.png" alt="Photo of Sarah Thompson, CEO of BlueBloom"
+                            class="testimonial__photo" width="60" height="60" loading="lazy" aria-hidden="true">
+                        <div class="testimonial__author" itemprop="author" itemscope
+                            itemtype="https://schema.org/Person">
+                            <span class="testimonial__author-name">Sarah Thompson</span>
+                            <span class="testimonial__author-role" itemprop="jobTitle">CEO of BlueBloom</span>
+                        </div>
+                        <a href="/" class="testimonial__details hero__stats-link"
+                            aria-label="Read full testimonial by Sarah Thompson">
+                            <span class="works__link-text">
+                                <img src="images/hero__stats-item.svg" alt="Arrow icon" aria-hidden="true" width="16"
+                                    height="16" loading="lazy">
+                            </span>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="testimonial container" itemscope itemtype="https://schema.org/Review"
+                    aria-labelledby="testimonial2-title">
+                    <div class="testimonial__header">
+                        <h3 id="testimonial2-title">NexGen turned our business around!</h3>
+                        <blockquote class="testimonial__quote" itemprop="reviewBody">
+                            “Their digital marketing strategies helped us reach new customers and increase our revenue
+                            by 30% within just a few months. Highly recommended!”
+                        </blockquote>
+                    </div>
+
+                    <div class="testimonial__footer">
+                        <img src="images/testimonial__photo2.png" alt="Photo of Wade Warren, Art Director"
+                            class="testimonial__photo" width="60" height="60" loading="lazy" aria-hidden="true">
+                        <div class="testimonial__author" itemprop="author" itemscope
+                            itemtype="https://schema.org/Person">
+                            <span class="testimonial__author-name">Wade Warren</span>
+                            <span class="testimonial__author-role" itemprop="jobTitle">Art Director</span>
+                        </div>
+                        <a href="/" class="testimonial__details hero__stats-link"
+                            aria-label="Read full testimonial by Wade Warren">
+                            <span class="works__link-text">
+                                <img src="images/hero__stats-item.svg" alt="Arrow icon" aria-hidden="true" width="16"
+                                    height="16" loading="lazy">
+                            </span>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="testimonial container" itemscope itemtype="https://schema.org/Review"
+                    aria-labelledby="testimonial3-title">
+                    <div class="testimonial__header">
+                        <h3 id="testimonial3-title">Working with NexGen was a pleasure.</h3>
+                        <blockquote class="testimonial__quote" itemprop="reviewBody">
+                            “Their web design team created a stunning website that perfectly captured our brand's
+                            essence. The feedback from our customers has been overwhelmingly positive.”
+                        </blockquote>
+                    </div>
+
+                    <div class="testimonial__footer">
+                        <img src="images/testimonial__photo3.png" alt="Photo of Lisa Williams, CEO Of HealthTech"
+                            class="testimonial__photo" width="60" height="60" loading="lazy" aria-hidden="true">
+                        <div class="testimonial__author" itemprop="author" itemscope
+                            itemtype="https://schema.org/Person">
+                            <span class="testimonial__author-name">Lisa Williams</span>
+                            <span class="testimonial__author-role" itemprop="jobTitle">CEO of HealthTech</span>
+                        </div>
+                        <a href="/" class="testimonial__details hero__stats-link"
+                            aria-label="Read full testimonial by Lisa Williams">
+                            <span class="works__link-text">
+                                <img src="images/hero__stats-item.svg" alt="Arrow icon" aria-hidden="true" width="16"
+                                    height="16" loading="lazy">
+                            </span>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="testimonial container" itemscope itemtype="https://schema.org/Review"
+                    aria-labelledby="testimonial4-title">
+                    <div class="testimonial__header">
+                        <h3 id="testimonial4-title">NexGen's web design team brought our vision to life.</h3>
+                        <blockquote class="testimonial__quote" itemprop="reviewBody">
+                            “Their responsive design ensures our website looks stunning on all devices, contributing to
+                            increased user engagement.”
+                        </blockquote>
+                    </div>
+
+                    <div class="testimonial__footer">
+                        <img src="images/testimonial__photo4.png" alt="Photo of Jennifer Lee, COO of Foodie Haven"
+                            class="testimonial__photo" width="60" height="60" loading="lazy" aria-hidden="true">
+                        <div class="testimonial__author" itemprop="author" itemscope
+                            itemtype="https://schema.org/Person">
+                            <span class="testimonial__author-name">Jennifer Lee</span>
+                            <span class="testimonial__author-role" itemprop="jobTitle">COO of Foodie Haven</span>
+                        </div>
+                        <a href="/" class="testimonial__details hero__stats-link"
+                            aria-label="Read full testimonial by Jennifer Lee">
+                            <span class="works__link-text">
+                                <img src="images/hero__stats-item.svg" alt="Arrow icon" aria-hidden="true" width="16"
+                                    height="16" loading="lazy">
+                            </span>
+                        </a>
+                    </div>
+                </article>
+            </div>
+
+            <a href="/works" class="works__link-mob container hero__stats-link" aria-label="View all testimonials">
+                <span class="works__link-text">
+                    <img src="images/arrow-bottom.svg" alt="Arrow icon" aria-hidden="true" width="20" height="20"
+                        loading="lazy">
+                </span>
+                ALL Testimonials
+            </a>
+        </section>
+
+        <section id="faq" class="faq wrapper" aria-labelledby="faq-title">
+            <div class="faq__header container">
+                <h2 id="faq-title" class="section__title heading-secondary">Frequently Asked Questions</h2>
+                <a href="/" class="works__link hero__stats-link" aria-label="View all FAQ">
+                    <span class="works__link-text">
+                        <img src="images/hero__stats-item.svg" alt="Arrow icon" aria-hidden="true" width="16"
+                            height="16" loading="lazy">
+                    </span>
+                    View All
+                </a>
+            </div>
+            <div class="faq__box">
+                <div class="faq__list">
+                    <details class="faq__item container border-light" open aria-expanded="true"
+                        aria-labelledby="faq1-title">
+                        <summary id="faq1-title" class="faq__question">How long does it take to complete a web
+                            development project?</summary>
+                        <p class="faq__answer">The timeline varies depending on the project's complexity and
+                            requirements. Our team strives to deliver projects on time while maintaining the highest
+                            quality standards.</p>
+                    </details>
+                    <details class="faq__item container border-light" aria-expanded="false"
+                        aria-labelledby="faq2-title">
+                        <summary id="faq2-title" class="faq__question">Can you handle large-scale mobile app development
+                            projects?</summary>
+                        <p class="faq__answer">Yes, we have extensive experience in building scalable mobile
+                            applications for enterprises and startups alike.</p>
+                    </details>
+                    <details class="faq__item container border-light" aria-expanded="false"
+                        aria-labelledby="faq3-title">
+                        <summary id="faq3-title" class="faq__question">Can you integrate third-party APIs into our
+                            mobile app?</summary>
+                        <p class="faq__answer">Absolutely. We specialize in integrating RESTful and GraphQL APIs to
+                            enrich your mobile app's functionality.</p>
+                    </details>
+                    <details class="faq__item container border-light" aria-expanded="false"
+                        aria-labelledby="faq4-title">
+                        <summary id="faq4-title" class="faq__question">How do you ensure cross-platform compatibility
+                            for mobile apps?</summary>
+                        <p class="faq__answer">We leverage React Native and Flutter to build apps that provide
+                            native-like performance across iOS and Android devices.</p>
+                    </details>
+                    <details class="faq__item container border-light" aria-expanded="false"
+                        aria-labelledby="faq5-title">
+                        <summary id="faq5-title" class="faq__question">What is your approach to user experience (UX)
+                            design?</summary>
+                        <p class="faq__answer">Our UX process involves user research, wireframing, prototyping, and
+                            iterative testing to ensure intuitive and user-centric designs.</p>
+                    </details>
+                </div>
+
+                <aside class="faq__form container">
+                    <h3 id="faq-form-title" class="faq__form-title">Ask Your Question</h3>
+                    <form action="/contact" method="post" class="faq__form-fields" aria-labelledby="faq-form-title">
+                        <label for="faq-name" class="faq__label">Name</label>
+                        <input type="text" id="faq-name" name="name" class="faq__input" placeholder="Enter your name"
+                            required>
+
+                        <label for="faq-email" class="faq__label">Email</label>
+                        <input type="email" id="faq-email" name="email" class="faq__input"
+                            placeholder="Enter your email" required>
+
+                        <label for="faq-question" class="faq__label">Your Question</label>
+                        <textarea id="faq-question" name="question" class="faq__textarea" rows="4"
+                            placeholder="Enter your question here..." required></textarea>
+
+                        <button type="submit" class="btn btn--primary faq__submit buttons"
+                            aria-label="Send your message"><span class="buttons-text">Send
+                                your message</span></button>
+                    </form>
+                </aside>
+            </div>
+        </section>
+
+
+        <section id="cta" class="cta wrapper" aria-labelledby="cta-title">
+            <div class="cta-banner">
+                <div class="cta-banner__box">
+                    <h2 id="cta-title" class="section__title">Ready to Transform Your Digital Presence?</h2>
+                    <p class="cta__text">Take the first step towards digital success with NexGen by your side. Our team
+                        of experts is eager to craft tailored solutions that drive growth for your business.</p>
+                </div>
+                <a href="#contact" class="cta__btn btn btn--secondary links"
+                    aria-label="Get in touch with us for digital solutions">
+                    <span class="cta__btn-text">Get in Touch</span>
+                    <img src="images/link-arrow-top.svg" alt="Right arrow icon" class="cta__btn-icon" width="16"
+                        height="16" loading="lazy" aria-hidden="true">
+                </a>
+            </div>
+            <div class="cta-services">
+                <div class="hero__services-slider hero__services-marquee">
+                    <div class="hero__services-wrapper hero__service-list">
+                        <span class="hero__service hero__service">Follow Us on Social Media</span>
+                        <span class="hero__service hero__service">Follow Us on Social Media</span>
+                        <span class="hero__service hero__service">Follow Us on Social Media</span>
+                        <span class="hero__service hero__service">Follow Us on Social Media</span>
+                        <span class="hero__service hero__service">Follow Us on Social Media</span>
+                        <span class="hero__service hero__service">Follow Us on Social Media</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="footer" class="footer wrapper">
+        <div class="footer__grid">
+            <div class="footer__socials">
+                <a href="#" class="social-card social-card--instagram container links"
+                    aria-label="Follow us on Instagram">
+                    <div class="social-card__header">
+                        <img src="images/icon-instagram.svg" alt="Instagram icon" class="social-card__icon" width="24"
+                            height="24" loading="lazy" aria-hidden="true">
+                        <span class="works__link-text">
+                            <img src="images/hero__stats-item.svg" alt="Arrow right icon" aria-hidden="true" width="16"
+                                height="16" loading="lazy">
+                        </span>
+                    </div>
+                    <div class="social-card__info">
+                        <h3 class="social-card__title">Instagram</h3>
+                        <p class="social-card__text">Share visually appealing snippets of our latest web projects.</p>
+                    </div>
+                </a>
+                <a href="#" class="social-card social-card--twitter container links" aria-label="Follow us on Twitter">
+                    <div class="social-card__header">
+                        <img src="images/icon-twitter.svg" alt="Twitter icon" class="social-card__icon" width="24"
+                            height="24" loading="lazy" aria-hidden="true">
+                        <span class="works__link-text">
+                            <img src="images/hero__stats-item.svg" alt="Arrow right icon" aria-hidden="true" width="16"
+                                height="16" loading="lazy">
+                        </span>
+                    </div>
+                    <div class="social-card__info">
+                        <h3 class="social-card__title">Twitter</h3>
+                        <p class="social-card__text">Tweet about interesting coding challenges you’ve overcome.</p>
+                    </div>
+                </a>
+                <a href="#" class="social-card social-card--dribbble container links"
+                    aria-label="Follow us on Dribbble">
+                    <div class="social-card__header">
+                        <img src="images/icon-dribbble.svg" alt="Dribbble icon" class="social-card__icon" width="24"
+                            height="24" loading="lazy" aria-hidden="true">
+                        <span class="works__link-text">
+                            <img src="images/hero__stats-item.svg" alt="Arrow right icon" aria-hidden="true" width="16"
+                                height="16" loading="lazy">
+                        </span>
+                    </div>
+                    <div class="social-card__info">
+                        <h3 class="social-card__title">Dribbble</h3>
+                        <p class="social-card__text">Showcase design elements of our web projects.</p>
+                    </div>
+                </a>
+                <a href="#" class="social-card social-card--behance container links" aria-label="Follow us on Behance">
+                    <div class="social-card__header">
+                        <img src="images/icon-behance.svg" alt="Behance icon" class="social-card__icon" width="24"
+                            height="24" loading="lazy" aria-hidden="true">
+                        <span class="works__link-text">
+                            <img src="images/hero__stats-item.svg" alt="Arrow right icon" aria-hidden="true" width="16"
+                                height="16" loading="lazy">
+                        </span>
+                    </div>
+                    <div class="social-card__info">
+                        <h3 class="social-card__title">Behance</h3>
+                        <p class="social-card__text">Create detailed presentations for our projects.</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="footer__grid-box">
+                <nav class="footer__nav container" aria-label="Footer navigation">
+                    <div class="footer__nav-section">
+                        <h3 class="footer__nav-title">Home</h3>
+                        <ul class="footer__nav-list">
+                            <li><a href="#why" class="footer__nav-link">Why Us</a></li>
+                            <li><a href="#about" class="footer__nav-link">About Us</a></li>
+                            <li><a href="#testimonials" class="footer__nav-link">Testimonials</a></li>
+                            <li><a href="#faq" class="footer__nav-link">FAQ’s</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__nav-section">
+                        <h3 class="footer__nav-title">Services</h3>
+                        <ul class="footer__nav-list">
+                            <li><a href="#services" class="footer__nav-link">Web Development</a></li>
+                            <li><a href="#services" class="footer__nav-link">App Development</a></li>
+                            <li><a href="#services" class="footer__nav-link">Web Design</a></li>
+                            <li><a href="#services" class="footer__nav-link">Digital Marketing</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__nav-section">
+                        <h3 class="footer__nav-title">Projects</h3>
+                        <ul class="footer__nav-list">
+                            <li><a href="/works/klothink" class="footer__nav-link">Klothink</a></li>
+                            <li><a href="/works/zenith-fitness" class="footer__nav-link">Zenith</a></li>
+                            <li><a href="/works/novus" class="footer__nav-link">Novus</a></li>
+                            <li><a href="/works/apex" class="footer__nav-link">Apex</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__nav-section">
+                        <h3 class="footer__nav-title">Blogs</h3>
+                        <ul class="footer__nav-list">
+                            <li><a href="/blog/business" class="footer__nav-link">Business</a></li>
+                            <li><a href="/blog/design" class="footer__nav-link">Design <span class="badge"
+                                        aria-live="polite">Soon</span></a></li>
+                            <li><a href="/blog/development" class="footer__nav-link">Development <span class="badge"
+                                        aria-live="polite">Soon</span></a></li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <div class="footer__newsletter container">
+                    <div class="footer__newsletter-box">
+                        <span>Newsletter</span>
+                        <h3 class="footer__newsletter-title">Subscribe to our newsletter</h3>
+                    </div>
+                    <form action="/subscribe" method="post" class="footer__newsletter-form">
+                        <input type="email" id="footer-email" name="email" class="footer__newsletter-input"
+                            placeholder="Enter your email" required>
+                        <button type="submit" class="btn btn--primary footer__newsletter-btn"
+                            aria-label="Subscribe to the newsletter">
+                            <img src="images/link-arrow-top.svg" alt="Arrow right icon" width="16" height="16"
+                                loading="lazy" aria-hidden="true">
+                        </button>
+                    </form>
+                </div>
+
+                <div class="footer__bottom container">
+                    <span class="footer__copyright">© 2025 NexGen. All rights reserved.</span>
+                    <ul class="footer__links">
+                        <li>
+                            <a href="/terms" class="footer__link">Terms &amp; Conditions</a>
+                        </li>
+                        <li>
+                            <a href="/privacy" class="footer__link">Privacy Policy</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="bg"></div>
+    <div class="menu-overlay" aria-hidden="true" role="presentation" onclick="closeMenu()"></div>
+
+    <script src="script/main.js" defer></script>
+
+</body>
+
+</html>
