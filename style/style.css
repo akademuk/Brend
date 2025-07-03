@@ -168,6 +168,37 @@ body.dark-theme .desktop-menu .links {
     background: #0F0F0F;
 }
 
+body.light-theme .container .services-hero__visual .hero__stats-item--action {
+    box-shadow: none !important;
+}
+
+body.light-theme .awards__article--date,
+body.light-theme .awards__article--boxs {
+    background: var(--background-light) !important;
+    border: none;
+    color: #404040;
+}
+
+body.light-theme .awards__article h3 {
+    color: var(--color-orange);
+}
+
+body.light-theme .awards__article p {
+    color: #404040;
+}
+
+body.light-theme .awards__article--date time {
+    color: var(--color-orange) !important;
+}
+
+body.dark-theme .services-hero__visual {
+    background: var(--background-light-container) !important;
+}
+
+body.dark-theme .services-hero__visual .hero__stats-item {
+    background: #1F1F1F;
+}
+
 body.dark-theme .desktop-menu li:nth-last-of-type(1) a {
     background: var(--color-orange);
 }
@@ -299,6 +330,21 @@ body.light-theme .cta-services .hero__services-slider {
 
 body.light-theme .social-card__icon {
     border: 1px solid transparent;
+}
+
+body.light-theme .achievements__article h3 {
+    background: var(--background-light);
+    color: var(--color-orange);
+    border-top: 2px solid var(--color-orange);
+}
+
+body.light-theme .achievements__article time {
+    color: #404040;
+}
+
+body.light-theme .achievements__article p {
+    border-top: 2px solid var(--color-orange);
+    color: #404040;
 }
 
 body.light-theme .works__link-text {
@@ -472,6 +518,19 @@ body.light-theme .burger .burger-line {
 
 body.light-theme .mobile-links {
     background-color: var(--white-color);
+}
+
+body.light-theme .meet-section .testimonial__footer {
+    background: var(--white-color);
+}
+
+body.light-theme .meet-section__link {
+    background: var(--background-light);
+    border: none;
+}
+
+body.light-theme .meet-section .testimonial.container {
+    background: var(--white-color) !important;
 }
 
 .menu-overlay {
@@ -2502,6 +2561,7 @@ details[open] .faq__question::after {
     padding: 0;
     flex-direction: column;
     gap: 24px;
+    border-radius: 8px;
     background: transparent;
 }
 
@@ -2658,7 +2718,14 @@ details[open] .faq__question::after {
     object-fit: contain;
 }
 
+.adout .services-hero__visual{
+    border-radius: 16px;
+}
 
+.adout .services-hero__visual .hero__stats {
+    border-radius: 0;
+    border: none;
+}
 
 
 
@@ -3952,6 +4019,10 @@ details[open] .faq__question::after {
 
     .awards__article p {
         font-size: 18px;
+    }
+
+    .meet-section .testimonial__footer {
+        border-radius: 12px;
     }
 }
 
