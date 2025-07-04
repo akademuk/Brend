@@ -2,6 +2,12 @@ document.addEventListener("DOMContentLoaded", () => {
   initThemeSwitcher();
   initBurgerMenu();
   initLanguageSwitcher();
+  initMarquee();
+  initSuccessTabs();
+  initSmoothScroll();
+  initWorksTabs();
+  initTestimonials();
+  initJobCardViewer();
 
   if (document.querySelector(".hero__stats")) {
     initCounterAnimation();
@@ -145,7 +151,7 @@ function initCounterAnimation() {
   observer.observe(statsEl);
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+function initMarquee() {
   const serviceLists = document.querySelectorAll(".hero__service-list");
 
   serviceLists.forEach((serviceList) => {
@@ -184,81 +190,186 @@ document.addEventListener("DOMContentLoaded", () => {
 
     animate();
   });
-});
+}
 
-
-document.addEventListener('DOMContentLoaded', function() {
-  const containers = document.querySelectorAll('.success-stories__tabs-container');
+function initSuccessTabs() {
+  const containers = document.querySelectorAll(
+    ".success-stories__tabs-container"
+  );
   if (!containers.length) return;
 
-  containers.forEach(container => {
-    const nav = container.querySelector('.success-stories__tabs-nav');
-    const tabs = nav ? nav.querySelectorAll('.success-stories__tab') : [];
-    const contents = container.querySelectorAll('.success-stories__tab-pane');
+  containers.forEach((container) => {
+    const nav = container.querySelector(".success-stories__tabs-nav");
+    const tabs = nav ? nav.querySelectorAll(".success-stories__tab") : [];
+    const contents = container.querySelectorAll(".success-stories__tab-pane");
     if (!tabs.length || !contents.length) return;
 
     function activateTab(tab) {
       const targetId = tab.dataset.target;
       if (!targetId) return;
-      tabs.forEach(t => t.classList.remove('active'));
-      contents.forEach(p => p.classList.remove('active'));
-      tab.classList.add('active');
+      tabs.forEach((t) => t.classList.remove("active"));
+      contents.forEach((p) => p.classList.remove("active"));
+      tab.classList.add("active");
       const pane = container.querySelector(`#${targetId}`);
-      if (pane) pane.classList.add('active');
+      if (pane) pane.classList.add("active");
     }
 
-    tabs.forEach(tab => {
+    tabs.forEach((tab) => {
       if (!tab.dataset.target) return;
-      tab.addEventListener('click', e => {
+      tab.addEventListener("click", (e) => {
         e.preventDefault();
         activateTab(tab);
       });
     });
 
-    const defaultTab = nav.querySelector('.success-stories__tab.active') || tabs[0];
+    const defaultTab =
+      nav.querySelector(".success-stories__tab.active") || tabs[0];
     if (defaultTab) activateTab(defaultTab);
   });
-});
+}
 
+function initSmoothScroll() {
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault(); 
-
-    const targetEl = document.querySelector(this.getAttribute('href'));
-    if (targetEl) {
-      targetEl.scrollIntoView({
-        behavior: 'smooth', 
-        block: 'start',     
-        inline: 'nearest'
-      });
-    }
+      const targetEl = document.querySelector(this.getAttribute("href"));
+      if (targetEl) {
+        targetEl.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+          inline: "nearest",
+        });
+      }
+    });
   });
-});
+}
 
-
-document.addEventListener('DOMContentLoaded', () => {
-  const tabsContainer = document.querySelector('.works__tabs');
+function initWorksTabs() {
+  const tabsContainer = document.querySelector(".works__tabs");
   if (!tabsContainer) return;
 
-  const tabs = Array.from(tabsContainer.querySelectorAll('.works__tab'));
-  const grids = Array.from(document.querySelectorAll('.works__grid'));
+  const tabs = Array.from(tabsContainer.querySelectorAll(".works__tab"));
+  const grids = Array.from(document.querySelectorAll(".works__grid"));
 
-  const showCategory = target => {
-    tabs.forEach(t => t.classList.toggle('works__tab--active', t.dataset.target === target));
-    grids.forEach(grid => {
+  const showCategory = (target) => {
+    tabs.forEach((t) =>
+      t.classList.toggle("works__tab--active", t.dataset.target === target)
+    );
+    grids.forEach((grid) => {
       const match = grid.dataset.category === target;
-      grid.style.display = match ? '' : 'none';
-      grid.classList.toggle('works__grid--active', match);
+      grid.style.display = match ? "" : "none";
+      grid.classList.toggle("works__grid--active", match);
     });
   };
 
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
       showCategory(tab.dataset.target);
     });
   });
 
-  const initialTab = tabsContainer.querySelector('.works__tab--active') || tabs[0];
+  const initialTab =
+    tabsContainer.querySelector(".works__tab--active") || tabs[0];
   showCategory(initialTab.dataset.target);
-});
+}
+
+function initTestimonials() {
+  var allStepsBtn = document.getElementById("allStepsApply");
+  var testimonials = document.querySelectorAll(
+    ".testimonials-apply .testimonials__grid .testimonial"
+  );
+  var increment = 3;
+  var shown = increment;
+
+  function showTestimonials() {
+    for (var i = 0; i < shown; i++) {
+      if (testimonials[i]) {
+        testimonials[i].style.display = "flex";
+      }
+    }
+    if (shown >= testimonials.length) {
+      allStepsBtn.style.display = "none";
+    }
+  }
+
+  function initTestimonialsVisibility() {
+    testimonials.forEach(function (testimonial) {
+      testimonial.style.display = "none";
+    });
+    showTestimonials();
+  }
+
+  if (allStepsBtn) {
+    allStepsBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      shown += increment;
+      showTestimonials();
+    });
+  }
+
+  function checkResize() {
+    if (window.innerWidth <= 1279) {
+      initTestimonialsVisibility();
+      if (allStepsBtn) allStepsBtn.style.display = "flex";
+    } else {
+      testimonials.forEach(function (testimonial) {
+        testimonial.style.display = "flex";
+      });
+      if (allStepsBtn) allStepsBtn.style.display = "none";
+    }
+  }
+
+  checkResize();
+  window.addEventListener("resize", checkResize);
+}
+
+function initJobCardViewer() {
+  var allStepsBtn = document.getElementById("joinTeamAll");
+  var testimonials = document.querySelectorAll(
+    ".join__team .services__grid .service"
+  );
+  var increment = 2;
+  var shown = increment;
+
+  function showTestimonials() {
+    for (var i = 0; i < shown; i++) {
+      if (testimonials[i]) {
+        testimonials[i].style.display = "flex";
+      }
+    }
+    if (shown >= testimonials.length) {
+      allStepsBtn.style.display = "none";
+    }
+  }
+
+  function initTestimonialsVisibility() {
+    testimonials.forEach(function (testimonial) {
+      testimonial.style.display = "none";
+    });
+    showTestimonials();
+  }
+
+  if (allStepsBtn) {
+    allStepsBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      shown += increment;
+      showTestimonials();
+    });
+  }
+
+  function checkResize() {
+    if (window.innerWidth <= 1279) {
+      initTestimonialsVisibility();
+      if (allStepsBtn) allStepsBtn.style.display = "flex";
+    } else {
+      testimonials.forEach(function (testimonial) {
+        testimonial.style.display = "flex";
+      });
+      if (allStepsBtn) allStepsBtn.style.display = "none";
+    }
+  }
+
+  checkResize();
+  window.addEventListener("resize", checkResize);
+}

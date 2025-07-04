@@ -208,6 +208,18 @@ body.light-theme .social-card__icon {
     background: transparent;
 }
 
+body.light-theme .join__team h4 {
+    color: var(--color-orange);
+}
+
+body.light-theme .careers__hero h3 {
+    color: var(--color-orange);
+}
+
+body.light-theme .careers__hero p {
+    color: var(--color-text);
+}
+
 body.light-theme .container {
     background: var(--white-color);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -2662,7 +2674,7 @@ details[open] .faq__question::after {
     color: #B3B3B2;
     font-size: 14px;
     font-weight: 400;
-    line-height: 150%; 
+    line-height: 150%;
     display: flex;
     gap: 8px;
 }
@@ -2671,30 +2683,30 @@ details[open] .faq__question::after {
     color: #F9EFEC;
     font-size: 18px;
     font-weight: 500;
-    line-height: 150%; 
+    line-height: 150%;
     text-transform: uppercase;
     margin-bottom: 6px;
 }
 
 .awards__article p {
-    color:#B3B3B2;
+    color: #B3B3B2;
     font-size: 14px;
     font-weight: 400;
-    line-height: 150%; 
+    line-height: 150%;
 }
 
 .awards__article .awards__article--box .awards__article--date time {
     color: #E6E6E6;
     font-size: 14px;
     font-weight: 500;
-    line-height: 150%; 
+    line-height: 150%;
     display: flex;
     align-items: center;
     gap: 8px;
 }
 
 .awards__article .awards__article--box .awards__article--date time::before {
-       content: "";
+    content: "";
     background: url(../images/circle.svg) no-repeat;
     background-size: contain;
     width: 8px;
@@ -2718,7 +2730,7 @@ details[open] .faq__question::after {
     object-fit: contain;
 }
 
-.adout .services-hero__visual{
+.adout .services-hero__visual {
     border-radius: 16px;
 }
 
@@ -2727,21 +2739,77 @@ details[open] .faq__question::after {
     border: none;
 }
 
+.careers__hero {
+    flex-direction: column;
+    padding: 24px;
+}
 
+.careers__hero h3 {
+    color: var(--font-dark);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 150%; 
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
 
+.careers__hero p {
+    color: #B3B3B2;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 150%;
+    margin-bottom: 24px;
+}
 
+.careers__hero a {
+    justify-content: flex-start;
+}
 
+.join__team .work__meta li strong{
+    font-size: 14px;
+}   
 
+.join__team .work__meta li span {
+    font-size: 14px;
+}
 
+.join__team .work__meta {
+    margin-bottom: 24px;
+}
 
+.join__team h4 {
+    color: #F9EFEC;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 150%; 
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
 
+.join__team .service__description {
+    color: #B3B3B2;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 150%; 
+    order: unset;
+}
 
+.join__team .join__team-mobile {
+    display: flex;
+    margin-bottom: 24px;
+}
 
+.testimonials-apply .testimonial span {
+    padding: 10px 20px;
+    color: #81807E;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 150%; 
+}
 
-
-
-
-
+#joinTeamAll {
+    padding: 20px 16px;
+}
 
 
 
@@ -3046,7 +3114,7 @@ details[open] .faq__question::after {
     }
 
     .service__header {
-        gap: 8px;
+        gap: 24px;
         flex-wrap: wrap;
         margin-bottom: 50px;
     }
@@ -3174,11 +3242,13 @@ details[open] .faq__question::after {
 
     .work__meta {
         gap: 12px;
+        flex-wrap: wrap;
     }
 
     .work__meta li {
         width: max-content;
         padding: 10px 16px;
+        flex-wrap: nowrap;
         gap: 8px;
     }
 
@@ -4023,6 +4093,64 @@ details[open] .faq__question::after {
 
     .meet-section .testimonial__footer {
         border-radius: 12px;
+    }
+    
+    .testimonials-apply .testimonial {
+        justify-content: flex-start;
+    }
+
+    .careers__hero {
+        padding: 50px;
+    }
+
+    .careers__hero h3 {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .careers__hero p {
+        font-size: 18px;
+        margin-bottom: 50px;
+    }
+
+    .join__team .join__team-mobile {
+        display: none;
+    }
+
+    .join__team .work__meta {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .join__team .work__meta li span {
+        font-size: 18px;
+    }
+
+    .join__team .work__meta li strong {
+        font-size: 16px;
+    }
+
+    .join__team .work__meta {
+        margin-bottom: 40px;
+    }
+
+    .join__team h4 {
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+
+    .join__team .service__description {
+        margin-bottom: 40px;
+        font-size: 18px;
+    }
+
+    .join__team .service__cta--link{
+        display: flex;
+    }
+
+    .testimonials-apply .testimonial span {
+        padding: 16px 30px;
+        font-size: 20px;
     }
 }
 
