@@ -288,7 +288,7 @@ function initTestimonials() {
         testimonials[i].style.display = "flex";
       }
     }
-    if (shown >= testimonials.length) {
+    if (allStepsBtn && shown >= testimonials.length) {
       allStepsBtn.style.display = "none";
     }
   }
@@ -338,7 +338,7 @@ function initJobCardViewer() {
         testimonials[i].style.display = "flex";
       }
     }
-    if (shown >= testimonials.length) {
+    if (allStepsBtn && shown >= testimonials.length) {
       allStepsBtn.style.display = "none";
     }
   }
@@ -373,3 +373,86 @@ function initJobCardViewer() {
   checkResize();
   window.addEventListener("resize", checkResize);
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const tabs = document.querySelectorAll(".blog__hero-tabs__tab");
+  const contents = document.querySelectorAll(".blog__hero-content");
+  const showMoreBtn = document.querySelector(".blog__hero-show-more");
+  let currentCategory = "business";
+
+  function getContentByCategory(category) {
+    return document.querySelector(
+      `.blog__hero-content[data-category="${category}"]`
+    );
+  }
+
+  function updateArticles(content) {
+    const articles = [...content.querySelectorAll(".blog__hero-article")];
+    const isMobile = window.innerWidth <= 1280;
+    const visibleCount = isMobile
+      ? parseInt(content.dataset.visible || 2)
+      : articles.length;
+
+    articles.forEach((article, i) => {
+      article.style.display = i < visibleCount ? "" : "none";
+    });
+
+    if (isMobile && visibleCount < articles.length) {
+      showMoreBtn.style.display = "";
+    } else {
+      showMoreBtn.style.display = "none";
+    }
+  }
+
+  function switchTab(category) {
+    contents.forEach((content) => {
+      const isActive = content.dataset.category === category;
+      content.hidden = !isActive;
+
+      if (!isActive) {
+        content.removeAttribute("data-visible");
+        content.querySelectorAll(".blog__hero-article").forEach((article) => {
+          article.style.display = "none";
+        });
+      }
+    });
+
+    tabs.forEach((tab) => {
+      const isActive = tab.dataset.target === category;
+      tab.classList.toggle("blog__hero-tab--active", isActive);
+      tab.setAttribute("aria-selected", isActive.toString());
+      tab.setAttribute("tabindex", isActive ? "0" : "-1");
+    });
+
+    currentCategory = category;
+    updateArticles(getContentByCategory(category));
+  }
+
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      switchTab(tab.dataset.target);
+    });
+  });
+
+  showMoreBtn.addEventListener("click", () => {
+    const content = getContentByCategory(currentCategory);
+    const visible = parseInt(content.dataset.visible || 2, 10);
+    content.dataset.visible = visible + 1;
+    updateArticles(content);
+  });
+
+  window.addEventListener("resize", () => {
+    const content = getContentByCategory(currentCategory);
+    if (window.innerWidth > 768) {
+      content.removeAttribute("data-visible");
+    }
+    updateArticles(content);
+  });
+
+  // Initial setup
+  switchTab(currentCategory);
+});
+
+
+
+
